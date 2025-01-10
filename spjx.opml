@@ -1,0 +1,17 @@
+/*
+
+脚本功能：黑料社🚗 解锁所有视频
+⚠️⚠️⚠️食用方法:添加订阅后 设置里找到quantumultX通知权限全部打开，运行脚本播放视频会有弹窗，点击弹窗会跳转到Safari浏览器，点击“显示”即可播放完整视频。
+
+注意事项⚠️不要开勿扰，睡眠模式之类的可能会拦截到弹窗提醒!
+
+下载地址：hlsapp.cc/?pc=85AAYK
+请安装轻量版!
+
+软件版本：所有
+脚本作者：伟人
+*/
+
+^http[s]?:\/\/wbapi\.wbbcv\.com\/api\/app\/vid\/h5\/m3u8\/.+m3u8.+token.*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/hls.js
+
+hostname = *wbbcv*

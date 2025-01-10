@@ -1,0 +1,84 @@
+#************************************#
+#脚本介绍：获取Cookie合集，@chxm1023整理
+#************************************#
+//主机名
+
+hostname = auth.aliyundrive.com, bwa.feierlaiedu.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, c.tieba.baidu.com, account.huami.com, -api-mifit-cn2.huami.com, -huami.com, mall.meituan.com, *.bilibili.com, *.ele.me, magicisland.58.com, gjgrowthoper.58.com, api.kuaisho*.com, open.meituan.com, apph5.manmanbuy.com
+
+
+
+#************************************#
+//远程重写
+# 阿里网盘签到获取Cookie
+; hostname = auth.aliyundrive.com
+^https:\/\/auth.aliyundrive.com\/v2\/account\/token url script-response-body https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+
+
+# 健走有礼获取Token
+; hostname = bwa.feierlaiedu.com
+https://bwa.feierlaiedu.com/api/v1/bbg/taskRecord/queryUserInfo url script-request-header https://raw.githubusercontent.com/leafTheFish/DeathNote/main/jzyl.js
+
+
+# 京东Cookie 登录网址：https://bean.m.jd.com/bean/signIndex.action
+; hostname = ms.jr.jd.com, me-api.jd.com, api.m.jd.com
+^https:\/\/(api\.m|me-api)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?) url script-request-header https://raw.githubusercontent.com/chxm1023/Task/main/JD/JD_DailyBonus.js
+
+
+# 百度贴吧每日自动签到获取Cookie
+; hostname = c.tieba.baidu.com
+^https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login url script-request-header https://raw.githubusercontent.com/chxm1023/Task/main/TieBa/TieBa_signin.js
+^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig url script-request-header https://raw.githubusercontent.com/chxm1023/Task/main/TieBa/TieBa_signin.js
+^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo url script-request-header https://raw.githubusercontent.com/chxm1023/Task/main/TieBa/TieBa_signin.js
+ 
+
+# 小米运动获取Token
+; hostname = account.huami.com, -api-mifit-cn2.huami.com, -huami.com
+^https:\/\/account\.huami\.com\/v2\/client\/login url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/xmSports.js
+
+
+# 美团买菜币
+; hostname = mall.meituan.com
+^https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\? url script-request-header https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.cookie.js
+
+
+# 哔哩哔哩
+; hostname = *.bilibili.com
+^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\? url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
+^https?:\/\/m.bilibili.com/$ url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
+
+
+# 饿了么
+; hostname = *.ele.me
+mtop.alsc.eleme.miniapp.collection.homepagev1 url script-request-header https://raw.githubusercontent.com/leafTheFish/DeathNote/main/elm.js
+
+
+# 58同城
+; hostname = magicisland.58.com
+https://magicisland.58.com/web/sign/getIndexSignInInfo url script-request-header https://raw.githubusercontent.com/leafTheFish/DeathNote/main/58tc.js
+
+
+# 赶集直招
+; hostname = gjgrowthoper.58.com
+https://gjgrowthoper.58.com/user/userinfo url script-request-header https://raw.githubusercontent.com/chxm1023/Task/main/gjzz.js
+
+
+# 快手
+; hostname = api.kuaisho*.com
+appsupport/yoda/biz/info url script-request-header https://raw.githubusercontent.com/chxm1023/Task/main/ks.js
+ksapp/client/package/renew url script-request-header https://raw.githubusercontent.com/chxm1023/Task/main/ks.js
+
+
+# 快手极速版
+; hostname = api.kuaisho*.com
+appsupport/yoda/biz/info url script-request-header https://raw.githubusercontent.com/chxm1023/Task/main/ksjsb_v2.js
+ksapp/client/package/renew url script-request-header https://raw.githubusercontent.com/chxm1023/Task/main/ksjsb_v2.js
+
+
+# 美团
+; hostname = open.meituan.com
+https://open.meituan.com/user/v1/info url script-request-body https://raw.githubusercontent.com/chxm1023/Task/main/meituan.js
+
+
+# 慢慢买
+; hostname = apph5.manmanbuy.com
+^https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx) url script-request-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js

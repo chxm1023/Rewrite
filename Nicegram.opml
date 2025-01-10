@@ -1,0 +1,6 @@
+# Nicegram-解锁高级功能
+hostname = restore-access.indream.app
+https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://raw.githubusercontent.com/chxm1023/Rewrite/main/Nicegram.js
+
+
+
