@@ -43,7 +43,7 @@ const list = {
   'MessageHold': { cm: 'timeb', hx: 'hxpda', id: "com.messagehold.forever", latest: "ddm1023" },  //拦截盾
   'co.vulcanlabs': { cm: 'timea', hx: 'hxpda', id: lifetimeid, latest: "ddm1023" },  //vulcanlabs合集
   'Guitar%20Gravitas': { cm: 'timea', hx: 'hxpda', id: "GuitarGravitasChordsScalesArpeggiosLessons", latest: "ddm1023" },  //GuitarGravitas
-//  'com.eleven.chatgpt': { cm: 'timea', hx: 'hxpda', id: "com.chatgpt.yearly", latest: "ddm1023" },  //ChatAI
+  'com.eleven.chatgpt': { cm: 'timea', hx: 'hxpda', id: "com.chatgpt.yearly", latest: "ddm1023" },  //ChatAI
   'com.casttv.remotetv': { cm: 'timeb', hx: 'hxpda', id: "liftetime2", latest: "ddm1023" }, //TVRemote电视遥控器
   'WallpaperWidget': { cm: 'timea', hx: 'hxpda', id: "com.widget.theme.yearly.3dayfree", latest: "ddm1023" }, //壁纸主题(需试用)
   'ProREC': { cm: 'timea', hx: 'hxpda', id: "ProAudioCamera_Annual", latest: "ddm1023" }, //ProREC-相机
