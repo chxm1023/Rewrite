@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2025-01-19
+更新日期：2025-01-25
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -49,6 +49,7 @@ const bundle = {
 };
 
 const listua = {
+  'Vinyls': { name: 'AllPro', id: 'com.shi.Vin.lifetime', cm: 'sjb' },  //Vinyls-音乐APP
   'Accountit': { name: 'spenditPlus', id: 'DesignTech.SIA.Spendit.Plus.Lifetime', cm: 'sjb' },  //Accountit-日常记账
   'Phtoto%20Swiper': { name: 'pro', id: 'rc_499_life', cm: 'sjb' },  //PhotoDeleteSwipe- 照片清理
   'ShellBean': { name: 'pro', id: 'com.ningle.shellbean.iap.forever', cm: 'sjb' },  //ShellBean-SSH终端
