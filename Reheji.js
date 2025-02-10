@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2025-02-08
+更新日期：2025-02-10
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -49,6 +49,7 @@ const bundle = {
 };
 
 const listua = {
+  'CodeScanner': { name: 'pro', id: 'pro_forever_399', cm: 'sjb' },  //CodeScanner-二维码生成器
   'Infltr': { name: 'com.Yooshr.infltr.subscriptionPremium', id: 'com.Yooshr.infltr.everythingForever', cm: 'sjb' },  //樱飞-无限滤镜
   'My%20Diary': { name: 'Pro', id: 'com.simpleinnovation.diary.premium.forever.base', cm: 'sjb' },  //日记本-我的日记
   'AICalculator': { name: 'Premium', id: 'com.simpleinnovation.calculator.ai.premium.yearly.base', cm: 'sja' },  //计算器AI
