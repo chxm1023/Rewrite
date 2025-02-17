@@ -49,7 +49,7 @@ const bundle = {
 };
 
 const listua = {
-  'IPCams': { name: 'pro', id: 'ipcams_pro_lifetime', nameb: 'pro_plus', idb: 'ipcams_pro_plus_lifetime', cm: 'sjb' },  //IPCams
+  'IPCams': { name: 'pro', id: 'ipcams_pro_lifetime', nameb: 'pro_plus', idb: 'ipcams_pro_plus_lifetime', cm: 'sjb' },  //网络摄像机浏览器-IPCams
   'Kylin': { name: 'pro', id: 'pro_life', cm: 'sjb' },  //吉光卡片
   'WidgetSmith': { name: 'Premium', id: 'PremiumMonthlyWidgetsmith', cm: 'sja' },  //WidgetSmith-小组件
   'ArtStage': { name: 'FullAccess', id: 'com.nicdeane.artstage.YearlySubscription', cm: 'sja' },  //ArtStage-艺术品预览
