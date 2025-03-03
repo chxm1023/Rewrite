@@ -49,7 +49,7 @@ const bundle = {
 };
 
 const listua = {
-  'Usage': { name: 'pro', id: 'pro.usage.mac.lifetime_1', cm: 'sjb' },  //Usage-跟踪系统活动与性能
+  'Usage': { name: 'pro.ios', id: 'pro.usage.mac.lifetime_1', nameb: 'pro.macos', idb: 'pro.usage.mac.lifetime_2', cm: 'sjb' },  //Usage-跟踪系统活动与性能
   'alistTools': { name: 'pro_lifetime', id: 'com.jy.alistTools.pro_lifetime', cm: 'sjb' },  //alistTools
   'FocusFour': { name: 'pro', id: 'focusfour_lifetime', cm: 'sjb' },  //FocusFour-四象限任务管理
   'remoteMouse': { name: 'pro', id: 'Subscribe__RemoteMouse_Yearly', cm: 'sja' },  //无线鼠标
