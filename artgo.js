@@ -10,9 +10,9 @@
 **************************************
 
 [rewrite_local]
-http:\/\/api\.artgo\.ltd\/artgo-service\/api\/v\d\/user url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/artgo.js
+http:\/\/api\.artgo\.ltd url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/artgo.js
 
 *************************************/
 
 
-var ddm = JSON.parse($response.body);ddm.vipExpiredAt = 4092599349000;$done({body : JSON.stringify(ddm)});
+var body = $response.body.replace(/\"vipExpiredAt":\d+/g, '\"vipExpiredAt":4092599349000').replace(/\"userVipExpiredAt":\d+/g, '\"userVipExpiredAt":4092599349000').replace(/\"chargeType":\d+/g, '\"chargeType":0').replace(/\"downloadAfterPay":\d+/g, '\"downloadAfterPay":1');$done({body});
