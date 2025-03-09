@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2025-03-06
+更新日期：2025-03-09
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -49,6 +49,7 @@ const bundle = {
 };
 
 const listua = {
+  'AccuFind': { name: 'accufind_payments', id: 'accufind_lifetime', cm: 'sjb' },  //AccuFind-搜索目标设备
   'alistTools': { name: 'pro_lifetime', id: 'com.jy.alistTools.pro_lifetime', cm: 'sjb' },  //alistTools
   'FocusFour': { name: 'pro', id: 'focusfour_lifetime', cm: 'sjb' },  //FocusFour-四象限任务管理
   'remoteMouse': { name: 'pro', id: 'Subscribe__RemoteMouse_Yearly', cm: 'sja' },  //无线鼠标
