@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2025-03-19
+更新日期：2025-03-22
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -49,6 +49,7 @@ const bundle = {
 };
 
 const listua = {
+  'Moonlitt': { name: 'moonlitt.pro', id: 'moonlitt.pro.lifetime', cm: 'sjb' },  //Moonlitt-月亮位置
   'Leica%20LUX': { name: 'pro', id: 'lux_7999_1y_2w0', cm: 'sja' },  //LeicaLUX-相机
   'A%20Widget': { name: 'all_widgets', id: 'all_widgets', cm: 'sjb' },  //OmniWidgets - 万能小组件灵动岛DIY
   'AccuFind': { name: 'accufind_payments', id: 'accufind_lifetime', cm: 'sjb' },  //AccuFind-搜索目标设备
