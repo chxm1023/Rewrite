@@ -140,7 +140,6 @@ const list = {
   'excel': { cm: 'timea', hx: 'hxpda', id: "com.gamawh.excelerios.yearly", latest: "ddm1023" },  //办公文档
   'Future%20Baby': { cm: 'timea', hx: 'hxpda', id: "com.nilu.faceseer.yearly", latest: "ddm1023" },  //宝宝长相预测
   'Smoke': { cm: 'timea', hx: 'hxpda', id: "smoke19870727", latest: "ddm1023" },  //今日香烟
-  'com.wms.hrv': { cm: 'timea', hx: 'hxpda', id: "com.wms.hrv.pro", latest: "ddm1023" },  //ECG+
   'AppAlarmIOS': { cm: 'timea', hx: 'hxpda', id: "alarm.me.vip.year.tier1", latest: "ddm1023" },  //Me+
   'Tinglee': { cm: 'timea', hx: 'hxpdb', id: "vip.forever.tinglee", latest: "ddm1023" },  //英语听听
   'NoteKeys': { cm: 'timea', hx: 'hxpda', id: "notekeys_access_weekly", latest: "ddm1023" },  //五线谱
