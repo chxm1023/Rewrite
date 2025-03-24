@@ -222,7 +222,6 @@ const list = {
   'ExcelSpreadSheetsWPS': { cm: 'timea', hx: 'hxpda', id: "com.turbocms.SimpleSpreadSheet.viponeyear", latest: "ddm1023" },  //简易表格(需试用)
   'XinQingRiJi': { cm: 'timea', hx: 'hxpda', id: "zhiwenshouzhangQuarterlyPlus", latest: "ddm1023" },  //猫咪手帐(需试用)
   'Nutrilio': { cm: 'timea', hx: 'hxpda', id: "net.nutrilio.one_year_plus", latest: "ddm1023" },  //Nutrilio
-  'Pixiu%E8%AE%B0%E8%B4%A6': { cm: 'timea', hx: 'hxpda', id: "com.RuoG.Pixiu.VIPYear", latest: "ddm1023" },  //貔貅记账
   'AIHeader': { cm: 'timea', hx: 'hxpda', id: "com.ai.avatar.maker.month.3dayfree", latest: "ddm1023" },  //AI头像馆
   'MoodTracker': { cm: 'timeb', hx: 'hxpda', id: "co.vulcanlabs.moodtracker.lifetime2", latest: "ddm1023" },  //ChatSmith(美区)
   'com.dandelion.Routine': { cm: 'timeb', hx: 'hxpda', id: "membership", latest: "ddm1023" },  //小日常
