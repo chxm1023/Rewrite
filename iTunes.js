@@ -34,7 +34,7 @@ const list = {
   'com.ideack.BusinessCard': { cm: 'timeb', hx: 'hxpda', id: "BusinessCardVipPerpetual", latest: "ddm1023" }, //名片夹
   'com.ideack.MagicAudio': { cm: 'timeb', hx: 'hxpdb', id: "MagicAudioPermanent", latest: "ddm1023" }, //音乐剪辑
   'DuChuangZhe': { cm: 'timea', hx: 'hxpda', id: "org.zrey.du.main", latest: "ddm1023" }, //独创者
-  'PhotoWhite': { cm: 'timeb', hx: 'hxpda', id: "org.zrey.photowhite.flash_lifetime", latest: "ddm1023" },  //印白
+  'PhotoWhite': { cm: 'timeb', hx: 'hxpda', id: "org.zrey.photowhite.flash_lifetime", latest: "ddm1023" },  //印白相册
   'FETreeVideoChange': { cm: 'timeb', hx: 'hxpda', id: "com.dj.videototext.forever", latest: "ddm1023" },  //视频转文字
   '%E5%B0%8F%E5%B0%8F%E7%9B%B8%E6%9C%BA%E5%A4%A7%E5%B8%88': { cm: 'timeb', hx: 'hxpda', id: "com.ai.merge.forever.vip", latest: "ddm1023" },  //乐颜
   'FoodIdentificationTool': { cm: 'timeb', hx: 'hxpda', id: "20002", latest: "ddm1023" },  //剂查查
