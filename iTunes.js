@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：iTunes-系列解锁合集
-更新日期：2025-03-24
+更新日期：2025-03-25
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -29,6 +29,7 @@ const yearlysubscription = `${bundle_id}.yearlysubscription`;
 const lifetimeid = `${bundle_id}.lifetime`;
 
 const list = {
+  'SoundLab': { cm: 'timea', hx: 'hxpda', id: "8001", latest: "ddm1023" },  //合声-音乐制作
   'ECGANALYZER': { cm: 'timea', hx: 'hxpda', id: "com.wms.hrv.yearlyfamilysharing", latest: "ddm1023" }, //ECG+
   'com.RuoG.Pixiu': { cm: 'timea', hx: 'hxpda', id: "com.RuoG.Pixiu.VIPYear", latest: "ddm1023" }, //貔貅记账
   'com.ideack.BusinessCard': { cm: 'timeb', hx: 'hxpda', id: "BusinessCardVipPerpetual", latest: "ddm1023" }, //名片夹
@@ -241,7 +242,6 @@ const list = {
   'com.SingingFish.SudokuGame': { cm: 'timea', hx: 'hxpda', id: "com.singingfish.sudokugame.year", latest: "ddm1023" },  //数独
   'com.kuaijiezhilingdashi.appname': { cm: 'timea', hx: 'hxpda', id: "com.othermaster.yearlyvip", latest: "ddm1023" },  //快捷指令库
   'LogInput': { cm: 'timea', hx: 'hxpda', id: "com.logcg.loginput", latest: "ddm1023" },  //落格输入法
-  'SoundLab': { cm: 'timea', hx: 'hxpda', id: "8800", latest: "ddm1023" },  //合声
   'HandNote': { cm: 'timeb', hx: 'hxpda', id: "permanent_membership", latest: "ddm1023" },  //千本笔记
   'Kilonotes': { cm: 'timea', hx: 'hxpda', id: "kipa_kilonotes_quarter_subscription", latest: "ddm1023" },  //千本笔记
   'YiJianKouTu': { cm: 'timea', hx: 'hxpda', id: "XiChaoYiJianKouTuPlus", latest: "ddm1023" },  //一键抠图
