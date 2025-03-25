@@ -29,7 +29,7 @@ const yearlysubscription = `${bundle_id}.yearlysubscription`;
 const lifetimeid = `${bundle_id}.lifetime`;
 
 const list = {
-  'SoundLab': { cm: 'timea', hx: 'hxpda', id: "8001", latest: "ddm1023" },  //合声-音乐制作
+  'SoundLab': { cm: 'timeb', hx: 'hxpda', id: "8001", latest: "ddm1023" },  //合声-音乐制作
   'ECGANALYZER': { cm: 'timea', hx: 'hxpda', id: "com.wms.hrv.yearlyfamilysharing", latest: "ddm1023" }, //ECG+
   'com.RuoG.Pixiu': { cm: 'timea', hx: 'hxpda', id: "com.RuoG.Pixiu.VIPYear", latest: "ddm1023" }, //貔貅记账
   'com.ideack.BusinessCard': { cm: 'timeb', hx: 'hxpda', id: "BusinessCardVipPerpetual", latest: "ddm1023" }, //名片夹
