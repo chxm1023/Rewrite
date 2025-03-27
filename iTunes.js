@@ -176,7 +176,6 @@ const list = {
   'Ptime': { cm: 'timea', hx: 'hxpda', id: "com.subscribe.pro.year", latest: "ddm1023" },  //Ptime-拼图(需试用)
   'Prookie': { cm: 'timea', hx: 'hxpda', id: "prookie.month.withtrial.0615", latest: "ddm1023" },  //AI灵绘
   'BodyTune': { cm: 'timea', hx: 'hxpda', id: "Bodypro1", latest: "ddm1023" },  //BodyTune-瘦身相机
-  'Caculator': { cm: 'timea', hx: 'hxpda', id: "calc_Unlock_1", latest: "ddm1023" },  //计算器+
   'killer.sudoku.free.brain.puzzle': { cm: 'timea', hx: 'hxpda', id: "ks.i.iap.premium", latest: "ddm1023" },  //杀手数独
   'sudoku.puzzle.free.game.brain': { cm: 'timea', hx: 'hxpda', id: "sudoku.i.sub.vvip.p1y", latest: "ddm1023" },  //数独
   'One%20Markdown': { cm: 'timeb', hx: 'hxpda', id: "10012", latest: "ddm1023" },  //One Markdown
