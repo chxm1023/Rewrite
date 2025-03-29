@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：adapty-合集
-更新日期：2025-03-12
+更新日期：2025-03-29
 脚本作者：ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -24,6 +24,7 @@ const profileid = headers['adapty-sdk-profile-id'] || headers['ADAPTY-SDK-PROFIL
 const time = Date.now();
 
 const list = {
+  'Genie': { dy: 'dypda', id: "yearly_advanced_pro", bundle_id: "co.appnation.geniechat" },  //Genie - Chatbot
   'Flight%20Tracker': { dy: 'dypda', id: "com.iaftt.flightplusfree.49.99year", bundle_id: "com.iaftt.flightplusfree" },
   '$%7BPRODUCT_NAME%7D': { dy: 'dypda', id: "com.iaftt.flightplusfree.49.99year", bundle_id: "com.iaftt.flightplusfree" },  //FlightTracker - 飞机追踪
   'AvA': { dy: 'dypda', id: "momo_yearly_subs_pro", bundle_id: "com.scaleup.dreame" },  //Momo
