@@ -22,6 +22,7 @@ hostname = *.apphud.com
 const ddm = JSON.parse(typeof $response != "undefined" && $response.body || "{}");
 
 const list = [
+  "SnipProYearly", //Snip:Removebg - 抠图换背景
   "com.newlearning.english.premium.forever",  //Excellent
   "1year7days80",  //Bright
   "com.movavi.clips.lifetime",  //Movavi
