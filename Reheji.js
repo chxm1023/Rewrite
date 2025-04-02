@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2025-03-28
+更新日期：2025-04-02
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -51,6 +51,7 @@ const bundle = {
 };
 
 const listua = {
+  'PhotoVault': { name: 'lifetime', id: 'photovault.lifetime', cm: 'sjc' },  //iSafe-私密相册管家
   'CountdownWidget': { name: 'pro', id: 'cd_lifetime', cm: 'sjb' },  //倒计时小工具:Countful
   'DarkLooker': { name: 'Pro', id: 'com.boleStudio.safaridarkmode.permanent', cm: 'sjb' },  //DarkLooker 护眼蓝光/Safari扩展工具
   'Sunlitt': { name: 'sunlitt.pro', id: 'pro.lifetime', cm: 'sjb' },  //Sunlitt-太阳位置
