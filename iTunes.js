@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：iTunes-系列解锁合集
-更新日期：2025-03-25
+更新日期：2025-04-04
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -63,7 +63,7 @@ const list = {
   'com.alphamobiletech.facey': { cm: 'timeb', hx: 'hxpda', id: "Facey_Forever", latest: "ddm1023" }, //Facey-专业彩妆P图神器
   'Packet': { cm: 'timeb', hx: 'hxpda', id: "com.aaaalab.nepacket.iap.full", latest: "ddm1023" }, //HTTPS抓包
   'AllMyBatteries': { cm: 'timeb', hx: 'hxpda', id: "AllMyBatteries_Ultimate", latest: "ddm1023" }, //AllMyBatteries-电池管家
-  'VDIT': { cm: 'timea', hx: 'hxpda', id: "me.imgbase.videoday.profeaturesYearly", latest: "ddm1023" }, //VDIT-视频转换
+  'VDIT': { cm: 'timeb', hx: 'hxpda', id: "me.imgbase.videoday.profeaturesLifetime", latest: "ddm1023" }, //VDIT-视频转换
   'CodeSnippet': { cm: 'timea', hx: 'hxpda', id: "it.beatcode.codesnippetpro.annualSubscription", latest: "ddm1023" }, //CodeSnippet
   'darkWeb': { cm: 'timea', hx: 'hxpda', id: "dforce_unlock_all_functions", latest: "ddm1023" }, //DForce-Safari扩展
   'BookReader': { cm: 'timea', hx: 'hxpda', id: "com.reader.1year", latest: "ddm1023" }, //阅读器-小说阅读器
