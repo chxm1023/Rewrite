@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2025-04-06
+更新日期：2025-04-11
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -51,6 +51,7 @@ const bundle = {
 };
 
 const listua = {
+  'Loopsie': { name: 'pro-iOS', id: 'com.gamelounge.loopsie.ios.one_time', cm: 'sjb' },  //Loopsie
   'StockPlus': { name: 'Premium', id: 'stocks_lifetime_premium', cm: 'sjb' },  //Stock+股票图表
   'StudyAI': { name: 'premium_access', id: 'Lifetime_PRO', cm: 'sjb' },  //StudyAI-智能题解AI
   'PhotoVault': { name: 'lifetime', id: 'photovault.lifetime', cm: 'sjc' },  //iSafe-私密相册管家
@@ -272,7 +273,6 @@ const listua = {
   'Paper': { name: 'pro', id: 'com.fiftythree.paper.credit', cm: 'sjb' },  //Paper
   'Ape': { name: 'pro-iOS', id: 'ape.lifetime', cm: 'sjb' },  //Sharp AI
   'Boar': { name: 'pro-iOS', id: 'boar.yearly', cm: 'sja' },  //Erase Objects
-  'Loopsie': { name: 'pro-iOS', id: 'com.reader.autoRenewableSeason', cm: 'sja' },  //Loopsie
   'MySticker': { name: 'mysticker premium', id: 'com.miiiao.MySticker.lifetime', cm: 'sjb' },  //Tico-贴抠
   'Rec': { name: 'rec.paid', id: 'rec.paid.onetime', cm: 'sjb' },  //Rec相机
   'Photon': { name: 'photon.paid', id: 'photon.paid.onetime', cm: 'sjb' },  //Photon相机
