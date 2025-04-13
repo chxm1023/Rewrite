@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：iTunes-系列解锁合集
-更新日期：2025-04-10
+更新日期：2025-04-13
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -33,7 +33,8 @@ const list = {
   'com.ideack.ASR': { cm: 'timeb', hx: 'hxpda', id: "ASR_Permanent_Plan", latest: "ddm1023" },  //录音转文字
   'Presets': { cm: 'timea', hx: 'hxpda', id: "com.chromatech.chroma.yearlyAutoRenewable", latest: "ddm1023" },  //Presets:照片处理、图像编辑器
   'GoodTask': { cm: 'timeb', hx: 'hxpda', id: "com.hahainteractive.goodtask3.pro", latest: "ddm1023" },  //代办事项清单-GoodTask
-  'com.hanchongzan.period': { cm: 'timeb', hx: 'hxpda', id: "com.hanchongzan.period.frog", latest: "ddm1023" },  //姨妈来咯
+  'com.hanchongzan.loverlist': { cm: 'timeb', hx: 'hxpda', id: "com.hanchongzan.loverlist.01", latest: "ddm1023" },  //恋人清单
+  'com.hanchongzan.period': { cm: 'timeb', hx: 'hxpda', id: "com.hanchongzan.period.girl", latest: "ddm1023" },  //姨妈来咯
   'com.hanchongzan.book': { cm: 'timeb', hx: 'hxpda', id: "com.hanchongzan.book.vip", latest: "ddm1023" }, //闪电记账
   'SoundLab': { cm: 'timeb', hx: 'hxpda', id: "8001", latest: "ddm1023" },  //合声-音乐制作
   'ECGANALYZER': { cm: 'timea', hx: 'hxpda', id: "com.wms.hrv.yearlyfamilysharing", latest: "ddm1023" }, //ECG+
