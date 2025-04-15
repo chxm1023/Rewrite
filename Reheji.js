@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2025-04-11
+更新日期：2025-04-15
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -51,6 +51,7 @@ const bundle = {
 };
 
 const listua = {
+  'AppBox': { name: 'appbookmark_vip', id: 'GAB_Lifetime_VIP', cm: 'sja' },  //应用收藏夹
   'Loopsie': { name: 'pro-iOS', id: 'com.gamelounge.loopsie.ios.one_time', cm: 'sjb' },  //Loopsie
   'StockPlus': { name: 'Premium', id: 'stocks_lifetime_premium', cm: 'sjb' },  //Stock+股票图表
   'StudyAI': { name: 'premium_access', id: 'Lifetime_PRO', cm: 'sjb' },  //StudyAI-智能题解AI
