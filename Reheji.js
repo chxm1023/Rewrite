@@ -51,6 +51,7 @@ const bundle = {
 };
 
 const listua = {
+  'Dailyart': { name: 'lifeTime', id: 'artLifeTime', cm: 'sjc' },  //Dailyart
   'My%20Sleep%20Affirmations': { name: 'premium', id: 'msa_ios_yearly_40', cm: 'sja' },  //My Sleep Affirmations
   'Lightune': { name: 'pro', id: 'Lightune_Pro_Year', cm: 'sja' },  //Lightune - AI专业修图
   'ArchiveList': { name: 'pro_life', id: 'com.jy.ArchiveBox.pro_1', cm: 'sjb' },  //ArchiveList - 收藏夹/稍后阅读
