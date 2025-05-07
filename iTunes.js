@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：iTunes-系列解锁合集
-更新日期：2025-05-02
+更新日期：2025-05-07
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -29,6 +29,7 @@ const yearlysubscription = `${bundle_id}.yearlysubscription`;
 const lifetimeid = `${bundle_id}.lifetime`;
 
 const list = {
+  'ChmReader': { cm: 'timeb', hx: 'hxpda', id: "EpubReader_ProVersion" },  //Epub阅读器
   'MediaConvert': { cm: 'timeb', hx: 'hxpda', id: "MediaConverter_ProVersion" },  //格式转换
   'FDSunAlly': { cm: 'timeb', hx: 'hxpda', id: "com.freenotes.sunally.lifetime" },  //SunAlly-智能健康助力
   'Period': { cm: 'timeb', hx: 'hxpda', id: "com.hanchongzan.time.pro" },  //时光提醒
