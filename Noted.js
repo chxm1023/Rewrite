@@ -21,7 +21,7 @@ hostname = *-api.notedapp.io
 
 const timestamp = Date.now();
 let ddm;
-
+//旧版
 if(/verifyReceipt/.test($request.url)){
   ddm = {
     "status" : 0,
@@ -90,8 +90,7 @@ if(/verifyReceipt/.test($request.url)){
     "Telegram" : "https://t.me/ddm1023"
   };
 }
-
-//新版内容
+//新版
 if(/purchases/.test($request.url)){
   ddm = {
     "originalTransactionId": "490001314520000",
