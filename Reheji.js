@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2025-05-13
+更新日期：2025-05-14
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -51,6 +51,7 @@ const bundle = {
 };
 
 const listua = {
+  'EFHello': { name: 'pro', id: 'group_1_subscription_1y_30off', cm: 'sja' },  //英孚英语-EFHello
   'SnapWords': { name: 'Pro access', id: 'com.happyplan.snapwords.premium.subscription.yearly', cm: 'sja' },  //CapWords-拍物品学语言
   'stopwatch': { name: 'remove_ads', id: 'hasen_stopwatch_remove_ads', cm: 'sja' },  //秒表计时器-Stopwatch
   'fengling': { name: 'Pro', id: 'com.nocmt.fengling.NewLifetime', cm: 'sjb' },  //烽翎
