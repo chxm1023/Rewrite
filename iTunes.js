@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：iTunes-系列解锁合集
-更新日期：2025-05-31
+更新日期：2025-06-03
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -29,6 +29,7 @@ const yearlysubscription = `${bundle_id}.yearlysubscription`;
 const lifetimeid = `${bundle_id}.lifetime`;
 
 const list = {
+  'PhotosPK': { cm: 'timeb', hx: 'hxpda', id: "indie.davidwang.PicPicks.membership.lifetime" },  //PicPicks-AI智能照片整理
   'WatchWallpaper': { cm: 'timea', hx: 'hxpda', id: "indie.davidwang.WatchWallpaper.yearsubscriptegold" },  //表盘专辑
   'com.beauty.MeiTui': { cm: 'timea', hx: 'hxpda', id: "vip_member_v3_365day" },  //AI美腿
   'ChmReader': { cm: 'timeb', hx: 'hxpda', id: "EpubReader_ProVersion" },  //Epub阅读器
