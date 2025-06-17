@@ -51,7 +51,7 @@ const bundle = {
 };
 
 const listua = {
-  'Lito': { name: 'LitoPlus', id: 'ml_lifetime_0499', cm: 'sjb' },  //Lito-极简桌面启动器
+  'Lito': { name: 'LitoPlus', id: 'ml_lifetime_0499', cm: 'sjc' },  //Lito-极简桌面启动器
   'nbcamera': { name: 'patron', id: 'com.andyworks.camera.yearlyPatron', cm: 'sja' },  //!Camera相机
   'CollageMaker': { name: 'pro', id: 'com.livintis.collagemakerplus.yearly.1', cm: 'sja' },  //CollageMaker+ 拼图软件
   'LaunchTrans': { name: 'PicChat.Subscribe.Start', id: 'Yearly.PicChat', cm: 'sja' },  //PicChat-专业AI图片翻译
