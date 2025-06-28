@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2025-06-17
+更新日期：2025-06-28
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -51,6 +51,7 @@ const bundle = {
 };
 
 const listua = {
+  'StayOff': { name: 'Plus', id: 'so_lt_1299', cm: 'sjb' },  //StayOff-不做手机控
   'Lito': { name: 'LitoPlus', id: 'ml_lifetime_0499', cm: 'sjc' },  //Lito-极简桌面启动器
   'nbcamera': { name: 'patron', id: 'com.andyworks.camera.yearlyPatron', cm: 'sja' },  //!Camera相机
   'CollageMaker': { name: 'pro', id: 'com.livintis.collagemakerplus.yearly.1', cm: 'sja' },  //CollageMaker+ 拼图软件
