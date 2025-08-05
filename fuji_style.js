@@ -91,8 +91,9 @@ let localMatched = false;
 console.log("🔍 开始匹配检查...");
 
 // 只检查bundle配置
-if (!bundle_id) {
+if (!bundle_id || bundle_id === "undefined" || bundle_id === "") {
     console.log('⚠️ 未检测到 Bundle ID，跳过本次匹配。');
+    console.log('Bundle ID 值:', bundle_id);
 } else {
     for (const i in bundle) {
         const test = bundle_id;
