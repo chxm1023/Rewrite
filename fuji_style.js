@@ -91,48 +91,52 @@ let localMatched = false;
 console.log("🔍 开始匹配检查...");
 
 // 只检查bundle配置
-for (const i in bundle) {
-    const test = bundle_id;
-    console.log(`🔍 检查配置项: ${i}`);
-    console.log(`🔍 测试值: ${test}`);
-    console.log(`🔍 正则表达式: ^${i}`);
-    
-    if (new RegExp("^" + i, "i").test(test)) {
-        console.log(`✅ 匹配成功: ${i}`);
+if (!bundle_id) {
+    console.log('⚠️ 未检测到 Bundle ID，跳过本次匹配。');
+} else {
+    for (const i in bundle) {
+        const test = bundle_id;
+        console.log(`🔍 检查配置项: ${i}`);
+        console.log(`🔍 测试值: ${test}`);
+        console.log(`🔍 正则表达式: ^${i}`);
         
-        if (bundle[i].cm.includes("sja")) {
-            console.log("📅 使用sja配置");
-            data = timea;
-            anchor = true;
-        } else if (bundle[i].cm.includes("sjb")) {
-            console.log("📅 使用sjb配置");
-            data = {
-                purchase_date: "2024-01-01T00:00:00Z",
-            };
-            anchor = true;
-        } else if (bundle[i].cm.includes("sjc")) {
-            console.log("📅 使用sjc配置");
-            data = timea;
-            anchor = false;
+        if (new RegExp("^" + i, "i").test(test)) {
+            console.log(`✅ 匹配成功: ${i}`);
+            
+            if (bundle[i].cm.includes("sja")) {
+                console.log("📅 使用sja配置");
+                data = timea;
+                anchor = true;
+            } else if (bundle[i].cm.includes("sjb")) {
+                console.log("📅 使用sjb配置");
+                data = {
+                    purchase_date: "2024-01-01T00:00:00Z",
+                };
+                anchor = true;
+            } else if (bundle[i].cm.includes("sjc")) {
+                console.log("📅 使用sjc配置");
+                data = timea;
+                anchor = false;
+            }
+            
+            ids = bundle[i].id;
+            name = bundle[i].name || "";
+            idb = bundle[i].idb;
+            nameb = bundle[i].nameb;
+            localMatched = true;
+            
+            console.log("📋 提取的配置:");
+            console.log("ids:", ids);
+            console.log("name:", name);
+            console.log("idb:", idb);
+            console.log("nameb:", nameb);
+            console.log("anchor:", anchor);
+            console.log("data:", JSON.stringify(data, null, 2));
+            
+            break;
+        } else {
+            console.log(`❌ 匹配失败: ${i}`);
         }
-        
-        ids = bundle[i].id;
-        name = bundle[i].name || "";
-        idb = bundle[i].idb;
-        nameb = bundle[i].nameb;
-        localMatched = true;
-        
-        console.log("📋 提取的配置:");
-        console.log("ids:", ids);
-        console.log("name:", name);
-        console.log("idb:", idb);
-        console.log("nameb:", nameb);
-        console.log("anchor:", anchor);
-        console.log("data:", JSON.stringify(data, null, 2));
-        
-        break;
-    } else {
-        console.log(`❌ 匹配失败: ${i}`);
     }
 }
 
