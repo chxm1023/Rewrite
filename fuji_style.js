@@ -36,7 +36,7 @@ console.log("Request Body:", $request.body);
 
 // 只保留FujiLifeStyle配置
 const bundle = {
-    FujiLifeStyle: {
+    "com.FujiLifeStyle.dg": {
         name: "FUJIStyle Pro(Year)",
         id: "FujiStyle2024003",
         cm: "sja",
@@ -249,14 +249,8 @@ if (typeof $response === "undefined") {
     console.log("📥 处理响应体...");
     console.log("原始响应:", $response.body);
     
-    if (
-        /(offerings|attributes|adservices_attribution)/.test(
-            $request.url
-        )
-    ) {
-        console.log("⏭️ 跳过非订阅相关请求");
-        $done({});
-    }
+    // 移除URL过滤，处理所有RevenueCat请求
+    console.log("🔍 处理所有RevenueCat请求，不跳过任何请求");
     
     if (localMatched) {
         console.log("🎯 匹配到FujiLifeStyle，开始处理...");
@@ -265,9 +259,10 @@ if (typeof $response === "undefined") {
     } else {
         console.log("❌ 未匹配到FujiLifeStyle");
         console.log("可能的原因:");
-        console.log("1. Bundle ID不匹配");
+        console.log("1. Bundle ID不匹配 - 实际Bundle ID:", bundle_id);
         console.log("2. 正则表达式问题");
         console.log("3. 请求URL不在匹配范围内");
+        console.log("💡 建议: 检查实际的Bundle ID并更新配置");
         $done({});
     }
 } 
