@@ -41,6 +41,11 @@ const bundle = {
         name: 'premium',
         id: 'truth_or_dare_premium_monthly',
         cm: 'sja'
+    },
+    'com.ultrafinelabs.LightMeterUltra': {
+        name: 'LightMeter Ultra',
+        id: 'com.ultrafinelabs.LightMeterUltra',
+        cm: 'sja'
     }
 };
 
@@ -54,6 +59,11 @@ const listua = {
     'Truth Or Dare': {
         name: 'premium',
         id: 'truth_or_dare_premium_monthly',
+        cm: 'sja'
+    },
+    'LightMeter': {
+        name: 'LightMeter Pro (Year)',
+        id: 'LightMeterPro2024001',
         cm: 'sja'
     }
 };
@@ -74,6 +84,7 @@ if (typeof $response === "undefined") {
     finalize();
     return;
 }
+
 
 // Time configurations
 const yearlyTime = {
