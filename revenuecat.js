@@ -24,6 +24,16 @@ const bundleId = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'];
 
 // App Configuration
 const bundle = {
+    'com.FujiLifeStyle.dg': { 
+        name: 'FUJIStyle Pro(Year)', 
+        id: 'FujiStyle2024003', 
+        cm: 'sja' 
+    },
+    'com.metaorder.TruthOrDare': {
+        name: 'premium',
+        id: 'truth_or_dare_premium_monthly',
+        cm: 'sja'
+    }
 };
 
 // Check for user agent match
