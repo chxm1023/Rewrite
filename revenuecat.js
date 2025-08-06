@@ -8,8 +8,8 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/sitien173/Rewrite/main/fuji_style.js
-^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/sitien173/Rewrite/main/fuji_style.js
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/sitien173/Rewrite/main/revenuecat.js
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/sitien173/Rewrite/main/revenuecat.js
 
 [mitm]
 hostname = api.revenuecat.com, api.rc-backup.com
@@ -22,17 +22,12 @@ const headers = $request.headers;
 const ua = headers['User-Agent'] || headers['user-agent'];
 const bundleId = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'];
 
-// App Configuration
+// FujiLifeStyle App Configuration
 const bundle = {
-    'FujiLifeStyle': { 
+    'com.FujiLifeStyle.dg': { 
         name: 'FUJIStyle Pro(Year)', 
         id: 'FujiStyle2024003', 
         cm: 'sja' 
-    },
-    'com.ultrafinelabs.LightMeterUltra': {
-        name: 'LightMeter Pro',
-        id: 'com.ultrafinelabs.LightMeterUltra.pro',
-        cm: 'lmu'
     }
 };
 
@@ -42,11 +37,6 @@ const listua = {
         name: 'FUJIStyle Pro(Year)', 
         id: 'FujiStyle2024003', 
         cm: 'sja' 
-    },
-    'LightMeter': {
-        name: 'LightMeter Pro',
-        id: 'com.ultrafinelabs.LightMeterUltra.pro',
-        cm: 'lmu'
     }
 };
 
@@ -88,45 +78,27 @@ const baseTime = {
     'ownership_type': 'PURCHASED'
 };
 
-// Check if this is a supported app request
+// Check if this is a FujiLifeStyle request
 let isMatched = false;
 let subscriptionData = null;
-let appConfig = null;
 
 // Check bundle ID first
 if (bundleId && bundleId.includes('FujiLifeStyle')) {
     isMatched = true;
-    appConfig = bundle['FujiLifeStyle'];
     subscriptionData = Object.assign({}, yearlyTime, baseTime);
     console.log("✅ Detected FujiLifeStyle Bundle ID");
-} else if (bundleId && bundleId.includes('com.ultrafinelabs.LightMeterUltra')) {
-    isMatched = true;
-    appConfig = bundle['com.ultrafinelabs.LightMeterUltra'];
-    subscriptionData = Object.assign({}, yearlyTime, baseTime);
-    console.log("✅ Detected LightMeter Ultra Bundle ID");
 }
 
 // Check user agent as fallback
 if (!isMatched && ua && ua.includes('FujiLifeStyle')) {
     isMatched = true;
-    appConfig = listua['FujiLifeStyle'];
     subscriptionData = Object.assign({}, yearlyTime, baseTime);
     console.log("✅ Detected FujiLifeStyle User Agent");
-} else if (!isMatched && ua && ua.includes('LightMeter')) {
-    isMatched = true;
-    appConfig = listua['LightMeter'];
-    subscriptionData = Object.assign({}, yearlyTime, baseTime);
-    console.log("✅ Detected LightMeter User Agent");
 }
 
 const updateEntitlements = function () {
-    if (!appConfig) {
-        console.log("❌ No app configuration found");
-        return;
-    }
-    
-    const subscriptionId = appConfig.id;
-    const entitlementName = appConfig.name;
+    const subscriptionId = 'FujiStyle2024003';
+    const entitlementName = 'FUJIStyle Pro(Year)';
     
     // Update subscriptions
     response.subscriber.subscriptions = Object.assign(response.subscriber.subscriptions || {}, {
@@ -147,7 +119,7 @@ const updateEntitlements = function () {
         })
     });
     
-    console.log("✅ Updated " + entitlementName + " subscription entitlements");
+    console.log("✅ Updated FujiLifeStyle subscription entitlements");
 };
 
 const fallbackSolution = function () {
@@ -158,10 +130,10 @@ const fallbackSolution = function () {
 
 // Main logic
 if (isMatched) {
-    console.log("✅ Matched supported app, unlocking directly");
+    console.log("✅ Matched FujiLifeStyle, unlocking directly");
     updateEntitlements();
     finalize(response);
 } else {
-    console.log("❌ No supported app match found, using fallback solution");
+    console.log("❌ No FujiLifeStyle match found, using fallback solution");
     fallbackSolution();
 }
