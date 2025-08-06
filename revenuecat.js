@@ -30,6 +30,9 @@ const headers = $request.headers;
 const ua = headers['User-Agent'] || headers['user-agent'];
 const bundleId = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'];
 
+console.log('ua', ua);
+console.log('bundleId', bundleId);
+
 // App Configuration
 const bundle = {
     'com.FujiLifeStyle.dg': { 
