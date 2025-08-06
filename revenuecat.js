@@ -73,13 +73,6 @@ if (typeof $response === "undefined") {
     obj.headers = headers;
     finalize();
     return;
-} 
-
-// Skip non-subscription related requests
-if (/(offerings|attributes|adservices_attribution)/.test($request.url)) {
-    console.log("🚫 Skipping non-subscription related requests");
-    $done({});
-    return;
 }
 
 // Time configurations
