@@ -29,7 +29,7 @@ const bundle = {
         id: 'FujiStyle2024003', 
         cm: 'sja' 
     },
-    'com.metaorder.TruthOrDare': {
+    'com.tiggel.truthordare': {
         name: 'premium',
         id: 'truth_or_dare_premium_monthly',
         cm: 'sja'
@@ -66,13 +66,6 @@ if (typeof $response === "undefined") {
     finalize();
     return;
 } 
-
-// Skip non-subscription related requests
-if (/(offerings|attributes|adservices_attribution)/.test($request.url)) {
-    console.log("🚫 Skipping non-subscription related requests");
-    $done({});
-    return;
-}
 
 // Time configurations
 const yearlyTime = {
