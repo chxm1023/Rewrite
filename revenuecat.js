@@ -16,7 +16,15 @@ hostname = api.revenuecat.com, api.rc-backup.com
 
 *************************************/
 
-let obj = {}, response = JSON.parse(typeof $response != "undefined" && $response.body || "{}");
+let obj = {}, response = {};
+if (typeof $response !== "undefined" && $response.body) {
+    try {
+        response = JSON.parse($response.body);
+    } catch (e) {
+        console.log("❌ Error parsing response body:", e);
+        response = {};
+    }
+}
 
 const headers = $request.headers;
 const ua = headers['User-Agent'] || headers['user-agent'];
@@ -43,7 +51,7 @@ const listua = {
         id: 'FujiStyle2024003', 
         cm: 'sja' 
     },
-    'TruthOrDare': {
+    'Truth Or Dare': {
         name: 'premium',
         id: 'truth_or_dare_premium_monthly',
         cm: 'sja'
@@ -139,6 +147,11 @@ const updateEntitlements = function () {
     if (!appConfig) {
         console.log("❌ No app configuration found");
         return;
+    }
+    
+    // Ensure response.subscriber exists
+    if (!response.subscriber) {
+        response.subscriber = {};
     }
     
     const subscriptionId = appConfig.id;
