@@ -1,6 +1,6 @@
 /*************************************
 
-项目名称：FujiLifeStyle App 解锁脚本
+项目名称：Multi-App 解锁脚本 (FujiLifeStyle & TruthOrDare)
 更新日期：2025-01-12
 脚本作者：@ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -22,13 +22,8 @@ const headers = $request.headers;
 const ua = headers['User-Agent'] || headers['user-agent'];
 const bundleId = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'];
 
-// FujiLifeStyle App Configuration
+// App Configuration
 const bundle = {
-    'com.FujiLifeStyle.dg': { 
-        name: 'FUJIStyle Pro(Year)', 
-        id: 'FujiStyle2024003', 
-        cm: 'sja' 
-    }
 };
 
 // Check for user agent match
@@ -37,6 +32,11 @@ const listua = {
         name: 'FUJIStyle Pro(Year)', 
         id: 'FujiStyle2024003', 
         cm: 'sja' 
+    },
+    'TruthOrDare': {
+        name: 'premium',
+        id: 'truth_or_dare_premium_monthly',
+        cm: 'sja'
     }
 };
 
@@ -78,27 +78,61 @@ const baseTime = {
     'ownership_type': 'PURCHASED'
 };
 
-// Check if this is a FujiLifeStyle request
+// Check for app match
 let isMatched = false;
 let subscriptionData = null;
+let appConfig = null;
 
-// Check bundle ID first
-if (bundleId && bundleId.includes('FujiLifeStyle')) {
-    isMatched = true;
-    subscriptionData = Object.assign({}, yearlyTime, baseTime);
-    console.log("✅ Detected FujiLifeStyle Bundle ID");
+// Check user agent first
+for (const i in listua) {
+    if (new RegExp("^" + i, "i").test(ua)) {
+        isMatched = true;
+        appConfig = listua[i];
+        
+        if (appConfig.cm.includes('sja')) {
+            subscriptionData = yearlyTime;
+        } else if (appConfig.cm.includes('sjb')) {
+            subscriptionData = { 'purchase_date': '2024-01-01T00:00:00Z' };
+        } else if (appConfig.cm.includes('sjc')) {
+            subscriptionData = yearlyTime;
+        }
+        
+        subscriptionData = Object.assign({}, subscriptionData, baseTime);
+        console.log(`✅ Detected ${i} via User Agent`);
+        break;
+    }
 }
 
-// Check user agent as fallback
-if (!isMatched && ua && ua.includes('FujiLifeStyle')) {
-    isMatched = true;
-    subscriptionData = Object.assign({}, yearlyTime, baseTime);
-    console.log("✅ Detected FujiLifeStyle User Agent");
+// Check bundle ID as fallback
+if (!isMatched) {
+    for (const i in bundle) {
+        if (new RegExp("^" + i, "i").test(bundleId)) {
+            isMatched = true;
+            appConfig = bundle[i];
+            
+            if (appConfig.cm.includes('sja')) {
+                subscriptionData = yearlyTime;
+            } else if (appConfig.cm.includes('sjb')) {
+                subscriptionData = { 'purchase_date': '2024-01-01T00:00:00Z' };
+            } else if (appConfig.cm.includes('sjc')) {
+                subscriptionData = yearlyTime;
+            }
+            
+            subscriptionData = Object.assign({}, subscriptionData, baseTime);
+            console.log(`✅ Detected ${i} via Bundle ID`);
+            break;
+        }
+    }
 }
 
 const updateEntitlements = function () {
-    const subscriptionId = 'FujiStyle2024003';
-    const entitlementName = 'FUJIStyle Pro(Year)';
+    if (!appConfig) {
+        console.log("❌ No app configuration found");
+        return;
+    }
+    
+    const subscriptionId = appConfig.id;
+    const entitlementName = appConfig.name;
     
     // Update subscriptions
     response.subscriber.subscriptions = Object.assign(response.subscriber.subscriptions || {}, {
@@ -119,7 +153,7 @@ const updateEntitlements = function () {
         })
     });
     
-    console.log("✅ Updated FujiLifeStyle subscription entitlements");
+    console.log(`✅ Updated ${entitlementName} subscription entitlements`);
 };
 
 const fallbackSolution = function () {
@@ -130,10 +164,10 @@ const fallbackSolution = function () {
 
 // Main logic
 if (isMatched) {
-    console.log("✅ Matched FujiLifeStyle, unlocking directly");
+    console.log("✅ App matched, unlocking subscription");
     updateEntitlements();
     finalize(response);
 } else {
-    console.log("❌ No FujiLifeStyle match found, using fallback solution");
+    console.log("❌ No app match found, using fallback solution");
     fallbackSolution();
 }
