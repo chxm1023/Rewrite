@@ -67,6 +67,13 @@ if (typeof $response === "undefined") {
     return;
 } 
 
+// Skip non-subscription related requests
+if (/(offerings|attributes|adservices_attribution)/.test($request.url)) {
+    console.log("🚫 Skipping non-subscription related requests");
+    $done({});
+    return;
+}
+
 // Time configurations
 const yearlyTime = {
     'purchase_date': '2024-01-01T00:00:00Z',
