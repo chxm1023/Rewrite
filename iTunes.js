@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：iTunes-系列解锁合集
-更新日期：2025-09-24
+更新日期：2025-10-05
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -29,6 +29,7 @@ const yearlysubscription = `${bundle_id}.yearlysubscription`;
 const lifetimeid = `${bundle_id}.lifetime`;
 
 const list = {
+  'FileMaster': { cm: 'timeb', hx: 'hxpda', id: "FileMaster_ProVersion" },  //文件大师
   'Squeeze': { cm: 'timea', hx: 'hxpda', id: "uk.co.olsonapps.kegeltrainerlite.yearly" },  //凯格尔运动教练-盆底肌运动
   'IPTV%20Flixana': { cm: 'timeb', hx: 'hxpda', id: "iptv_flixana_lifetime_sub" },  //IPTV Flixana
   'AdBlocker': { cm: 'timeb', hx: 'hxpda', id: "com.va.adBlocker.lifeTimefree" },  //AdBlocker
