@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2025-10-12
+更新日期：2025-10-17
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -53,6 +53,7 @@ const bundle = {
 };
 
 const listua = {
+  'GrowthPath': { name: 'Premium', id: 'GrowthPath_IAP_Lifetime', cm: 'sjb' },  //习惯记
   'Awake': { name: 'awake_pro', id: 'io.unorderly.awake.pro.lifetime_v1', cm: 'sjb' },  //Awake-智能闹钟
   'ContextApp': { name: 'plus', id: 'context_1y', cm: 'sjc' },  //Context-基于语境学英语的AI工具
   'Watchly': { name: 'lifetime', id: 'watchface.lifetime', cm: 'sjb' },  //Watch Faces-表盘专辑
