@@ -29,18 +29,20 @@ const yearlysubscription = `${bundle_id}.yearlysubscription`;
 const lifetimeid = `${bundle_id}.lifetime`;
 
 const list = {
-  'XiangCePhoto': { cm: 'timeb', hx: 'hxpda', id: "ql128" },  //相册清理-删除重复照片
-  'FileMaster': { cm: 'timeb', hx: 'hxpda', id: "FileMaster_ProVersion" },  //文件大师
-  'Squeeze': { cm: 'timea', hx: 'hxpda', id: "uk.co.olsonapps.kegeltrainerlite.yearly" },  //凯格尔运动教练-盆底肌运动
-  'IPTV%20Flixana': { cm: 'timeb', hx: 'hxpda', id: "iptv_flixana_lifetime_sub" },  //IPTV Flixana
-  'AdBlocker': { cm: 'timeb', hx: 'hxpda', id: "com.va.adBlocker.lifeTimefree" },  //AdBlocker
-  'PhotosPK': { cm: 'timeb', hx: 'hxpda', id: "indie.davidwang.PicPicks.membership.lifetime" },  //PicPicks-AI智能照片整理
-  'WatchWallpaper': { cm: 'timea', hx: 'hxpda', id: "indie.davidwang.WatchWallpaper.yearsubscriptegold" },  //表盘专辑
-  'com.beauty.MeiTui': { cm: 'timea', hx: 'hxpda', id: "vip_member_v3_365day" },  //AI美腿
-  'ChmReader': { cm: 'timeb', hx: 'hxpda', id: "EpubReader_ProVersion" },  //Epub阅读器
-  'MediaConvert': { cm: 'timeb', hx: 'hxpda', id: "MediaConverter_ProVersion" },  //格式转换
-  'FDSunAlly': { cm: 'timeb', hx: 'hxpda', id: "com.freenotes.sunally.lifetime" },  //SunAlly-智能健康助力
-  'Period': { cm: 'timeb', hx: 'hxpda', id: "com.hanchongzan.time.pro" },  //时光提醒
+  'XiangCePhoto': { cm: 'timeb', hx: 'hxpda', id: "ql128", latest: "ddm1023" }, //相册清理-删除重复照片
+  'FileMaster': { cm: 'timeb', hx: 'hxpda', id: "FileMaster_ProVersion", latest: "ddm1023" },  //文件大师
+  'Squeeze': { cm: 'timea', hx: 'hxpda', id: "uk.co.olsonapps.kegeltrainerlite.yearly", latest: "ddm1023" },  //凯格尔运动教练-盆底肌运动
+  'Tuesday': { cm: 'timeb', hx: 'hxpda', id: "PIGLET_VIP_Forever", latest: "ddm1023" },  //Tuesday-纪念日
+  'IPTV%20Flixana': { cm: 'timeb', hx: 'hxpda', id: "iptv_flixana_lifetime_sub", latest: "ddm1023" },  //IPTV Flixana
+  'AdBlocker': { cm: 'timeb', hx: 'hxpda', id: "com.va.adBlocker.lifeTimefree", latest: "ddm1023" },  //AdBlocker
+  'ECGPlus': { cm: 'timeb', hx: 'hxpda', id: "com.wms.hrv.pro", latest: "ddm1023" },  //ECG+心电房颤分析
+  'PhotosPK': { cm: 'timeb', hx: 'hxpda', id: "indie.davidwang.PicPicks.membership.lifetime", latest: "ddm1023" },  //PicPicks-AI智能照片整理
+  'WatchWallpaper': { cm: 'timea', hx: 'hxpda', id: "indie.davidwang.WatchWallpaper.yearsubscriptegold", latest: "ddm1023" },  //表盘专辑
+  'com.beauty.MeiTui': { cm: 'timea', hx: 'hxpda', id: "vip_member_v3_365day", latest: "ddm1023" },  //AI美腿
+  'ChmReader': { cm: 'timeb', hx: 'hxpda', id: "EpubReader_ProVersion", latest: "ddm1023" },  //Epub阅读器
+  'MediaConvert': { cm: 'timeb', hx: 'hxpda', id: "MediaConverter_ProVersion", latest: "ddm1023" },  //格式转换
+  'FDSunAlly': { cm: 'timeb', hx: 'hxpda', id: "com.freenotes.sunally.lifetime", latest: "ddm1023" },  //SunAlly-智能健康助力
+  'Period': { cm: 'timeb', hx: 'hxpda', id: "com.hanchongzan.time.pro", latest: "ddm1023" },  //时光提醒
   'com.sixiaobo.MusCut': { cm: 'timeb', hx: 'hxpdb', id: "com.purecollage.pro" },  //无损拼图
   'FlashTransportMaster': { cm: 'timea', hx: 'hxpda', id: "com.flashtransport.fightenegery.yearly.base", latest: "ddm1023" },  //时光罐罐
   'com.ideack.ASR': { cm: 'timeb', hx: 'hxpda', id: "ASR_Permanent_Plan", latest: "ddm1023" },  //录音转文字
