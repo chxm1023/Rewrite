@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2025-12-15
+更新日期：2026-01-07
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -22,7 +22,7 @@ let obj = {}, ddm = JSON.parse(typeof $response != "undefined" && $response.body
 
 const headers = $request.headers, ua = headers['User-Agent'] || headers['user-agent'], bundle_id = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'];
 
-const forbiddenApps = ['Rond', 'Filebar', 'Fileball', 'APTV'];
+const forbiddenApps = [ 'MyHabit', 'Rond', 'Filebar', 'Fileball', 'APTV'];
 if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $request.body.includes(app)))) {
   console.log("⛔️检测到禁止 MITM 的 APP，脚本停止运行！");
   $done({});
