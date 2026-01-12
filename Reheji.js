@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-01-07
+更新日期：2026-01-12
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -53,6 +53,7 @@ const bundle = {
 };
 
 const listua = {
+  'ShouChong': { name: 'lulemevip', id: 'lulemeYears', cm: 'sja' },  //撸了么
   'BeetleADB': { name: 'beetle_pro', id: 'beetle_lifetime_pro', cm: 'sjc' },  //甲壳虫ADB
   'adbTools': { name: 'pro_lifetime', id: 'com.jy.adbTools.pro_1', cm: 'sjb' },  //adbTools
   'Habitor': { name: 'premium', id: 'habitor_lifetime', cm: 'sjb' },  //Habitor
