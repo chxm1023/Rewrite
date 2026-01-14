@@ -53,7 +53,7 @@ const bundle = {
 };
 
 const listua = {
-  'Percento': { name: 'premium', id: 'app.percento.premium.168.lifetime', cm: 'sjb' },  //Percento-个人资产管理
+  'Percento': { name: 'premium', id: 'app.percento.premium.168.lifetime', cm: 'sjb' },  //Percento-个人资产轻松管理
   'ShouChong': { name: 'lulemevip', id: 'lulemeYears', cm: 'sja' },  //撸了么
   'BeetleADB': { name: 'beetle_pro', id: 'beetle_lifetime_pro', cm: 'sjc' },  //甲壳虫ADB
   'adbTools': { name: 'pro_lifetime', id: 'com.jy.adbTools.pro_1', cm: 'sjb' },  //adbTools
