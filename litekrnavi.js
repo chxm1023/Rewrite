@@ -10,7 +10,7 @@
 **************************************
 
 [rewrite_local]
-http:\/\/39\.101\.171\.199:8080\/(liteKrnaviDownloadUserData|liteKrnaviCheckToken) url script-response-body JS/litekrnavi.js
+http:\/\/39\.101\.171\.199:8080\/(liteKrnaviDownloadUserData|liteKrnaviCheckToken) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/litekrnavi.js
 
 *************************************/
 
