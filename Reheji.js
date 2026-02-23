@@ -53,7 +53,7 @@ const bundle = {
 };
 
 const listua = {
-  'Leica%20LUX': { name: 'pro', id: 'annual_subscribers_first_cohort', cm: 'sja' },  //LeicaLUX-相机
+  'Leica%20LUX': { name: 'pro', id: 'annual_subscribers_first_cohort', cm: 'sja' },  //LeicaLUX-徕卡相机
   'ai_music_generator': { name: 'music_generation_yearly_79_99', id: 'music_generation_yearly_79_99', cm: 'sja' },  //Musicia-AI音乐
   'Loopsie': { name: 'pro-iOS', id: 'com.gamelounge.loopsie.ios.one_time_l', cm: 'sjb' },  //Loopsie-漫画滤镜
   'Percento': { name: 'premium', id: 'app.percento.premium.168.lifetime', cm: 'sjb' },  //Percento 个人资产轻松管理
