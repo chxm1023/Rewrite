@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-02-23
+更新日期：2026-03-08
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -53,6 +53,7 @@ const bundle = {
 };
 
 const listua = {
+  'TheGreatMe': { name: 'The Great Me Pro', id: 'thegreatme.forever', cm: 'sjc' },  //伟大的我: 重启人生计划
   'Leica%20LUX': { name: 'pro', id: 'annual_subscribers_first_cohort', cm: 'sja' },  //LeicaLUX-徕卡相机
   'ai_music_generator': { name: 'music_generation_yearly_79_99', id: 'music_generation_yearly_79_99', cm: 'sja' },  //Musicia-AI音乐
   'Loopsie': { name: 'pro-iOS', id: 'com.gamelounge.loopsie.ios.one_time_l', cm: 'sjb' },  //Loopsie-漫画滤镜
