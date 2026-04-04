@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：iTunes-系列解锁合集
-更新日期：2026-02-18
+更新日期：2026-04-05
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -29,6 +29,7 @@ const yearlysubscription = `${bundle_id}.yearlysubscription`;
 const lifetimeid = `${bundle_id}.lifetime`;
 
 const list = {
+  'art.yueyin.ebook-convert': { cm: 'timea', hx: 'hxpda', id: "art.yueyin.ebook.year", latest: "ddm1023" }, //电子书格式转换
   'MaiqiSun': { cm: 'timeb', hx: 'hxpda', id: "life_cn_68", latest: "ddm1023" }, //iSunning
   'CCRemote': { cm: 'timea', hx: 'hxpda', id: "ays.chromo.remote.yearly", latest: "ddm1023" }, //Chromo-Remote
   'PulseWatch': { cm: 'timeb', hx: 'hxpda', id: "relaxlife_ebp", latest: "ddm1023" }, //RelaxWatch:AI智能压力监测
