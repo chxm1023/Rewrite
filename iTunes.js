@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：iTunes-系列解锁合集
-更新日期：2026-04-05
+更新日期：2026-04-11
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -29,333 +29,335 @@ const yearlysubscription = `${bundle_id}.yearlysubscription`;
 const lifetimeid = `${bundle_id}.lifetime`;
 
 const list = {
-  'art.yueyin.ebook-convert': { cm: 'timea', hx: 'hxpda', id: "art.yueyin.ebook.year", latest: "ddm1023" }, //电子书格式转换
-  'MaiqiSun': { cm: 'timeb', hx: 'hxpda', id: "life_cn_68", latest: "ddm1023" }, //iSunning
-  'CCRemote': { cm: 'timea', hx: 'hxpda', id: "ays.chromo.remote.yearly", latest: "ddm1023" }, //Chromo-Remote
-  'PulseWatch': { cm: 'timeb', hx: 'hxpda', id: "relaxlife_ebp", latest: "ddm1023" }, //RelaxWatch:AI智能压力监测
-  'PicCompress': { cm: 'timea', hx: 'hxpda', id: "pc_vip_new_1y", latest: "ddm1023" }, //图片压缩
-  'XiangCePhoto': { cm: 'timeb', hx: 'hxpda', id: "ql128", latest: "ddm1023" }, //相册清理-删除重复照片
-  'FileMaster': { cm: 'timeb', hx: 'hxpda', id: "FileMaster_ProVersion", latest: "ddm1023" },  //文件大师
-  'Squeeze': { cm: 'timea', hx: 'hxpda', id: "uk.co.olsonapps.kegeltrainerlite.yearly", latest: "ddm1023" },  //凯格尔运动教练-盆底肌运动
-  'Tuesday': { cm: 'timeb', hx: 'hxpda', id: "PIGLET_VIP_Forever", latest: "ddm1023" },  //Tuesday-纪念日
-  'IPTV%20Flixana': { cm: 'timeb', hx: 'hxpda', id: "iptv_flixana_lifetime_sub", latest: "ddm1023" },  //IPTV Flixana
-  'AdBlocker': { cm: 'timeb', hx: 'hxpda', id: "com.va.adBlocker.lifeTimefree", latest: "ddm1023" },  //AdBlocker
-  'ECGPlus': { cm: 'timeb', hx: 'hxpda', id: "com.wms.hrv.pro", latest: "ddm1023" },  //ECG+心电房颤分析
-  'PhotosPK': { cm: 'timeb', hx: 'hxpda', id: "indie.davidwang.PicPicks.membership.lifetime", latest: "ddm1023" },  //PicPicks-AI智能照片整理
-  'WatchWallpaper': { cm: 'timea', hx: 'hxpda', id: "indie.davidwang.WatchWallpaper.yearsubscriptegold", latest: "ddm1023" },  //表盘专辑
-  'com.beauty.MeiTui': { cm: 'timea', hx: 'hxpda', id: "vip_member_v3_365day", latest: "ddm1023" },  //AI美腿
-  'ChmReader': { cm: 'timeb', hx: 'hxpda', id: "EpubReader_ProVersion", latest: "ddm1023" },  //Epub阅读器
-  'MediaConvert': { cm: 'timeb', hx: 'hxpda', id: "MediaConverter_ProVersion", latest: "ddm1023" },  //格式转换
-  'FDSunAlly': { cm: 'timeb', hx: 'hxpda', id: "com.freenotes.sunally.lifetime", latest: "ddm1023" },  //SunAlly-智能健康助力
-  'Period': { cm: 'timeb', hx: 'hxpda', id: "com.hanchongzan.time.pro", latest: "ddm1023" },  //时光提醒
-  'com.sixiaobo.MusCut': { cm: 'timeb', hx: 'hxpdb', id: "com.purecollage.pro" },  //无损拼图
-  'FlashTransportMaster': { cm: 'timea', hx: 'hxpda', id: "com.flashtransport.fightenegery.yearly.base", latest: "ddm1023" },  //时光罐罐
-  'com.ideack.ASR': { cm: 'timeb', hx: 'hxpda', id: "ASR_Permanent_Plan", latest: "ddm1023" },  //录音转文字
-  'Presets': { cm: 'timea', hx: 'hxpda', id: "com.chromatech.chroma.yearlyAutoRenewable", latest: "ddm1023" },  //Presets:照片处理、图像编辑器
-  'GoodTask': { cm: 'timeb', hx: 'hxpda', id: "com.hahainteractive.goodtask3.pro", latest: "ddm1023" },  //代办事项清单-GoodTask
-  'com.hanchongzan.loverlist': { cm: 'timeb', hx: 'hxpda', id: "com.hanchongzan.loverlist.01", latest: "ddm1023" },  //恋人清单
-  'com.hanchongzan.period': { cm: 'timeb', hx: 'hxpda', id: "com.hanchongzan.period.girl", latest: "ddm1023" },  //姨妈来咯
-  'com.hanchongzan.book': { cm: 'timeb', hx: 'hxpda', id: "com.hanchongzan.book.vip", latest: "ddm1023" }, //闪电记账
-  'SoundLab': { cm: 'timeb', hx: 'hxpda', id: "8001", latest: "ddm1023" },  //合声-音乐制作
-  'ECGANALYZER': { cm: 'timea', hx: 'hxpda', id: "com.wms.hrv.yearlyfamilysharing", latest: "ddm1023" }, //ECG+
-  'com.RuoG.Pixiu': { cm: 'timea', hx: 'hxpda', id: "com.RuoG.Pixiu.VIPYear", latest: "ddm1023" }, //貔貅记账
-  'com.ideack.BusinessCard': { cm: 'timeb', hx: 'hxpda', id: "BusinessCardVipPerpetual", latest: "ddm1023" }, //名片夹
-  'com.ideack.MagicAudio': { cm: 'timeb', hx: 'hxpdb', id: "MagicAudioPermanent", latest: "ddm1023" }, //音乐剪辑
-  'DuChuangZhe': { cm: 'timea', hx: 'hxpda', id: "org.zrey.du.main", latest: "ddm1023" }, //独创者
-  'PhotoWhite': { cm: 'timeb', hx: 'hxpda', id: "org.zrey.photowhite.flash_lifetime", latest: "ddm1023" },  //印白相册
-  'FETreeVideoChange': { cm: 'timeb', hx: 'hxpda', id: "com.dj.videototext.forever", latest: "ddm1023" },  //视频转文字
-  '%E5%B0%8F%E5%B0%8F%E7%9B%B8%E6%9C%BA%E5%A4%A7%E5%B8%88': { cm: 'timeb', hx: 'hxpda', id: "com.ai.merge.forever.vip", latest: "ddm1023" },  //乐颜
-  'FoodIdentificationTool': { cm: 'timeb', hx: 'hxpda', id: "20002", latest: "ddm1023" },  //剂查查
-  'com.qingcheng.seal.Seal': { cm: 'timeb', hx: 'hxpda', id: "com.qingcheng.seal.Seal.premium.forever", latest: "ddm1023" },  //印章制作
-  'com.geekapp.VoiceTranslation': { cm: 'timeb', hx: 'hxpda', id: "VoiceTranslatorPerpetual", latest: "ddm1023" },  //出国翻译官
-  'com.idealityapp.VideoEditing': { cm: 'timeb', hx: 'hxpda', id: "MagicVideo_Vip_Permanent", latest: "ddm1023" },  //魔影-视频剪辑
-  'YinzhangMaster': { cm: 'timeb', hx: 'hxpda', id: "com.xiaoqi.seal.forever", latest: "ddm1023" },  //印章大师
-  'com.cuilingshi.flipclock': { cm: 'timeb', hx: 'hxpda', id: "FlipClockProVersion", latest: "ddm1023" },  //翻页时钟
-  'com.maine.aifill': { cm: 'timeb', hx: 'hxpda', id: "com.maine.aifill.unlimited", latest: "ddm1023" },  //AI FILL-智能填充.换衣/换背景
-  'DeviceFinder': { cm: 'timeb', hx: 'hxpda', id: "com.wonderfind.lifetime", latest: "ddm1023" },  //Wonderfind-设备查找
-  'Graphionica': { cm: 'timea', hx: 'hxpda', id: "premium_year", latest: "ddm1023" },  //Graphionica
-  'AIAssistant': { cm: 'timea', hx: 'hxpda', id: "AIchat_1w_7.99_trial", latest: "ddm1023" },  //AIAssistant
-  'MonitorPlus': { cm: 'timeb', hx: 'hxpda', id: "com.unhonin.MonitorPlus.proversion", latest: "ddm1023" },  //Monitor+
-  'MessageHold': { cm: 'timeb', hx: 'hxpda', id: "com.messagehold.forever", latest: "ddm1023" },  //拦截盾
-  'co.vulcanlabs': { cm: 'timea', hx: 'hxpda', id: lifetimeid, latest: "ddm1023" },  //vulcanlabs合集
-  'Guitar%20Gravitas': { cm: 'timea', hx: 'hxpda', id: "GuitarGravitasChordsScalesArpeggiosLessons", latest: "ddm1023" },  //GuitarGravitas
-  'com.eleven.chatgpt': { cm: 'timea', hx: 'hxpda', id: "com.chatgpt.yearly", latest: "ddm1023" },  //ChatAI
-  'com.casttv.remotetv': { cm: 'timeb', hx: 'hxpda', id: "liftetime2", latest: "ddm1023" }, //TVRemote电视遥控器
-  'WallpaperWidget': { cm: 'timea', hx: 'hxpda', id: "com.widget.theme.yearly.3dayfree", latest: "ddm1023" }, //壁纸主题(需试用)
-  'ProREC': { cm: 'timea', hx: 'hxpda', id: "ProAudioCamera_Annual", latest: "ddm1023" }, //ProREC-相机
-  'TypeOn%20Keyboard': { cm: 'timeb', hx: 'hxpda', id: "com.hanchongzan.book.vip", latest: "ddm1023" }, //TypeOn
-  'PhotoCollagePro': { cm: 'timeb', hx: 'hxpda', id: "PHOTABLE_PREMIUM", latest: "ddm1023" }, //Photable-腹肌P图神器
-  'com.alphamobiletech.bodyApp': { cm: 'timeb', hx: 'hxpda', id: "Bodyapp_Forever", latest: "ddm1023" }, //Bodyapp-身材修图软件
-  'com.alphamobiletech.facey': { cm: 'timeb', hx: 'hxpda', id: "Facey_Forever", latest: "ddm1023" }, //Facey-专业彩妆P图神器
-  'Packet': { cm: 'timeb', hx: 'hxpda', id: "com.aaaalab.nepacket.iap.full", latest: "ddm1023" }, //HTTPS抓包
-  'AllMyBatteries': { cm: 'timeb', hx: 'hxpda', id: "AllMyBatteries_Ultimate", latest: "ddm1023" }, //AllMyBatteries-电池管家
-  'VDIT': { cm: 'timeb', hx: 'hxpda', id: "me.imgbase.videoday.profeaturesLifetime", latest: "ddm1023" }, //VDIT-视频转换
-  'CodeSnippet': { cm: 'timea', hx: 'hxpda', id: "it.beatcode.codesnippetpro.annualSubscription", latest: "ddm1023" }, //CodeSnippet
-  'darkWeb': { cm: 'timea', hx: 'hxpda', id: "dforce_unlock_all_functions", latest: "ddm1023" }, //DForce-Safari扩展
-  'BookReader': { cm: 'timea', hx: 'hxpda', id: "com.reader.1year", latest: "ddm1023" }, //阅读器-小说阅读器
-  'BeatStation': { cm: 'timea', hx: 'hxpda', id: "BS_Pro_Yearly", latest: "ddm1023" }, //BeatStation-节奏工作站
-  'FastPlayer': { cm: 'timea', hx: 'hxpda', id: "VideoPlayer_ProVersion", latest: "ddm1023" }, //万能播放器
-  'SimpleNotation': { cm: 'timeb', hx: 'hxpda', id: "com.xinlin.notation.once", latest: "ddm1023" }, //简谱大师
-  'ChordMaster': { cm: 'timeb', hx: 'hxpda', id: "com.chordMaster.once", latest: "ddm1023" }, //MusicTotor-识谱大师
-  'Xfuse': { cm: 'timeb', hx: 'hxpda', id: "com.xfuse.ProVision", latest: "ddm1023" }, //磁力宅播放器
-  'com.BertonYc.ScannerOCR': { cm: 'timeb', hx: 'hxpda', id: "Scanner_Subscibe_Permanent", latest: "ddm1023" }, //万能扫描王
-  'HRV': { hx: 'hxpdc', id: "com.stress.test.record.yearly", latest: "ddm1023" },  //解压小橘子(需试用)
-  'iVCam': { cm: 'timeb', hx: 'hxpda', id: "ivcam.full", latest: "ddm1023" },//iVCam-电脑摄像头
-  'RBrowser': { cm: 'timea', hx: 'hxpda', id: "com.mm.RBroswer.product11", latest: "ddm1023" }, //R浏览器(需试用)
-  'Filterra': { cm: 'timeb', hx: 'hxpda', id: "com.filterra.wtonetimepurchase", latest: "ddm1023" },//Filterra-照片编辑器
-  'MOLDIV': { cm: 'timeb', hx: 'hxpda', id: "com.jellybus.Moldiv.IAP.PRO7999", latest: "ddm1023" },//MOLDIV-视频/照片编辑
-  'PICSPLAY': { cm: 'timea', hx: 'hxpda', id: "com.jellybus.PicsPlay2.IAP.PRO5999", latest: "ddm1023" },//PICSPLAY-照片编辑
-  'Rookie': { cm: 'timea', hx: 'hxpda', id: "com.jellybus.Rookie.IAP.PRO5999", latest: "ddm1023" },//RKCAM-照片编辑
-  'MoneyWiz': { cm: 'timea', hx: 'hxpda', id: "com.moneywiz.personalfinance.1year", latest: "ddm1023" }, //MoneyWiz-个人财务
-  'qxzs': { cm: 'timeb', hx: 'hxpda', id: "yongjiu", latest: "ddm1023" },//心率广播
-  'Overdrop': { cm: 'timeb', hx: 'hxpda', id: "com.weather.overdrop.forever", latest: "ddm1023" }, //Overdrop-天气预报
-  'Boom': { cm: 'timeb', hx: 'hxpda', id: "com.globaldelight.iBoom.LifetimeDiscountPack", latest: "ddm1023" }, //Boom-感受音乐
-  'PDFReaderPro%20Free': { cm: 'timeb', hx: 'hxpda', id: "com.pdfreaderpro.free.member.all_access_pack_permanent_license.001", latest: "ddm1023" }, //PDFReaderProFree
-  'VideoHelper': { cm: 'timeb', hx: 'hxpda', id: "vip_service", latest: "ddm1023" }, //媒关系
-  'Digital%20Planner': { cm: 'timea', hx: 'hxpda', id: "com.softwings.DigitalPlanner.1year", latest: "ddm1023" }, //电子手帐
-  'SuperMandarin': { cm: 'timea', hx: 'hxpda', id: "pth_vip_year", latest: "ddm1023" }, //普通话水平测试
-  'SuperQuestion': { cm: 'timea', hx: 'hxpda', id: "qtzs_vip_year", latest: "ddm1023" }, //真题全刷
-  'SuperElves': { cm: 'timeb', hx: 'hxpda', id: "com.SuperElves.Answer.Forever", latest: "ddm1023" }, //答案精灵
-  'SuperDriving': { cm: 'timeb', hx: 'hxpda', id: "jiakao_vip_forever", latest: "ddm1023" }, //驾考学典
-  'Pollykann': { cm: 'timeb', hx: 'hxpda', id: "vip.forever.pollykann", latest: "ddm1023" }, //小鹦看看
-  'JCCalendar': { cm: 'timeb', hx: 'hxpda', id: "com.sjc.calendar.vip.lifelong", latest: "ddm1023" }, //简约日历
-  'com.yanxia.ChsMedical': { cm: 'timeb', hx: 'hxpda', id: "VIPUser", latest: "ddm1023" }, //中医精华
-  'SuperPointer': { cm: 'timeb', hx: 'hxpda', id: "com.SuperPointer.Location.Forever", latest: "ddm1023" }, //海拔指南针
-  'SnakeReader': { cm: 'timeb', hx: 'hxpda', id: "com.lyran.snakescanner.premium18", latest: "ddm1023" }, //开卷阅读
-  'FourthPPT': { cm: 'timeb', hx: 'hxpda', id: "com.FourthPPT.Mobile.Forever", latest: "ddm1023" }, //PPT制作软件
-  'OneExtractor': { cm: 'timeb', hx: 'hxpda', id: "com.OneExtractor.Video.Forever", latest: "ddm1023" }, //视频提取器
-  'com.Colin.Colors': { cm: 'timea', hx: 'hxpda', id: "com.colin.colors.annualVIP", latest: "ddm1023" }, //搜图
-  'PhotosSorter': { cm: 'timeb', hx: 'hxpda', id: "sorter.pro.ipa", latest: "ddm1023" }, //Sorter-相册整理
-  'intolive': { cm: 'timea', hx: 'hxpda', id: "me.imgbase.intolive.proSubYearly", latest: "ddm1023" }, //intolive-实况壁纸制作器
-  'MyAlbum': { cm: 'timeb', hx: 'hxpda', id: "com.colin.myalbum.isUpgradeVip", latest: "ddm1023" }, //Cleaner-照片管理
-  'VideoEditor': { cm: 'timeb', hx: 'hxpda', id: "com.god.videohand.alwaysowner", latest: "ddm1023" }, //VideoShot
-  'PhotoMovie': { cm: 'timea', hx: 'hxpda', id: "com.mediaeditor.photomovie.year", latest: "ddm1023" }, //PhotoMovie-照片视频
-  'ShotOn': { cm: 'timeb', hx: 'hxpda', id: "com.colin.shoton.forevervip", latest: "ddm1023" }, //ShotOn
-  'PhimCiaj': { cm: 'timeb', hx: 'hxpda', id: "com.jiancent.calligraphymaster.lifetime", latest: "ddm1023" }, //练字大师
-  'TimeCut': { cm: 'timea', hx: 'hxpda', id: "com.floatcamellia.hfrslowmotion.forevervip", latest: "ddm1023" },  //TimeCut
-  'com.floatcamellia.motiok': { cm: 'timea', hx: 'hxpda', id: "com.floatcamellia.motiok.vipforever", latest: "ddm1023" },  //Hype_Text-AE特效片制作
-  'POPOLockScreenWidgetable': { cm: 'timea', hx: 'hxpda', id: "com.widget.fightenegery.yearly", latest: "ddm1023" },  //多彩壁纸
-  'GreetingScanner': { cm: 'timea', hx: 'hxpda', id: "com.alphaplus.greetingscaner.w.b", latest: "ddm1023" },  //扫描识别王
-  'FancyCamPlus': { cm: 'timea', hx: 'hxpda', id: "com.alphaplus.fancycam.year.198", latest: "ddm1023" },  //悦颜相机
-  'Again': { cm: 'timeb', hx: 'hxpda', id: "com.owen.again.profession", latest: "ddm1023" },  //Again-稍后阅读器
-  'remotelg': { cm: 'timeb', hx: 'hxpda', id: "com.gqp.remotelg.lifetime", latest: "ddm1023" },  //UniversalRemoteTV+ 遥控器
-  'Notebook': { cm: 'timea', hx: 'hxpda', id: "com.zoho.notebook.ios.personal.yearly", latest: "ddm1023" },  //Notebook
-  'com.damon.dubbing': { cm: 'timea', hx: 'hxpda', id: "com.damon.dubbing.vip12", latest: "ddm1023" },  //有声英语绘本
-  'ZHUBEN': { cm: 'timea', hx: 'hxpda', id: "com.xiaoyu.yue", latest: "ddm1023" },  //有声英语绘本
-  'XIAOTangHomeParadise': { cm: 'timea', hx: 'hxpda', id: "com.yuee.mo2", latest: "ddm1023" },  //鸿海幼儿启蒙
-  'film': { cm: 'timea', hx: 'hxpda', id: "pro_auto_subscribe_year_ovs", latest: "ddm1023" },  //胶卷相机
-  'Muza': { cm: 'timea', hx: 'hxpda', id: "com.appmuza.premium_year", latest: "ddm1023" },  //Muza-修图APP
-  'StandbyWidget': { cm: 'timed', hx: 'hxpda', id: "com.standby.idream.year.68", ids: "standbyus.nonconsume.missingyou", latest: "ddm1023" },  //StandBy_Us-情侣定位
-  'Mango6Minute': { cm: 'timea', hx: 'hxpda', id: "576170870", latest: "ddm1023" },  //6分钟英语
-  'Photo%20Cutout': { cm: 'timea', hx: 'hxpda', id: "com.icepine.allyear", latest: "ddm1023" },  //轻松扣图
-  'cleanPhone': { cm: 'timea', hx: 'hxpda', id: "com.clean.year", latest: "ddm1023" },  //爱机清理
-  'ppt': { cm: 'timea', hx: 'hxpda', id: "com.palmmob.pptios.yearly", latest: "ddm1023" },  //手机PPT制作
-  'WasteCat': { cm: 'timeb', hx: 'hxpda', id: "dev.sanjin.WasteCat.PermanentVip", latest: "ddm1023" },  //垃圾贪吃猫
-  'MeowTalk': { cm: 'timea', hx: 'hxpda', id: "meowtalk.month.basic.autorenewable.subscription", latest: "ddm1023" },  //喵说
-  'habitdot': { cm: 'timeb', hx: 'hxpda', id: "habitdots_pro_forever", latest: "ddm1023" },  //习惯点点
-  'stretchworkout': { cm: 'timea', hx: 'hxpda', id: "com.abishkking.premiumYearStretch", latest: "ddm1023" },  //拉伸运动
-  'Planist': { cm: 'timed', hx: 'hxpda', id: "org.zrey.planist.main", ids: "org.zrey.planist.lifetime", latest: "ddm1023" },  //Planist-计划和清单
-  'com.uzstudio.avenuecast.ios': { cm: 'timeb', hx: 'hxpda', id: "1001", latest: "ddm1023" },  //凡视知音
-  'CongZhenBaZi': { cm: 'timeb', hx: 'hxpda', id: "vip_forever_78", latest: "ddm1023" },  //八字排盘-从真版
-  'CongZhenQiMen': { cm: 'timea', hx: 'hxpda', id: "cn.congzhen.CongZhenQiMen.yearlyplan", latest: "ddm1023" },  //奇门遁甲
-  'ProFit': { cm: 'timea', hx: 'hxpda', id: "com.maxty.gofitness.yearlyplan", latest: "ddm1023" },  //ProFit锻炼计划
-  'FitnessBodybuildingVGFIT': { cm: 'timea', hx: 'hxpda', id: "com.vgfit.fitnessvip.yearly", latest: "ddm1023" },  //fitnessvip
-  'Water%20Reminder': { cm: 'timea', hx: 'hxpda', id: "com.vgfit.premiumtracker.year", latest: "ddm1023" },  //WaterReminder水提醒
-  '%E7%91%9C%E4%BC%BD': { cm: 'timea', hx: 'hxpda', id: "com.vgfit.yoga.yearly", latest: "ddm1023" },  //瑜伽
-  'GPSMaker': { cm: 'timea', hx: 'hxpda', id: "theodolite_vip_year", latest: "ddm1023" },  //指南针定位
-  'wrongbook': { cm: 'timea', hx: 'hxpda', id: "com.palmmob.wrongbookios.yearly", latest: "ddm1023" },  //错题宝
-  'excel': { cm: 'timea', hx: 'hxpda', id: "com.gamawh.excelerios.yearly", latest: "ddm1023" },  //办公文档
-  'Future%20Baby': { cm: 'timea', hx: 'hxpda', id: "com.nilu.faceseer.yearly", latest: "ddm1023" },  //宝宝长相预测
-  'Smoke': { cm: 'timea', hx: 'hxpda', id: "smoke19870727", latest: "ddm1023" },  //今日香烟
-  'AppAlarmIOS': { cm: 'timea', hx: 'hxpda', id: "alarm.me.vip.year.tier1", latest: "ddm1023" },  //Me+
-  'Tinglee': { cm: 'timea', hx: 'hxpdb', id: "vip.forever.tinglee", latest: "ddm1023" },  //英语听听
-  'NoteKeys': { cm: 'timea', hx: 'hxpda', id: "notekeys_access_weekly", latest: "ddm1023" },  //五线谱
-  'SheetMusicPro': { cm: 'timea', hx: 'hxpda', id: "sheetmusicpro.yearwithtrial", latest: "ddm1023" },  //乐谱吧
-  'ProtractorEdge': { cm: 'timea', hx: 'hxpda', id: "ProtracatorEdge.PremiumAccess", latest: "ddm1023" },  //量角器
-  'Piano%20Plus': { cm: 'timea', hx: 'hxpda', id: "kn_access_weekly", latest: "ddm1023" },  //Piano Plus
-  'Notation%20Pad': { cm: 'timea', hx: 'hxpda', id: "np_access_weekly", latest: "ddm1023" },  //Notation Pad
-  'Guitar%20Notation': { cm: 'timea', hx: 'hxpda', id: "gn_access_weekly", latest: "ddm1023" },  //Guitar Notation
-  'Piano%20Fantasy': { cm: 'timea', hx: 'hxpda', id: "com.lotuz.PianoFantasy.weekwithtrail", latest: "ddm1023" },  //钢琴幻想
-  'Piano%20Rush': { cm: 'timea', hx: 'hxpda', id: "com.lotuz.PianoPro.weekwithtrail", latest: "ddm1023" },  //钢琴大师
-  'com.richads.saucyart': { cm: 'timea', hx: 'hxpda', id: "com.richads.saucyart.sub.quarterly_29.99", latest: "ddm1023" },  //Perky
-  'SurveyorPro': { cm: 'timea', hx: 'hxpda', id: "com.celiangyuan.SurveyorPro.OneYear", latest: "ddm1023" },  //测量员Pro
-  'com.ydatong.dingdone': { cm: 'timeb', hx: 'hxpda', id: "com.ydatong.dingdone.vip.forever", latest: "ddm1023" },  //叮当代办
-  'Dial': { cm: 'timea', hx: 'hxpda', id: "2104", latest: "ddm1023" },  //T9拨号
-  'qxwp%20copy': { cm: 'timed', hx: 'hxpda', id: "com.chowjoe.wp2free.year.pro", ids: "com.chowjoe.wp2free.coin.70", latest: "ddm1023" },  //壁纸
-  'LingLongShouZ': { cm: 'timea', hx: 'hxpda', id: "zhenwushouzhangQuarterlyPlus", latest: "ddm1023" },  //Cute手帐软件
-  'MediaEditor': { cm: 'timeb', hx: 'hxpda', id: "alwaysowner", latest: "ddm1023" },  //剪影(需试用)
-  'UniversTranslate': { cm: 'timea', hx: 'hxpda', id: "com.univers.translator.tool.year", latest: "ddm1023" },  //翻译官(需试用)
-  'com.gostraight.smallAccountBook': { cm: 'timeb', hx: 'hxpda', id: "ForeverVIPPayment", latest: "ddm1023" },  //iCost记账(需要购买)
-  'ZJTBiaoGe': { cm: 'timea', hx: 'hxpda', id: "zhangjt.biaoge.monthvip", latest: "ddm1023" },  //表格手机版
-  'MiniMouse': { cm: 'timea', hx: 'hxpda', id: "minimouse_vip_1year", latest: "ddm1023" },  //MiniMouse
-  'Paste%20Keyboard': { cm: 'timea', hx: 'hxpda', id: "com.keyboard.1yetr", latest: "ddm1023" },  //复制和粘贴键盘
-  'EWA': { cm: 'timea', hx: 'hxpda', id: "com.ewa.renewable.subscription.year8", latest: "ddm1023" },  //EWA-学习外语
-  'BuBuSZ': { cm: 'timea', hx: 'hxpda', id: "quaVersion", latest: "ddm1023" },  //BuBu手帐
-  'CapyMood': { cm: 'timea', hx: 'hxpda', id: "com.paha.CapyMood.year", latest: "ddm1023" },  //CapyMood
-  'xyz.iofree.lifenotes': { cm: 'timea', hx: 'hxpda', id: "xyz.iofree.lifelog.pro.yearly", latest: "ddm1023" },  //人生笔记(需试用)
-  'com.icandiapps.nightsky': { cm: 'timea', hx: 'hxpda', id: "com.icandiapps.ns4.annual", latest: "ddm1023" },  //星空
-  'Wallpapers': { cm: 'timea', hx: 'hxpda', id: "wallpaperworld.subscription.yearly.12.notrial", latest: "ddm1023" },  //Wallpaper Tree壁纸
-  'com.yumiteam.Kuki.ID': { cm: 'timea', hx: 'hxpda', id: "com.yumiteam.Kuki.ID.2", latest: "ddm1023" },  //PicsLeap-美飞
-  'com.quangtm193.picpro': { cm: 'timea', hx: 'hxpda', id: "com.quangtm193.picpro1year", latest: "ddm1023" },  //PicPro-人工智能照片编辑器
-  'Storybeat': { cm: 'timea', hx: 'hxpda', id: "yearly_1", latest: "ddm1023" },  //Storybeat
-  'SmartGym': { cm: 'timea', hx: 'hxpda', id: "com.smartgymapp.smartgym.premiumuserworkoutsyearly", latest: "ddm1023" },  //SmartGym
-  'Ptime': { cm: 'timea', hx: 'hxpda', id: "com.subscribe.pro.year", latest: "ddm1023" },  //Ptime-拼图(需试用)
-  'Prookie': { cm: 'timea', hx: 'hxpda', id: "prookie.month.withtrial.0615", latest: "ddm1023" },  //AI灵绘
-  'BodyTune': { cm: 'timea', hx: 'hxpda', id: "Bodypro1", latest: "ddm1023" },  //BodyTune-瘦身相机
-  'killer.sudoku.free.brain.puzzle': { cm: 'timea', hx: 'hxpda', id: "ks.i.iap.premium", latest: "ddm1023" },  //杀手数独
-  'sudoku.puzzle.free.game.brain': { cm: 'timea', hx: 'hxpda', id: "sudoku.i.sub.vvip.p1y", latest: "ddm1023" },  //数独
-  'One%20Markdown': { cm: 'timeb', hx: 'hxpda', id: "10012", latest: "ddm1023" },  //One Markdown
-  'MWeb%20iOS': { cm: 'timeb', hx: 'hxpda', id: "10001", latest: "ddm1023" },  //MWeb-编辑器/笔记/发布
-  'NYMF': { cm: 'timea', hx: 'hxpda', id: "com.nymf.app.premium_year", latest: "ddm1023" },  //Nymf艺术照片
-  'com.lockwidt.cn': { cm: 'timea', hx: 'hxpda', id: "com.lockwidt.cn.member", latest: "ddm1023" },  //壁纸16
-  'Utsuki': { cm: 'timea', hx: 'hxpda', id: "KameePro", latest: "ddm1023" },  //梦见账本
-  'Processing': { cm: 'timeb', hx: 'hxpda', id: "wtf.riedel.processing.lifetime", latest: "ddm1023" },  //Processing-软件开发工具
-  'one%20sec': { cm: 'timea', hx: 'hxpda', id: "wtf.riedel.one_sec.pro.annual.individual", latest: "ddm1023" },  //one sec-番茄钟
-  'com.skysoft.pencilsketch': { cm: 'timea', hx: 'hxpda', id: "com.skysoft.pencilsketch.subscription.yearly", latest: "ddm1023" },  //铅笔画(需试用)
-  'com.instagridpost.rsigp': { cm: 'timea', hx: 'hxpda', id: "com.GridPost.oneyearplus", latest: "ddm1023" },  //九宫格切图
-  'com.skysoft.picsqueen': { cm: 'timea', hx: 'hxpda', id: "com.skysoft.picsqueen.subscription.yearly", latest: "ddm1023" },  //PicsQueen-AI绘图
-  'com.skysoft.removalfree': { cm: 'timea', hx: 'hxpda', id: "com.skysoft.removalfree.discount.unlimitedaccess", latest: "ddm1023" },  //神奇消除笔-图片消除
-  'com.skysoft.facecartoon': { cm: 'timea', hx: 'hxpda', id: "com.skysoft.facecartoon.subscription.yearly", latest: "ddm1023" },  //卡通头像
-  'Jennie%20AI': { cm: 'timea', hx: 'hxpda', id: "com.skysoft.text2img.vip.yearly", latest: "ddm1023" },  //Jennie AI制作图片
-  'MGhostLens': { cm: 'timea', hx: 'hxpda', id: "com.ghostlens.premium1month", latest: "ddm1023" },  //魔鬼相机
-  'Luminous': { cm: 'timea', hx: 'hxpda', id: "com.spacemushrooms.weekly", latest: "ddm1023" },  //光影修图
-  'RitmoVideo': { cm: 'timea', hx: 'hxpda', id: "com.zhk.hidebox.yearly", latest: "ddm1023" },  //RitmoVideo
-  'PerfectImage': { cm: 'timea', hx: 'hxpda', id: "Perfect_Image_VIP_Yearly", latest: "ddm1023" },  //完美影像(需试用)
-  'moment': { cm: 'timea', hx: 'hxpda', id: "PYJMoment2", latest: "ddm1023" },  //片羽集(需试用)
-  'Planner%20Plus': { cm: 'timea', hx: 'hxpda', id: "com.btgs.plannerfree.yearly", latest: "ddm1023" },  //PlannerPro-日程安排
-  'HiddenBox': { cm: 'timec', hx: 'hxpdb', version: "1" },//我的书橱
-  'Synthesizer': { cm: 'timea', hx: 'hxpda', id: "com.qingxiu.synthesizer.mon", latest: "ddm1023" },  //语音合成
-  'ContractMaster': { cm: 'timea', hx: 'hxpda', id: "com.qingxiu.contracts.monthly", latest: "ddm1023" },  //印象全能王
-  'MyDiary': { cm: 'timea', hx: 'hxpda', id: "diary.yearly.vip.1029", latest: "ddm1023" },  //我的日记
-  'Translator': { cm: 'timea', hx: 'hxpda', id: "trans_sub_week", latest: "ddm1023" },  //翻译家
-  'ToDoList': { cm: 'timea', hx: 'hxpda', id: "todolist.subscription.yearly", latest: "ddm1023" },  //ToDoList(需试用)
-  'Idea': { cm: 'timea', hx: 'hxpda', id: "top.ideaapp.ideaiOS.membership.oneyear", latest: "ddm1023" },  //灵感(需试用)
-  'ZeroTuImg': { cm: 'timea', hx: 'hxpda', id: "ZeroTuImgPlus", latest: "ddm1023" },  //Zero壁纸
-  'com.traveltao.ExchangeAssistant': { cm: 'timea', hx: 'hxpda', id: "lxbyplus", latest: "ddm1023" },  //极简汇率(需试用)
-  'ServerKit': { cm: 'timea', hx: 'hxpda', id: "com.serverkit.subscription.year.a", latest: "ddm1023" },  //服务器助手
-  'RawPlus': { cm: 'timea', hx: 'hxpda', id: "com.dynamicappdesign.rawplus.yearlysubscription", latest: "ddm1023" },  //Raw相机
-  'OrderGenerator': { cm: 'timeb', hx: 'hxpda', id: "oder_pay_forever", latest: "ddm1023" },  //订单生成
-  'GenerateAllOrdersTool': { cm: 'timea', hx: 'hxpda', id: "Order_Vip_010", latest: "ddm1023" },  //订单生成器(需试用)
-  'MoMoShouZhang': { cm: 'timea', hx: 'hxpda', id: "shunchangshouzhangQuarterlyPlus", latest: "ddm1023" },  //卡卡手账(需试用)
-  'Mindkit': { cm: 'timeb', hx: 'hxpda', id: "mindkit_permanently", latest: "ddm1023" },  //Mindkit
-  'DailySpending': { cm: 'timea', hx: 'hxpda', id: "com.xxtstudio.dailyspending.year", latest: "ddm1023" },  //Daily记账
-  'Miary': { cm: 'timeb', hx: 'hxpda', id: "lifetime_sub", latest: "ddm1023" },  //Miary-记录日记
-  'Noted': { cm: 'timeb', hx: 'hxpda', id: "com.digitalworkroom.noted.plus.lifetime", latest: "ddm1023" },  //Noted-录音笔记软件
-  'BingQiTools': { cm: 'timea', hx: 'hxpda', id: "bingqi_e2", latest: "ddm1023" },  //猫狗翻译
-  'AnyDown': { cm: 'timeb', hx: 'hxpda', id: "com.xiaoqi.down.forever", latest: "ddm1023" },  //AnyDown-下载神器
-  'Reader': { cm: 'timeb', hx: 'hxpda', id: "com.xiaoqi.reader.forever", latest: "ddm1023" },  //爱阅读-TXT阅读器
-  'com.bestmusicvideo.formmaster': { cm: 'timea', hx: 'hxpda', id: "com.form.1yearvip", latest: "ddm1023" },  //表格大师
-  'ExcelSpreadSheetsWPS': { cm: 'timea', hx: 'hxpda', id: "com.turbocms.SimpleSpreadSheet.viponeyear", latest: "ddm1023" },  //简易表格(需试用)
-  'XinQingRiJi': { cm: 'timea', hx: 'hxpda', id: "zhiwenshouzhangQuarterlyPlus", latest: "ddm1023" },  //猫咪手帐(需试用)
-  'Nutrilio': { cm: 'timea', hx: 'hxpda', id: "net.nutrilio.one_year_plus", latest: "ddm1023" },  //Nutrilio
-  'AIHeader': { cm: 'timea', hx: 'hxpda', id: "com.ai.avatar.maker.month.3dayfree", latest: "ddm1023" },  //AI头像馆
-  'MoodTracker': { cm: 'timeb', hx: 'hxpda', id: "co.vulcanlabs.moodtracker.lifetime2", latest: "ddm1023" },  //ChatSmith(美区)
-  'com.dandelion.Routine': { cm: 'timeb', hx: 'hxpda', id: "membership", latest: "ddm1023" },  //小日常
-  'YSBrowser': { cm: 'timeb', hx: 'hxpda', id: "com.ys.pro", latest: "ddm1023" },  //亚瑟浏览器
-  'org.zrey.metion': { cm: 'timed', hx: 'hxpda', id: "org.zrey.metion.pro", ids: "org.zrey.metion.main", latest: "ddm1023" },  //Metion-基础+Pro
-  'ZenJournal': { cm: 'timea', hx: 'hxpda', id: "zen_pro", latest: "ddm1023" },  //禅记
-  '%E5%80%92%E6%94%BE%E6%8C%91%E6%88%98': { cm: 'timea', hx: 'hxpda', id: "com.abighead.ReverseChallenge.iap.pro.year", latest: "ddm1023" },  //倒放挑战
-  'com.visualmidi.app.perfectpiano.Perfect-Piano': { cm: 'timea', hx: 'hxpda', id: "auto_renew_monthly_subscription", latest: "ddm1023" },  //完美钢琴
-  'Straw': { cm: 'timea', hx: 'hxpda', id: "com.1year.eyedropper", latest: "ddm1023" },  //吸管Pro-取色
-  'vibee': { cm: 'timea', hx: 'hxpda', id: "com.vibee.year.bigchampagne", latest: "ddm1023" },  //vibee-氛围歌单小组件
-  'Lister': { cm: 'timea', hx: 'hxpda', id: "com.productlab.lister.yearly", latest: "ddm1023" },  //Lister-计划清单
-  'DrumPads': { cm: 'timeb', hx: 'hxpda', id: "com.gismart.drumpads.pro_lifetime_30", latest: "ddm1023" },  //BeatMakerGo-打碟机/打击垫/DJ鼓机
-  'com.photoslab.ai.writerassistant': { cm: 'timea', hx: 'hxpda', id: "com.photoslab.ai.writerassistant.year", latest: "ddm1023" },  //Smart AI
-  'WaterMaskCamera': { cm: 'timea', hx: 'hxpda', id: "com.camera.watermark.yearly.3dayfree", latest: "ddm1023" },  //徕卡水印相机
-  'ColorPaint': { cm: 'timea', hx: 'hxpda', id: "coloring.app.singingfish.year", latest: "ddm1023" },  //涂色
-  'SymbolKeyboard': { cm: 'timeb', hx: 'hxpda', id: "fronts.keyboard.singingfish.one", latest: "ddm1023" },  //Fonts花样字体
-  'com.SingingFish.SudokuGame': { cm: 'timea', hx: 'hxpda', id: "com.singingfish.sudokugame.year", latest: "ddm1023" },  //数独
-  'com.kuaijiezhilingdashi.appname': { cm: 'timea', hx: 'hxpda', id: "com.othermaster.yearlyvip", latest: "ddm1023" },  //快捷指令库
-  'LogInput': { cm: 'timea', hx: 'hxpda', id: "com.logcg.loginput", latest: "ddm1023" },  //落格输入法
-  'HandNote': { cm: 'timeb', hx: 'hxpda', id: "permanent_membership", latest: "ddm1023" },  //千本笔记
-  'Kilonotes': { cm: 'timea', hx: 'hxpda', id: "kipa_kilonotes_quarter_subscription", latest: "ddm1023" },  //千本笔记
-  'YiJianKouTu': { cm: 'timea', hx: 'hxpda', id: "XiChaoYiJianKouTuPlus", latest: "ddm1023" },  //一键抠图
-  'FileArtifact': { cm: 'timeb', hx: 'hxpda', id: "com.shengzhou.fileartifact.permanent", latest: "ddm1023" },  //文晓生
-  'Wext': { cm: 'timeb', hx: 'hxpda', id: "com.lmf.wext.life", latest: "ddm1023" },  //万源阅读
-  'ColorCapture': { cm: 'timeb', hx: 'hxpda', id: "10001", latest: "ddm1023" },  //色采
-  'xTerminal': { cm: 'timea', hx: 'hxpda', id: "xterminal.pro2", latest: "ddm1023" },  //xTerminal
-  'Fotoz': { cm: 'timeb', hx: 'hxpda', id: "com.kiddy.fotoz.ipa.pro", latest: "ddm1023" },  //Fotoz - 图片一键下载
-  'TheLastFilm': { cm: 'timea', hx: 'hxpda', id: "Filmroll_Pro_1Year", latest: "ddm1023" },  //最后一卷胶片(需订阅一次)
-  'Motivation': { cm: 'timea', hx: 'hxpda', id: "com.monkeytaps.motivation.premium.year3", latest: "ddm1023" },  //Motivation
-  'io.sumi.GridDiary2': { cm: 'timea', hx: 'hxpda', id: "io.sumi.GridDiary.pro.annually", latest: "ddm1023" },  //格志
-  'Subscriptions': { cm: 'timea', hx: 'hxpda', id: "com.touchbits.subscriptions.iap.pro.yearly", latest: "ddm1023" },  //订阅通
-  'com.leapfitness.fasting': { cm: 'timea', hx: 'hxpda', id: "com.leapfitness.fasting.oneyear1", latest: "ddm1023" },  //168轻断食
-  'WidgetBox': { cm: 'timeb', hx: 'hxpda', id: "widgetlab001", latest: "ddm1023" },  //小组件盒子
-  'LifeTracker': { cm: 'timea', hx: 'hxpda', id: "com.dk.lifetracker.yearplan", latest: "ddm1023" },  //Becord生活记录
-  'imgplay': { cm: 'timea', hx: 'hxpda', id: "me.imgbase.imgplay.subscriptionYearly", latest: "ddm1023" },  //imgPlay
-  'WaterMinder': { cm: 'timea', hx: 'hxpda', id: "waterminder.premiumYearly", latest: "ddm1023" },  //WaterMinder喝水APP
-  'HashPhotos': { cm: 'timeb', hx: 'hxpda', id: "com.kobaltlab.HashPhotos.iap.allinone.free", latest: "ddm1023" },  //HashPhotos
-  'FileBrowser': { cm: 'timea', hx: 'hxpda', id: "com.qingcheng.filex.pro.yearly", latest: "ddm1023" },  //松鼠下载
-  'SilProject': { cm: 'timea', hx: 'hxpda', id: "com.sm.Alina.Pro", latest: "ddm1023" },  //Alina米克锁屏—
-  'com.chenxi.shanniankapian': { cm: 'timea', hx: 'hxpda', id: "com.chenxi.shannian.superNian", latest: "ddm1023" },  //闪念
-  'com.risingcabbage.pro.camera': { cm: 'timea', hx: 'hxpda', id: "com.risingcabbage.pro.camera.yearlysubscription", latest: "ddm1023" },  //ReLens相机
-  'co.bazaart.patternator': { cm: 'timea', hx: 'hxpda', id: "Patternator_Lock_Screen_Monthly", latest: "ddm1023" },  //拍特内头
-  '%E5%BD%95%E9%9F%B3%E4%B8%93%E4%B8%9A%E7%89%88': { cm: 'timea', hx: 'hxpda', id: "com.winat.recording.pro.yearly", latest: "ddm1023" },  //录音专业版
-  'cn.linfei.SimpleRecorder': { cm: 'timea', hx: 'hxpda', id: "cn.linfei.SimpleRecorder.Plus", latest: "ddm1023" },  //录音机
-  'com.maliquankai.appdesign': { cm: 'timec', hx: 'hxpdb', version: "1.5.8" },  //PutApp-应用收集
-  'PictureScanner': { cm: 'timea', hx: 'hxpda', id: "om.picturescanner.tool.year", latest: "ddm1023" },  //扫描王
-  'BestColor': { cm: 'timea', hx: 'hxpda', id: "com.bestColor.tool.month", latest: "ddm1023" },  //小红图
-  'com.decibel.tool': { cm: 'timea', hx: 'hxpda', id: "decibel98free3", latest: "ddm1023" },  //分贝测试仪
-  'MeasurementTools': { cm: 'timea', hx: 'hxpda', id: "mesurementyearvip", latest: "ddm1023" },  //测量工具
-  'TinyPNGTool': { cm: 'timea', hx: 'hxpda', id: "com.tinypngtool.tool.weekvip", latest: "ddm1023" },  //TinyPNG
-  'IconChange': { cm: 'timea', hx: 'hxpda', id: "iconeryearvip", latest: "ddm1023" },  //iconser图标更换
-  'life.journal.diary': { cm: 'timeb', hx: 'hxpda', id: "life.journal.diary.lifetime", latest: "ddm1023" },  //Today日记
-  'com.floatcamellia.motionninja': { cm: 'timea', hx: 'hxpda', id: "com.floatcamellia.motionninja.yearlyvip", latest: "ddm1023" },  //MotionNinja
-  'com.iuuapp.audiomaker': { cm: 'timed', hx: 'hxpda', id: "com.iuuapp.audiomaker.cloud.year", ids: "com.iuuapp.audiomaker.removeads", latest: "ddm1023" },  //音频剪辑
-  'com.biggerlens.photoretouch': { cm: 'timeb', hx: 'hxpda', id: "com.photoretouch.SVIP", latest: "ddm1023" },  //PhotoRetouch消除笔P图
-  'com.macpaw.iosgemini': { cm: 'timea', hx: 'hxpda', id: "com.macpaw.iosgemini.month.trial", latest: "ddm1023" },  //GeminiPhotos
-  'com.mematom.ios': { cm: 'timea', hx: 'hxpda', id: "MMYear", latest: "ddm1023" },  //年轮3
-  'com.LuoWei.aDiary': { cm: 'timea', hx: 'hxpda', id: "com.LuoWei.aDiary.yearly0", latest: "ddm1023" },  //aDiary-待办日记本
-  'com.zerone.hidesktop': { cm: 'timeb', hx: 'hxpda', id: "com.zerone.hidesktop.forever", latest: "ddm1023" },  //iScreen-桌面小组件主题美化
-  'MagicWidget': { cm: 'timeb', hx: 'hxpda', id: "cf__forever_0_4.7.1", latest: "ddm1023" },  //ColorfulWidget—小组件
-  'com.tasmanic.capture': { cm: 'timea', hx: 'hxpda', id: "CTPCAPTUREYEARLY", latest: "ddm1023" },  //3DScanner-绘制/测量平面图
-  'com.readdle.CalendarsLite': { cm: 'timea', hx: 'hxpda', id: "com.readdle.CalendarsLite.subscription.year20trial7", latest: "ddm1023" },  //Calendars-日历/计划
-  'com.readdle.ReaddleDocsIPad': { cm: 'timea', hx: 'hxpda', id: "com.readdle.ReaddleDocsIPad.subscription.month10_allusers", latest: "ddm1023" },  //Documents
-  'com.1ps.lovetalk': { cm: 'timea', hx: 'hxpda', id: "com.1ps.lovetalk.normal.weekly", latest: "ddm1023" },  //高级恋爱话术
-  'tech.miidii.MDClock': { cm: 'timeb', hx: 'hxpda', id: "tech.miidii.MDClock.pro", latest: "ddm1023" },  //谜底时钟
-  'com.floatcamellia.prettyup': { cm: 'timeb', hx: 'hxpda', id: "com.floatcamellia.prettyup.onetimepurchase", latest: "ddm1023" },  //PrettyUp视频P图
-  'com.zijayrate.analogcam': { cm: 'timea', hx: 'hxpda', id: "com.zijayrate.analogcam.vipforever10", latest: "ddm1023" },  //oldroll复古相机
-  'WeeklyNote': { cm: 'timeb', hx: 'hxpda', id: "org.zrey.weeklynote.lifetime", latest: "ddm1023" },  //WeeklyNote-周周记
-  'DoMemo': { cm: 'timea', hx: 'hxpda', id: "org.zrey.fastnote.lifetime", latest: "ddm1023" },  //DoMemo-笔记和备忘录
-  'CostMemo': { cm: 'timea', hx: 'hxpda', id: "org.zrey.money.lifetime", latest: "ddm1023" },  //CostMemo-生活记账本
-  'iTimely': { cm: 'timeb', hx: 'hxpda', id: "org.zrey.iTimely.lifetime", latest: "ddm1023" },  //iTimely-记录
-  'net.daylio.Daylio': { cm: 'timea', hx: 'hxpda', id: "net.daylio.one_year_pro.offer_initial", latest: "ddm1023" },  //Daylio-日记
-  'com.yengshine.webrecorder': { cm: 'timea', hx: 'hxpda', id: "com.yengshine.webrecorder.yearly", latest: "ddm1023" },  //VlogStar-视频编辑器
-  'org.skydomain.foodcamera': { cm: 'timea', hx: 'hxpda', id: "org.skydomain.foodcamera.yearly", latest: "ddm1023" },  //Koloro-滤镜君
-  'com.yengshine.proccd': { cm: 'timea', hx: 'hxpda', id: "com.yengshine.proccd.yearly", latest: "ddm1023" },  //ProCCD相机
-  'com.palmmob.pdfios': { cm: 'timea', hx: 'hxpda', id: "com.palmmob.pdfios.168", latest: "ddm1023" },  //图片PDF转换器
-  'com.palmmob.scanner2ios': { cm: 'timea', hx: 'hxpda', id: "com.palmmob.scanner2ios.396", latest: "ddm1023" },  //文字扫描
-  'com.palmmob.officeios': { cm: 'timea', hx: 'hxpda', id: "com.palmmob.officeios.188", latest: "ddm1023" },  //文档表格编辑
-  'com.palmmob.recorder': { cm: 'timea', hx: 'hxpda', id: "com.palmmob.recorder.198", latest: "ddm1023" },  //录音转文字
-  'com.7color.newclean': { cm: 'timea', hx: 'hxpda', id: "com.cleaner.salesyear", latest: "ddm1023" },  //手机清理
-  'Habbit': { cm: 'timea', hx: 'hxpda', id: "HabitUpYearly", latest: "ddm1023" },  //习惯清单
-  'com.dbmeterpro.dB-Meter-Free': { cm: 'timea', hx: 'hxpda', id: "com.dbmeterpro.premiumModeSubscriptionWithTrial", latest: "ddm1023" },  //dBMeter-分贝仪(专业版)
-  'com.vstudio.newpuzzle': { cm: 'timea', hx: 'hxpda', id: "com.vstudio.newpuzzle.yearlyVipFreetrail.15_99", latest: "ddm1023" },  //拼图酱
-  'com.jianili.Booka': { cm: 'timea', hx: 'hxpda', id: "com.jianili.Booka.pro.yearly", latest: "ddm1023" },  //Booka-极简书房
-  'com.ziheng.OneBox': { cm: 'timeb', hx: 'hxpda', id: "com.ziheng.OneBox", latest: "ddm1023" },  //Pandora管理订阅
-  'ChickAlarmClock': { cm: 'timea', hx: 'hxpda', id: "com.ChickFocus.ChickFocus.yearly_2023_promo", latest: "ddm1023" },  //小鸡专注
-  'MyWorks': { cm: 'timea', hx: 'hxpda', id: "com.MyWorks.Handwritten.Year", latest: "ddm1023" },  //仿手写
-  'Instant%20Saver': { cm: 'timea', hx: 'hxpda', id: "com.pocket.compress.yearly", latest: "ddm1023" },  //InstantSocialSaver(ins下载)
-  'SaveTik': { cm: 'timea', hx: 'hxpda', id: "com.pocket.compress.yearly", latest: "ddm1023" },  //SaveTik
-  '%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8': { cm: 'timea', hx: 'hxpda', id: "com.mobislet.files.yearly", latest: "ddm1023" },  //文件管理器
-  'ZIP%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7': { cm: 'timea', hx: 'hxpda', id: "com.mobislet.zipfile.yearly", latest: "ddm1023" },  //ZIP压缩解压
-  'TPTeleprompter': { cm: 'timea', hx: 'hxpda', id: "com.pocket.compress.yearly", latest: "ddm1023" },  //爱提词
-  'com.pocket.photo': { cm: 'timea', hx: 'hxpda', id: "com.pocket.photo.yearly", latest: "ddm1023" },  //一寸证件照
-  'com.pocket.watermark': { cm: 'timea', hx: 'hxpda', id: "com.pocket.watermark.yearly", latest: "ddm1023" },  //一键水印
-  'com.pocket.compress': { cm: 'timea', hx: 'hxpda', id: "com.pocket.compress.yearly", latest: "ddm1023" },  //压缩软件
-  'com.pocket.format': { cm: 'timea', hx: 'hxpda', id: "com.pocket.format.yearly", latest: "ddm1023" },  //格式转换
-  'com.CalculatorForiPad.InternetRocks': { cm: 'timea', hx: 'hxpda', id: "co.airapps.calculator.year", latest: "ddm1023" },  //计算器Air
-  'solutions.wzp': { cm: 'timea', hx: 'hxpda', id: yearlysubscription, latest: "ddm1023" },  //airapps
-  'co.airapps': { cm: 'timea', hx: 'hxpda', id: yearid, latest: "ddm1023" },  //airapps
-  'com.internet-rocks': { cm: 'timea', hx: 'hxpda', id: yearid, latest: "ddm1023" },  //airapps
-  'SuperWidget': { cm: 'timea', hx: 'hxpda', id: "com.focoslive", latest: "ddm1023" },  //PandaWidget小组件
-  'Picsew': { cm: 'timeb', hx: 'hxpdb', id: "com.sugarmo.ScrollClip.pro"},  //Picsew截长图3.9.4版本(最新版无效)
-  'vpn': { cm: 'timea', hx: 'hxpda', id: "yearautorenew", latest: "ddm1023" },  //VPN-unlimited
-  'TT': { cm: 'timea', hx: 'hxpda', id: "com.55panda.hicalculator.year_sub", latest: "ddm1023" },  //TT_私密相册管家
-  'Focos': { cm: 'timea', hx: 'hxpda', id: "com.focos.1w_t4_1w", latest: "ddm1023" },  //Focos
-  'ProKnockOut': { cm: 'timeb', hx: 'hxpda', id: "com.knockout.SVIP.50off", latest: "ddm1023" },  //ProKnockOut
-  'com.teadoku.flashnote': { cm: 'timea', hx: 'hxpda', id: "pro_ios_ipad_mac", latest: "ddm1023" },  //AnkiNote
-  'com.tapuniverse.texteditor': { cm: 'timea', hx: 'hxpda', id: "com.tapuniverse.texteditor.w", latest: "ddm1023" }  //TextEditor
+  'EnglishTalent': { tp: 'timea', hx: 'hxpda', id: "com.mango.newYearVip", strict: true }, //英语演讲
+  'art.yueyin.ebook-convert': { tp: 'timea', hx: 'hxpda', id: "art.yueyin.ebook.year" }, //电子书格式转换
+  'MaiqiSun': { tp: 'timeb', hx: 'hxpda', id: "life_cn_68" }, //iSunning
+  'CCRemote': { tp: 'timea', hx: 'hxpda', id: "ays.chromo.remote.yearly" }, //Chromo-Remote
+  'PulseWatch': { tp: 'timeb', hx: 'hxpda', id: "relaxlife_ebp" }, //RelaxWatch:AI智能压力监测
+  'PicCompress': { tp: 'timea', hx: 'hxpda', id: "pc_vip_new_1y" }, //图片压缩
+  'XiangCePhoto': { tp: 'timeb', hx: 'hxpda', id: "ql128" }, //相册清理-删除重复照片
+  'FileMaster': { tp: 'timeb', hx: 'hxpda', id: "FileMaster_ProVersion" },  //文件大师
+  'Squeeze': { tp: 'timea', hx: 'hxpda', id: "uk.co.olsonapps.kegeltrainerlite.yearly" },  //凯格尔运动教练-盆底肌运动
+  'Tuesday': { tp: 'timeb', hx: 'hxpda', id: "PIGLET_VIP_Forever" },  //Tuesday-纪念日
+  'IPTV%20Flixana': { tp: 'timeb', hx: 'hxpda', id: "iptv_flixana_lifetime_sub" },  //IPTV Flixana
+  'AdBlocker': { tp: 'timeb', hx: 'hxpda', id: "com.va.adBlocker.lifeTimefree" },  //AdBlocker
+  'ECGPlus': { tp: 'timeb', hx: 'hxpda', id: "com.wms.hrv.pro" },  //ECG+心电房颤分析
+  'PhotosPK': { tp: 'timeb', hx: 'hxpda', id: "indie.davidwang.PicPicks.membership.lifetime" },  //PicPicks-AI智能照片整理
+  'WatchWallpaper': { tp: 'timea', hx: 'hxpda', id: "indie.davidwang.WatchWallpaper.yearsubscriptegold" },  //表盘专辑
+  'com.beauty.MeiTui': { tp: 'timea', hx: 'hxpda', id: "vip_member_v3_365day" },  //AI美腿
+  'ChmReader': { tp: 'timeb', hx: 'hxpda', id: "EpubReader_ProVersion" },  //Epub阅读器
+  'MediaConvert': { tp: 'timeb', hx: 'hxpda', id: "MediaConverter_ProVersion" },  //格式转换
+  'FDSunAlly': { tp: 'timeb', hx: 'hxpda', id: "com.freenotes.sunally.lifetime" },  //SunAlly-智能健康助力
+  'Period': { tp: 'timeb', hx: 'hxpda', id: "com.hanchongzan.time.pro" },  //时光提醒
+  'com.sixiaobo.MusCut': { tp: 'timeb', hx: 'hxpdb', id: "com.purecollage.pro" },  //无损拼图
+  'com.hanchongzan.loverlist': { tp: 'timeb', hx: 'hxpda', id: "com.hanchongzan.loverlist.01" },  //恋人清单
+  'FlashTransportMaster': { tp: 'timea', hx: 'hxpda', id: "com.flashtransport.fightenegery.yearly.base" },  //时光罐罐
+  'com.ideack.ASR': { tp: 'timeb', hx: 'hxpda', id: "ASR_Permanent_Plan" },  //录音转文字
+  'Presets': { tp: 'timea', hx: 'hxpda', id: "com.chromatech.chroma.yearlyAutoRenewable" },  //Presets:照片处理、图像编辑器
+  'GoodTask': { tp: 'timeb', hx: 'hxpda', id: "com.hahainteractive.goodtask3.pro" },  //代办事项清单-GoodTask
+  'com.hanchongzan.period': { tp: 'timeb', hx: 'hxpda', id: "com.hanchongzan.period.girl" },  //姨妈来咯
+  'com.hanchongzan.book': { tp: 'timeb', hx: 'hxpda', id: "com.hanchongzan.book.vip" }, //闪电记账
+  'SoundLab': { tp: 'timeb', hx: 'hxpda', id: "8001" },  //合声-音乐制作
+  'ECGANALYZER': { tp: 'timea', hx: 'hxpda', id: "com.wms.hrv.yearlyfamilysharing" }, //ECG+
+  'com.RuoG.Pixiu': { tp: 'timea', hx: 'hxpda', id: "com.RuoG.Pixiu.VIPYear" }, //貔貅记账
+  'com.ideack.BusinessCard': { tp: 'timeb', hx: 'hxpda', id: "BusinessCardVipPerpetual" }, //名片夹
+  'com.ideack.MagicAudio': { tp: 'timeb', hx: 'hxpdb', id: "MagicAudioPermanent" }, //音乐剪辑
+  'DuChuangZhe': { tp: 'timea', hx: 'hxpda', id: "org.zrey.du.main" }, //独创者
+  'PhotoWhite': { tp: 'timeb', hx: 'hxpda', id: "org.zrey.photowhite.flash_lifetime" },  //印白相册
+  'Pure%20Tuber%20Pro': { tp: 'timeb', hx: 'hxpda', id: "lifetime" },  //PureTuberPro
+  'FETreeVideoChange': { tp: 'timeb', hx: 'hxpda', id: "com.dj.videototext.forever" },  //视频转文字
+  '%E5%B0%8F%E5%B0%8F%E7%9B%B8%E6%9C%BA%E5%A4%A7%E5%B8%88': { tp: 'timeb', hx: 'hxpda', id: "com.ai.merge.forever.vip" },  //乐颜
+  'FoodIdentificationTool': { tp: 'timeb', hx: 'hxpda', id: "20002" },  //剂查查
+  'com.qingcheng.seal.Seal': { tp: 'timeb', hx: 'hxpda', id: "com.qingcheng.seal.Seal.premium.forever" },  //印章制作
+  'com.geekapp.VoiceTranslation': { tp: 'timeb', hx: 'hxpda', id: "VoiceTranslatorPerpetual" },  //出国翻译官
+  'com.idealityapp.VideoEditing': { tp: 'timeb', hx: 'hxpda', id: "MagicVideo_Vip_Permanent" },  //魔影-视频剪辑
+  'YinzhangMaster': { tp: 'timeb', hx: 'hxpda', id: "com.xiaoqi.seal.forever" },  //印章大师
+  'com.cuilingshi.flipclock': { tp: 'timeb', hx: 'hxpda', id: "FlipClockProVersion" },  //翻页时钟
+  'com.maine.aifill': { tp: 'timeb', hx: 'hxpda', id: "com.maine.aifill.unlimited" },  //AI FILL-智能填充.换衣/换背景
+  'DeviceFinder': { tp: 'timeb', hx: 'hxpda', id: "com.wonderfind.lifetime" },  //Wonderfind-设备查找
+  'Graphionica': { tp: 'timea', hx: 'hxpda', id: "premium_year" },  //Graphionica
+  'AIAssistant': { tp: 'timea', hx: 'hxpda', id: "AIchat_1w_7.99_trial" },  //AIAssistant
+  'MonitorPlus': { tp: 'timeb', hx: 'hxpda', id: "com.unhonin.MonitorPlus.proversion" },  //Monitor+
+  'MessageHold': { tp: 'timea', hx: 'hxpda', id: "com.messagehold.forever" },  //拦截盾
+  'co.vulcanlabs': { tp: 'timea', hx: 'hxpda', id: lifetimeid },  //vulcanlabs合集
+  'Guitar%20Gravitas': { tp: 'timea', hx: 'hxpda', id: "GuitarGravitasChordsScalesArpeggiosLessons" },  //GuitarGravitas
+//  'com.eleven.chatgpt': { tp: 'timea', hx: 'hxpda', id: "com.chatgpt.yearly" },  //ChatAI
+  'com.casttv.remotetv': { tp: 'timeb', hx: 'hxpda', id: "liftetime2" }, //TVRemote电视遥控器
+  'WallpaperWidget': { tp: 'timea', hx: 'hxpda', id: "com.widget.theme.yearly.3dayfree" }, //壁纸主题(需试用)
+  'ProREC': { tp: 'timea', hx: 'hxpda', id: "ProAudioCamera_Annual" }, //ProREC-相机
+  'TypeOn%20Keyboard': { tp: 'timeb', hx: 'hxpda', id: "com.hanchongzan.book.vip" }, //TypeOn
+  'PhotoCollagePro': { tp: 'timeb', hx: 'hxpda', id: "PHOTABLE_PREMIUM" }, //Photable-腹肌P图神器
+  'com.alphamobiletech.bodyApp': { tp: 'timeb', hx: 'hxpda', id: "Bodyapp_Forever" }, //Bodyapp-身材修图软件
+  'com.alphamobiletech.facey': { tp: 'timeb', hx: 'hxpda', id: "Facey_Forever" }, //Facey-专业彩妆P图神器
+  'Packet': { tp: 'timeb', hx: 'hxpda', id: "com.aaaalab.nepacket.iap.full" }, //HTTPS抓包
+  'AllMyBatteries': { tp: 'timeb', hx: 'hxpda', id: "AllMyBatteries_Ultimate" }, //AllMyBatteries-电池管家
+  'VDIT': { tp: 'timeb', hx: 'hxpda', id: "me.imgbase.videoday.profeaturesLifetime" }, //VDIT-视频转换
+  'CodeSnippet': { tp: 'timea', hx: 'hxpda', id: "it.beatcode.codesnippetpro.annualSubscription" }, //CodeSnippet
+  'darkWeb': { tp: 'timea', hx: 'hxpda', id: "dforce_unlock_all_functions" }, //DForce-Safari扩展
+  'BookReader': { tp: 'timea', hx: 'hxpda', id: "com.reader.1year" }, //阅读器-小说阅读器
+  'BeatStation': { tp: 'timea', hx: 'hxpda', id: "BS_Pro_Yearly" }, //BeatStation-节奏工作站
+  'FastPlayer': { tp: 'timea', hx: 'hxpda', id: "VideoPlayer_ProVersion" }, //万能播放器
+  'SimpleNotation': { tp: 'timeb', hx: 'hxpda', id: "com.xinlin.notation.once" }, //简谱大师
+  'ChordMaster': { tp: 'timeb', hx: 'hxpda', id: "com.chordMaster.once" }, //MusicTotor-识谱大师
+  'Xfuse': { tp: 'timeb', hx: 'hxpda', id: "com.xfuse.ProVision" }, //磁力宅播放器
+  'com.BertonYc.ScannerOCR': { tp: 'timeb', hx: 'hxpda', id: "Scanner_Subscibe_Permanent" }, //万能扫描王
+  'HRV': { hx: 'hxpdc', id: "com.stress.test.record.yearly" },  //解压小橘子(需试用)
+  'iVCam': { tp: 'timeb', hx: 'hxpda', id: "ivcam.full" },//iVCam-电脑摄像头
+  'RBrowser': { tp: 'timea', hx: 'hxpda', id: "com.mm.RBroswer.product11" }, //R浏览器(需试用)
+  'Filterra': { tp: 'timeb', hx: 'hxpda', id: "com.filterra.wtonetimepurchase" },//Filterra-照片编辑器
+  'MOLDIV': { tp: 'timeb', hx: 'hxpda', id: "com.jellybus.Moldiv.IAP.PRO7999" },//MOLDIV-视频/照片编辑
+  'PICSPLAY': { tp: 'timea', hx: 'hxpda', id: "com.jellybus.PicsPlay2.IAP.PRO5999" },//PICSPLAY-照片编辑
+  'Rookie': { tp: 'timea', hx: 'hxpda', id: "com.jellybus.Rookie.IAP.PRO5999" },//RKCAM-照片编辑
+  'MoneyWiz': { tp: 'timea', hx: 'hxpda', id: "com.moneywiz.personalfinance.1year" }, //MoneyWiz-个人财务
+  'qxzs': { tp: 'timeb', hx: 'hxpda', id: "yongjiu" },//心率广播
+  'Overdrop': { tp: 'timeb', hx: 'hxpda', id: "com.weather.overdrop.forever" }, //Overdrop-天气预报
+  'Boom': { tp: 'timeb', hx: 'hxpda', id: "com.globaldelight.iBoom.LifetimeDiscountPack" }, //Boom-感受音乐
+  'PDFReaderPro%20Free': { tp: 'timeb', hx: 'hxpda', id: "com.pdfreaderpro.free.member.all_access_pack_permanent_license.001" }, //PDFReaderProFree
+  'VideoHelper': { tp: 'timeb', hx: 'hxpda', id: "vip_service" }, //媒关系
+  'Digital%20Planner': { tp: 'timea', hx: 'hxpda', id: "com.softwings.DigitalPlanner.1year" }, //电子手帐
+  'SuperMandarin': { tp: 'timea', hx: 'hxpda', id: "pth_vip_year" }, //普通话水平测试
+  'SuperQuestion': { tp: 'timea', hx: 'hxpda', id: "qtzs_vip_year" }, //真题全刷
+  'SuperElves': { tp: 'timeb', hx: 'hxpda', id: "com.SuperElves.Answer.Forever" }, //答案精灵
+  'SuperDriving': { tp: 'timeb', hx: 'hxpda', id: "jiakao_vip_forever" }, //驾考学典
+  'Pollykann': { tp: 'timeb', hx: 'hxpda', id: "vip.forever.pollykann" }, //小鹦看看
+  'JCCalendar': { tp: 'timeb', hx: 'hxpda', id: "com.sjc.calendar.vip.lifelong" }, //简约日历
+  'com.yanxia.ChsMedical': { tp: 'timeb', hx: 'hxpda', id: "VIPUser" }, //中医精华
+  'SuperPointer': { tp: 'timeb', hx: 'hxpda', id: "com.SuperPointer.Location.Forever" }, //海拔指南针
+  'SnakeReader': { tp: 'timea', hx: 'hxpda', id: "com.lyran.snakescanner.premium18" }, //开卷阅读
+  'FourthPPT': { tp: 'timeb', hx: 'hxpda', id: "com.FourthPPT.Mobile.Forever" }, //PPT制作软件
+  'OneExtractor': { tp: 'timeb', hx: 'hxpda', id: "com.OneExtractor.Video.Forever" }, //视频提取器
+  'com.Colin.Colors': { tp: 'timea', hx: 'hxpda', id: "com.colin.colors.annualVIP" }, //搜图
+  'PhotosSorter': { tp: 'timeb', hx: 'hxpda', id: "sorter.pro.ipa" }, //Sorter-相册整理
+  'intolive': { tp: 'timea', hx: 'hxpda', id: "me.imgbase.intolive.proSubYearly" }, //intolive-实况壁纸制作器
+  'MyAlbum': { tp: 'timeb', hx: 'hxpda', id: "com.colin.myalbum.isUpgradeVip" }, //Cleaner-照片管理
+  'VideoEditor': { tp: 'timeb', hx: 'hxpda', id: "com.god.videohand.alwaysowner" }, //VideoShot
+  'PhotoMovie': { tp: 'timea', hx: 'hxpda', id: "com.mediaeditor.photomovie.year" }, //PhotoMovie-照片视频
+  'ShotOn': { tp: 'timeb', hx: 'hxpda', id: "com.colin.shoton.forevervip" }, //ShotOn
+  'PhimCiaj': { tp: 'timeb', hx: 'hxpda', id: "com.jiancent.calligraphymaster.lifetime" }, //练字大师
+  'TimeCut': { tp: 'timea', hx: 'hxpda', id: "com.floatcamellia.hfrslowmotion.forevervip" },  //TimeCut
+  'com.floatcamellia.motiok': { tp: 'timea', hx: 'hxpda', id: "com.floatcamellia.motiok.vipforever" },  //Hype_Text-AE特效片制作
+  'POPOLockScreenWidgetable': { tp: 'timea', hx: 'hxpda', id: "com.widget.fightenegery.yearly" },  //多彩壁纸
+  'GreetingScanner': { tp: 'timea', hx: 'hxpda', id: "com.alphaplus.greetingscaner.w.b" },  //扫描识别王
+  'FancyCamPlus': { tp: 'timea', hx: 'hxpda', id: "com.alphaplus.fancycam.year.198" },  //悦颜相机
+  'Again': { tp: 'timeb', hx: 'hxpda', id: "com.owen.again.profession" },  //Again-稍后阅读器
+  'remotelg': { tp: 'timeb', hx: 'hxpda', id: "com.gqp.remotelg.lifetime" },  //UniversalRemoteTV+ 遥控器
+  'Notebook': { tp: 'timea', hx: 'hxpda', id: "com.zoho.notebook.ios.personal.yearly" },  //Notebook
+  'com.damon.dubbing': { tp: 'timea', hx: 'hxpda', id: "com.damon.dubbing.vip12" },  //有声英语绘本
+  'ZHUBEN': { tp: 'timea', hx: 'hxpda', id: "com.xiaoyu.yue" },  //有声英语绘本
+  'XIAOTangHomeParadise': { tp: 'timea', hx: 'hxpda', id: "com.yuee.mo2" },  //鸿海幼儿启蒙
+  'film': { tp: 'timea', hx: 'hxpda', id: "pro_auto_subscribe_year_ovs" },  //胶卷相机
+  'Muza': { tp: 'timea', hx: 'hxpda', id: "com.appmuza.premium_year" },  //Muza-修图APP
+  'StandbyWidget': { tp: 'timed', hx: 'hxpda', id: "com.standby.idream.year.68", ids: "standbyus.nonconsume.missingyou" },  //StandBy_Us-情侣定位
+  'Mango6Minute': { tp: 'timea', hx: 'hxpda', id: "576170870" },  //6分钟英语
+  'Photo%20Cutout': { tp: 'timea', hx: 'hxpda', id: "com.icepine.allyear" },  //轻松扣图
+  'cleanPhone': { tp: 'timea', hx: 'hxpda', id: "com.clean.year" },  //爱机清理
+  'ppt': { tp: 'timea', hx: 'hxpda', id: "com.palmmob.pptios.yearly" },  //手机PPT制作
+  'WasteCat': { tp: 'timeb', hx: 'hxpda', id: "dev.sanjin.WasteCat.PermanentVip" },  //垃圾贪吃猫
+  'MeowTalk': { tp: 'timea', hx: 'hxpda', id: "meowtalk.month.basic.autorenewable.subscription" },  //喵说
+  'habitdot': { tp: 'timeb', hx: 'hxpda', id: "habitdots_pro_forever" },  //习惯点点
+  'stretchworkout': { tp: 'timea', hx: 'hxpda', id: "com.abishkking.premiumYearStretch" },  //拉伸运动
+  'Planist': { tp: 'timed', hx: 'hxpda', id: "org.zrey.planist.main", ids: "org.zrey.planist.lifetime" },  //Planist-计划和清单
+  'com.uzstudio.avenuecast.ios': { tp: 'timeb', hx: 'hxpda', id: "1001" },  //凡视知音
+  'CongZhenBaZi': { tp: 'timeb', hx: 'hxpda', id: "vip_forever_78" },  //八字排盘-从真版
+  'CongZhenQiMen': { tp: 'timea', hx: 'hxpda', id: "cn.congzhen.CongZhenQiMen.yearlyplan" },  //奇门遁甲
+  'ProFit': { tp: 'timea', hx: 'hxpda', id: "com.maxty.gofitness.yearlyplan" },  //ProFit锻炼计划
+  'FitnessBodybuildingVGFIT': { tp: 'timea', hx: 'hxpda', id: "com.vgfit.fitnessvip.yearly" },  //fitnessvip
+  'Water%20Reminder': { tp: 'timea', hx: 'hxpda', id: "com.vgfit.premiumtracker.year" },  //WaterReminder水提醒
+  '%E7%91%9C%E4%BC%BD': { tp: 'timea', hx: 'hxpda', id: "com.vgfit.yoga.yearly" },  //瑜伽
+  'GPSMaker': { tp: 'timea', hx: 'hxpda', id: "theodolite_vip_year" },  //指南针定位
+  'wrongbook': { tp: 'timea', hx: 'hxpda', id: "com.palmmob.wrongbookios.yearly" },  //错题宝
+  'excel': { tp: 'timea', hx: 'hxpda', id: "com.gamawh.excelerios.yearly" },  //办公文档
+  'Future%20Baby': { tp: 'timea', hx: 'hxpda', id: "com.nilu.faceseer.yearly" },  //宝宝长相预测
+  'Smoke': { tp: 'timea', hx: 'hxpda', id: "smoke19870727" },  //今日香烟
+  'AppAlarmIOS': { tp: 'timea', hx: 'hxpda', id: "alarm.me.vip.year.tier1" },  //Me+
+  'Tinglee': { tp: 'timea', hx: 'hxpdb', id: "vip.forever.tinglee" },  //英语听听
+  'NoteKeys': { tp: 'timea', hx: 'hxpda', id: "notekeys_access_weekly" },  //五线谱
+  'SheetMusicPro': { tp: 'timea', hx: 'hxpda', id: "sheetmusicpro.yearwithtrial" },  //乐谱吧
+  'ProtractorEdge': { tp: 'timea', hx: 'hxpda', id: "ProtracatorEdge.PremiumAccess" },  //量角器
+  'Piano%20Plus': { tp: 'timea', hx: 'hxpda', id: "kn_access_weekly" },  //Piano Plus
+  'Notation%20Pad': { tp: 'timea', hx: 'hxpda', id: "np_access_weekly" },  //Notation Pad
+  'Guitar%20Notation': { tp: 'timea', hx: 'hxpda', id: "gn_access_weekly" },  //Guitar Notation
+  'Piano%20Fantasy': { tp: 'timea', hx: 'hxpda', id: "com.lotuz.PianoFantasy.weekwithtrail" },  //钢琴幻想
+  'Piano%20Rush': { tp: 'timea', hx: 'hxpda', id: "com.lotuz.PianoPro.weekwithtrail" },  //钢琴大师
+  'com.richads.saucyart': { tp: 'timea', hx: 'hxpda', id: "com.richads.saucyart.sub.quarterly_29.99" },  //Perky
+  'SurveyorPro': { tp: 'timea', hx: 'hxpda', id: "com.celiangyuan.SurveyorPro.OneYear" },  //测量员Pro
+  'com.ydatong.dingdone': { tp: 'timeb', hx: 'hxpda', id: "com.ydatong.dingdone.vip.forever" },  //叮当代办
+  'Dial': { tp: 'timea', hx: 'hxpda', id: "2104" },  //T9拨号
+  'qxwp%20copy': { tp: 'timed', hx: 'hxpda', id: "com.chowjoe.wp2free.year.pro", ids: "com.chowjoe.wp2free.coin.70" },  //壁纸
+  'LingLongShouZ': { tp: 'timea', hx: 'hxpda', id: "zhenwushouzhangQuarterlyPlus" },  //Cute手帐软件
+  'MediaEditor': { tp: 'timeb', hx: 'hxpda', id: "alwaysowner" },  //剪影(需试用)
+  'UniversTranslate': { tp: 'timea', hx: 'hxpda', id: "com.univers.translator.tool.year" },  //翻译官(需试用)
+  'com.gostraight.smallAccountBook': { tp: 'timeb', hx: 'hxpda', id: "ForeverVIPPayment" },  //iCost记账(需要购买)
+  'ZJTBiaoGe': { tp: 'timea', hx: 'hxpda', id: "zhangjt.biaoge.monthvip" },  //表格手机版
+  'MiniMouse': { tp: 'timea', hx: 'hxpda', id: "minimouse_vip_1year" },  //MiniMouse
+  'Paste%20Keyboard': { tp: 'timea', hx: 'hxpda', id: "com.keyboard.1yetr" },  //复制和粘贴键盘
+  'EWA': { tp: 'timea', hx: 'hxpda', id: "com.ewa.renewable.subscription.year8" },  //EWA-学习外语
+  'BuBuSZ': { tp: 'timea', hx: 'hxpda', id: "quaVersion" },  //BuBu手帐
+  'CapyMood': { tp: 'timea', hx: 'hxpda', id: "com.paha.CapyMood.year" },  //CapyMood
+  'xyz.iofree.lifenotes': { tp: 'timea', hx: 'hxpda', id: "xyz.iofree.lifelog.pro.yearly" },  //人生笔记(需试用)
+  'com.icandiapps.nightsky': { tp: 'timea', hx: 'hxpda', id: "com.icandiapps.ns4.annual" },  //星空
+  'Wallpapers': { tp: 'timea', hx: 'hxpda', id: "wallpaperworld.subscription.yearly.12.notrial" },  //Wallpaper Tree壁纸
+  'com.yumiteam.Kuki.ID': { tp: 'timea', hx: 'hxpda', id: "com.yumiteam.Kuki.ID.2" },  //PicsLeap-美飞
+  'com.quangtm193.picpro': { tp: 'timea', hx: 'hxpda', id: "com.quangtm193.picpro1year" },  //PicPro-人工智能照片编辑器
+  'Storybeat': { tp: 'timea', hx: 'hxpda', id: "yearly_1" },  //Storybeat
+  'SmartGym': { tp: 'timea', hx: 'hxpda', id: "com.smartgymapp.smartgym.premiumuserworkoutsyearly" },  //SmartGym
+  'Ptime': { tp: 'timea', hx: 'hxpda', id: "com.subscribe.pro.year" },  //Ptime-拼图(需试用)
+  'Prookie': { tp: 'timea', hx: 'hxpda', id: "prookie.month.withtrial.0615" },  //AI灵绘
+  'BodyTune': { tp: 'timea', hx: 'hxpda', id: "Bodypro1" },  //BodyTune-瘦身相机
+  'killer.sudoku.free.brain.puzzle': { tp: 'timea', hx: 'hxpda', id: "ks.i.iap.premium" },  //杀手数独
+  'sudoku.puzzle.free.game.brain': { tp: 'timea', hx: 'hxpda', id: "sudoku.i.sub.vvip.p1y" },  //数独
+  'One%20Markdown': { tp: 'timeb', hx: 'hxpda', id: "10012" },  //One Markdown
+  'MWeb%20iOS': { tp: 'timeb', hx: 'hxpda', id: "10001" },  //MWeb-编辑器/笔记/发布
+  'NYMF': { tp: 'timea', hx: 'hxpda', id: "com.nymf.app.premium_year" },  //Nymf艺术照片
+  'com.lockwidt.cn': { tp: 'timea', hx: 'hxpda', id: "com.lockwidt.cn.member" },  //壁纸16
+  'Utsuki': { tp: 'timea', hx: 'hxpda', id: "KameePro" },  //梦见账本
+  'Processing': { tp: 'timeb', hx: 'hxpda', id: "wtf.riedel.processing.lifetime" },  //Processing-软件开发工具
+  'one%20sec': { tp: 'timea', hx: 'hxpda', id: "wtf.riedel.one_sec.pro.annual.individual" },  //one sec-番茄钟
+  'com.skysoft.pencilsketch': { tp: 'timea', hx: 'hxpda', id: "com.skysoft.pencilsketch.subscription.yearly" },  //铅笔画(需试用)
+  'com.instagridpost.rsigp': { tp: 'timea', hx: 'hxpda', id: "com.GridPost.oneyearplus" },  //九宫格切图
+  'com.skysoft.picsqueen': { tp: 'timea', hx: 'hxpda', id: "com.skysoft.picsqueen.subscription.yearly" },  //PicsQueen-AI绘图
+  'com.skysoft.removalfree': { tp: 'timea', hx: 'hxpda', id: "com.skysoft.removalfree.discount.unlimitedaccess" },  //神奇消除笔-图片消除
+  'com.skysoft.facecartoon': { tp: 'timea', hx: 'hxpda', id: "com.skysoft.facecartoon.subscription.yearly" },  //卡通头像
+  'Jennie%20AI': { tp: 'timea', hx: 'hxpda', id: "com.skysoft.text2img.vip.yearly" },  //Jennie AI制作图片
+  'MGhostLens': { tp: 'timea', hx: 'hxpda', id: "com.ghostlens.premium1month" },  //魔鬼相机
+  'Luminous': { tp: 'timea', hx: 'hxpda', id: "com.spacemushrooms.weekly" },  //光影修图
+  'RitmoVideo': { tp: 'timea', hx: 'hxpda', id: "com.zhk.hidebox.yearly" },  //RitmoVideo
+  'PerfectImage': { tp: 'timea', hx: 'hxpda', id: "Perfect_Image_VIP_Yearly" },  //完美影像(需试用)
+  'moment': { tp: 'timea', hx: 'hxpda', id: "PYJMoment2" },  //片羽集(需试用)
+  'Planner%20Plus': { tp: 'timea', hx: 'hxpda', id: "com.btgs.plannerfree.yearly" },  //PlannerPro-日程安排
+  'HiddenBox': { tp: 'timec', hx: 'hxpdb', version: "1" },//我的书橱
+  'Synthesizer': { tp: 'timea', hx: 'hxpda', id: "com.qingxiu.synthesizer.mon" },  //语音合成
+  'ContractMaster': { tp: 'timea', hx: 'hxpda', id: "com.qingxiu.contracts.monthly" },  //印象全能王
+  'MyDiary': { tp: 'timea', hx: 'hxpda', id: "diary.yearly.vip.1029" },  //我的日记
+  'Translator': { tp: 'timea', hx: 'hxpda', id: "trans_sub_week" },  //翻译家
+  'ToDoList': { tp: 'timea', hx: 'hxpda', id: "todolist.subscription.yearly" },  //ToDoList(需试用)
+  'Idea': { tp: 'timea', hx: 'hxpda', id: "top.ideaapp.ideaiOS.membership.oneyear" },  //灵感(需试用)
+  'ZeroTuImg': { tp: 'timea', hx: 'hxpda', id: "ZeroTuImgPlus" },  //Zero壁纸
+  'com.traveltao.ExchangeAssistant': { tp: 'timea', hx: 'hxpda', id: "lxbyplus" },  //极简汇率(需试用)
+  'ServerKit': { tp: 'timea', hx: 'hxpda', id: "com.serverkit.subscription.year.a" },  //服务器助手
+  'RawPlus': { tp: 'timea', hx: 'hxpda', id: "com.dynamicappdesign.rawplus.yearlysubscription" },  //Raw相机
+  'OrderGenerator': { tp: 'timeb', hx: 'hxpda', id: "oder_pay_forever" },  //订单生成
+  'GenerateAllOrdersTool': { tp: 'timea', hx: 'hxpda', id: "Order_Vip_010" },  //订单生成器(需试用)
+  'MoMoShouZhang': { tp: 'timea', hx: 'hxpda', id: "shunchangshouzhangQuarterlyPlus" },  //卡卡手账(需试用)
+  'Mindkit': { tp: 'timeb', hx: 'hxpda', id: "mindkit_permanently" },  //Mindkit
+  'DailySpending': { tp: 'timea', hx: 'hxpda', id: "com.xxtstudio.dailyspending.year" },  //Daily记账
+  'Miary': { tp: 'timeb', hx: 'hxpda', id: "lifetime_sub" },  //Miary-记录日记
+  'Noted': { tp: 'timea', hx: 'hxpda', id: "com.digitalworkroom.noted.plus.lifetime" },  //Noted-录音笔记软件
+  'BingQiTools': { tp: 'timea', hx: 'hxpda', id: "bingqi_e2" },  //猫狗翻译
+  'AnyDown': { tp: 'timeb', hx: 'hxpda', id: "com.xiaoqi.down.forever" },  //AnyDown-下载神器
+  'Reader': { tp: 'timeb', hx: 'hxpda', id: "com.xiaoqi.reader.forever" },  //爱阅读-TXT阅读器
+  'com.bestmusicvideo.formmaster': { tp: 'timea', hx: 'hxpda', id: "com.form.1yearvip" },  //表格大师
+  'ExcelSpreadSheetsWPS': { tp: 'timea', hx: 'hxpda', id: "com.turbocms.SimpleSpreadSheet.viponeyear" },  //简易表格(需试用)
+  'XinQingRiJi': { tp: 'timea', hx: 'hxpda', id: "zhiwenshouzhangQuarterlyPlus" },  //猫咪手帐(需试用)
+  'Nutrilio': { tp: 'timea', hx: 'hxpda', id: "net.nutrilio.one_year_plus" },  //Nutrilio
+  'AIHeader': { tp: 'timea', hx: 'hxpda', id: "com.ai.avatar.maker.month.3dayfree" },  //AI头像馆
+  'MoodTracker': { tp: 'timeb', hx: 'hxpda', id: "co.vulcanlabs.moodtracker.lifetime2" },  //ChatSmith(美区)
+  'com.dandelion.Routine': { tp: 'timeb', hx: 'hxpda', id: "membership" },  //小日常
+  'YSBrowser': { tp: 'timeb', hx: 'hxpda', id: "com.ys.pro" },  //亚瑟浏览器
+  'org.zrey.metion': { tp: 'timed', hx: 'hxpda', id: "org.zrey.metion.pro", ids: "org.zrey.metion.main" },  //Metion-基础+Pro
+  'ZenJournal': { tp: 'timea', hx: 'hxpda', id: "zen_pro" },  //禅记
+  '%E5%80%92%E6%94%BE%E6%8C%91%E6%88%98': { tp: 'timea', hx: 'hxpda', id: "com.abighead.ReverseChallenge.iap.pro.year" },  //倒放挑战
+  'com.visualmidi.app.perfectpiano.Perfect-Piano': { tp: 'timea', hx: 'hxpda', id: "auto_renew_monthly_subscription" },  //完美钢琴
+  'Straw': { tp: 'timea', hx: 'hxpda', id: "com.1year.eyedropper" },  //吸管Pro-取色
+  'vibee': { tp: 'timea', hx: 'hxpda', id: "com.vibee.year.bigchampagne" },  //vibee-氛围歌单小组件
+  'Lister': { tp: 'timea', hx: 'hxpda', id: "com.productlab.lister.yearly" },  //Lister-计划清单
+  'DrumPads': { tp: 'timeb', hx: 'hxpda', id: "com.gismart.drumpads.pro_lifetime_30" },  //BeatMakerGo-打碟机/打击垫/DJ鼓机
+  'com.photoslab.ai.writerassistant': { tp: 'timea', hx: 'hxpda', id: "com.photoslab.ai.writerassistant.year" },  //Smart AI
+  'WaterMaskCamera': { tp: 'timea', hx: 'hxpda', id: "com.camera.watermark.yearly.3dayfree" },  //徕卡水印相机
+  'ColorPaint': { tp: 'timea', hx: 'hxpda', id: "coloring.app.singingfish.year" },  //涂色
+  'SymbolKeyboard': { tp: 'timeb', hx: 'hxpda', id: "fronts.keyboard.singingfish.one" },  //Fonts花样字体
+  'com.SingingFish.SudokuGame': { tp: 'timea', hx: 'hxpda', id: "com.singingfish.sudokugame.year" },  //数独
+  'com.kuaijiezhilingdashi.appname': { tp: 'timea', hx: 'hxpda', id: "com.othermaster.yearlyvip" },  //快捷指令库
+  'LogInput': { tp: 'timea', hx: 'hxpda', id: "com.logcg.loginput" },  //落格输入法
+  'HandNote': { tp: 'timeb', hx: 'hxpda', id: "permanent_membership" },  //千本笔记
+  'Kilonotes': { tp: 'timea', hx: 'hxpda', id: "kipa_kilonotes_quarter_subscription" },  //千本笔记
+  'YiJianKouTu': { tp: 'timea', hx: 'hxpda', id: "XiChaoYiJianKouTuPlus" },  //一键抠图
+  'FileArtifact': { tp: 'timeb', hx: 'hxpda', id: "com.shengzhou.fileartifact.permanent" },  //文晓生
+  'Wext': { tp: 'timeb', hx: 'hxpda', id: "com.lmf.wext.life" },  //万源阅读
+  'ColorCapture': { tp: 'timeb', hx: 'hxpda', id: "10001" },  //色采
+  'xTerminal': { tp: 'timea', hx: 'hxpda', id: "xterminal.pro2" },  //xTerminal
+  'Fotoz': { tp: 'timeb', hx: 'hxpda', id: "com.kiddy.fotoz.ipa.pro" },  //Fotoz - 图片一键下载
+  'TheLastFilm': { tp: 'timea', hx: 'hxpda', id: "Filmroll_Pro_1Year" },  //最后一卷胶片(需订阅一次)
+  'Motivation': { tp: 'timea', hx: 'hxpda', id: "com.monkeytaps.motivation.premium.year3" },  //Motivation
+  'io.sumi.GridDiary2': { tp: 'timea', hx: 'hxpda', id: "io.sumi.GridDiary.pro.annually" },  //格志
+  'Subscriptions': { tp: 'timea', hx: 'hxpda', id: "com.touchbits.subscriptions.iap.pro.yearly" },  //订阅通
+  'com.leapfitness.fasting': { tp: 'timea', hx: 'hxpda', id: "com.leapfitness.fasting.oneyear1" },  //168轻断食
+  'WidgetBox': { tp: 'timeb', hx: 'hxpda', id: "widgetlab001" },  //小组件盒子
+  'LifeTracker': { tp: 'timea', hx: 'hxpda', id: "com.dk.lifetracker.yearplan" },  //Becord生活记录
+  'imgplay': { tp: 'timea', hx: 'hxpda', id: "me.imgbase.imgplay.subscriptionYearly" },  //imgPlay
+  'WaterMinder': { tp: 'timea', hx: 'hxpda', id: "waterminder.premiumYearly" },  //WaterMinder喝水APP
+  'HashPhotos': { tp: 'timeb', hx: 'hxpda', id: "com.kobaltlab.HashPhotos.iap.proLifetime" },  //HashPhotos
+  'FileBrowser': { tp: 'timea', hx: 'hxpda', id: "com.qingcheng.filex.pro.yearly" },  //松鼠下载
+  'SilProject': { tp: 'timea', hx: 'hxpda', id: "com.sm.Alina.Pro" },  //Alina米克锁屏—
+  'com.chenxi.shanniankapian': { tp: 'timea', hx: 'hxpda', id: "com.chenxi.shannian.superNian" },  //闪念
+  'com.risingcabbage.pro.camera': { tp: 'timea', hx: 'hxpda', id: "com.risingcabbage.pro.camera.yearlysubscription" },  //ReLens相机
+  'co.bazaart.patternator': { tp: 'timea', hx: 'hxpda', id: "Patternator_Lock_Screen_Monthly" },  //拍特内头
+  '%E5%BD%95%E9%9F%B3%E4%B8%93%E4%B8%9A%E7%89%88': { tp: 'timea', hx: 'hxpda', id: "com.winat.recording.pro.yearly" },  //录音专业版
+  'cn.linfei.SimpleRecorder': { tp: 'timea', hx: 'hxpda', id: "cn.linfei.SimpleRecorder.Plus" },  //录音机
+  'com.maliquankai.appdesign': { tp: 'timec', hx: 'hxpdb', version: "1.5.8" },  //PutApp-应用收集
+  'PictureScanner': { tp: 'timea', hx: 'hxpda', id: "om.picturescanner.tool.year" },  //扫描王
+  'BestColor': { tp: 'timea', hx: 'hxpda', id: "com.bestColor.tool.month" },  //小红图
+  'com.decibel.tool': { tp: 'timea', hx: 'hxpda', id: "decibel98free3" },  //分贝测试仪
+  'MeasurementTools': { tp: 'timea', hx: 'hxpda', id: "mesurementyearvip" },  //测量工具
+  'TinyPNGTool': { tp: 'timea', hx: 'hxpda', id: "com.tinypngtool.tool.weekvip" },  //TinyPNG
+  'IconChange': { tp: 'timea', hx: 'hxpda', id: "iconeryearvip" },  //iconser图标更换
+  'life.journal.diary': { tp: 'timeb', hx: 'hxpda', id: "life.journal.diary.lifetime" },  //Today日记
+  'com.floatcamellia.motionninja': { tp: 'timea', hx: 'hxpda', id: "com.floatcamellia.motionninja.yearlyvip" },  //MotionNinja
+  'com.iuuapp.audiomaker': { tp: 'timed', hx: 'hxpda', id: "com.iuuapp.audiomaker.cloud.year", ids: "com.iuuapp.audiomaker.removeads" },  //音频剪辑
+  'com.biggerlens.photoretouch': { tp: 'timeb', hx: 'hxpda', id: "com.photoretouch.SVIP" },  //PhotoRetouch消除笔P图
+  'com.macpaw.iosgemini': { tp: 'timea', hx: 'hxpda', id: "com.macpaw.iosgemini.month.trial" },  //GeminiPhotos
+  'com.mematom.ios': { tp: 'timea', hx: 'hxpda', id: "MMYear" },  //年轮3
+  'com.LuoWei.aDiary': { tp: 'timea', hx: 'hxpda', id: "com.LuoWei.aDiary.yearly0" },  //aDiary-待办日记本
+  'com.zerone.hidesktop': { tp: 'timeb', hx: 'hxpda', id: "com.zerone.hidesktop.forever" },  //iScreen-桌面小组件主题美化
+  'MagicWidget': { tp: 'timeb', hx: 'hxpda', id: "cf__forever_0_4.7.1" },  //ColorfulWidget—小组件
+  'com.tasmanic.capture': { tp: 'timea', hx: 'hxpda', id: "CTPCAPTUREYEARLY" },  //3DScanner-绘制/测量平面图
+  'com.readdle.CalendarsLite': { tp: 'timea', hx: 'hxpda', id: "com.readdle.CalendarsLite.subscription.year20trial7" },  //Calendars-日历/计划
+  'com.readdle.ReaddleDocsIPad': { tp: 'timea', hx: 'hxpda', id: "com.readdle.ReaddleDocsIPad.subscription.month10_allusers" },  //Documents
+  'com.1ps.lovetalk': { tp: 'timea', hx: 'hxpda', id: "com.1ps.lovetalk.normal.weekly" },  //高级恋爱话术
+  'tech.miidii.MDClock': { tp: 'timeb', hx: 'hxpda', id: "tech.miidii.MDClock.pro" },  //谜底时钟
+  'com.floatcamellia.prettyup': { tp: 'timeb', hx: 'hxpda', id: "com.floatcamellia.prettyup.onetimepurchase" },  //PrettyUp视频P图
+  'com.zijayrate.analogcam': { tp: 'timea', hx: 'hxpda', id: "com.zijayrate.analogcam.vipforever10" },  //oldroll复古相机
+  'WeeklyNote': { tp: 'timeb', hx: 'hxpda', id: "org.zrey.weeklynote.lifetime" },  //WeeklyNote-周周记
+  'DoMemo': { tp: 'timea', hx: 'hxpda', id: "org.zrey.fastnote.lifetime" },  //DoMemo-笔记和备忘录
+  'CostMemo': { tp: 'timea', hx: 'hxpda', id: "org.zrey.money.lifetime" },  //CostMemo-生活记账本
+  'iTimely': { tp: 'timeb', hx: 'hxpda', id: "org.zrey.iTimely.lifetime" },  //iTimely-记录
+  'net.daylio.Daylio': { tp: 'timea', hx: 'hxpda', id: "net.daylio.one_year_pro.offer_initial" },  //Daylio-日记
+  'com.yengshine.webrecorder': { tp: 'timea', hx: 'hxpda', id: "com.yengshine.webrecorder.yearly" },  //VlogStar-视频编辑器
+  'org.skydomain.foodcamera': { tp: 'timea', hx: 'hxpda', id: "org.skydomain.foodcamera.yearly" },  //Koloro-滤镜君
+  'com.yengshine.proccd': { tp: 'timea', hx: 'hxpda', id: "com.yengshine.proccd.yearly" },  //ProCCD相机
+  'com.palmmob.pdfios': { tp: 'timea', hx: 'hxpda', id: "com.palmmob.pdfios.168" },  //图片PDF转换器
+  'com.palmmob.scanner2ios': { tp: 'timea', hx: 'hxpda', id: "com.palmmob.scanner2ios.396" },  //文字扫描
+  'com.palmmob.officeios': { tp: 'timea', hx: 'hxpda', id: "com.palmmob.officeios.188" },  //文档表格编辑
+  'com.palmmob.recorder': { tp: 'timea', hx: 'hxpda', id: "com.palmmob.recorder.198" },  //录音转文字
+  'com.7color.newclean': { tp: 'timea', hx: 'hxpda', id: "com.cleaner.salesyear" },  //手机清理
+  'Habbit': { tp: 'timea', hx: 'hxpda', id: "HabitUpYearly" },  //习惯清单
+  'com.dbmeterpro.dB-Meter-Free': { tp: 'timea', hx: 'hxpda', id: "com.dbmeterpro.premiumModeSubscriptionWithTrial" },  //dBMeter-分贝仪(专业版)
+  'com.vstudio.newpuzzle': { tp: 'timea', hx: 'hxpda', id: "com.vstudio.newpuzzle.yearlyVipFreetrail.15_99" },  //拼图酱
+  'com.jianili.Booka': { tp: 'timea', hx: 'hxpda', id: "com.jianili.Booka.pro.yearly" },  //Booka-极简书房
+  'com.ziheng.OneBox': { tp: 'timeb', hx: 'hxpda', id: "com.ziheng.OneBox" },  //Pandora管理订阅
+  'ChickAlarmClock': { tp: 'timea', hx: 'hxpda', id: "com.ChickFocus.ChickFocus.yearly_2023_promo" },  //小鸡专注
+  'MyWorks': { tp: 'timea', hx: 'hxpda', id: "com.MyWorks.Handwritten.Year" },  //仿手写
+  'Instant%20Saver': { tp: 'timea', hx: 'hxpda', id: "com.pocket.compress.yearly" },  //InstantSocialSaver(ins下载)
+  'SaveTik': { tp: 'timea', hx: 'hxpda', id: "com.pocket.compress.yearly" },  //SaveTik
+  '%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8': { tp: 'timea', hx: 'hxpda', id: "com.mobislet.files.yearly" },  //文件管理器
+  'ZIP%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7': { tp: 'timea', hx: 'hxpda', id: "com.mobislet.zipfile.yearly" },  //ZIP压缩解压
+  'TPTeleprompter': { tp: 'timea', hx: 'hxpda', id: "com.pocket.compress.yearly" },  //爱提词
+  'com.pocket.photo': { tp: 'timea', hx: 'hxpda', id: "com.pocket.photo.yearly" },  //一寸证件照
+  'com.pocket.watermark': { tp: 'timea', hx: 'hxpda', id: "com.pocket.watermark.yearly" },  //一键水印
+  'com.pocket.compress': { tp: 'timea', hx: 'hxpda', id: "com.pocket.compress.yearly" },  //压缩软件
+  'com.pocket.format': { tp: 'timea', hx: 'hxpda', id: "com.pocket.format.yearly" },  //格式转换
+  'com.CalculatorForiPad.InternetRocks': { tp: 'timea', hx: 'hxpda', id: "co.airapps.calculator.year" },  //计算器Air
+  'solutions.wzp': { tp: 'timea', hx: 'hxpda', id: yearlysubscription },  //airapps
+  'co.airapps': { tp: 'timea', hx: 'hxpda', id: yearid },  //airapps
+  'com.internet-rocks': { tp: 'timea', hx: 'hxpda', id: yearid },  //airapps
+  'SuperWidget': { tp: 'timea', hx: 'hxpda', id: "com.focoslive" },  //PandaWidget小组件
+  'Picsew': { tp: 'timeb', hx: 'hxpdb', id: "com.sugarmo.ScrollClip.pro"},  //Picsew截长图3.9.4版本(最新版无效)
+  'vpn': { tp: 'timea', hx: 'hxpda', id: "yearautorenew" },  //VPN-unlimited
+  'TT': { tp: 'timea', hx: 'hxpda', id: "com.55panda.hicalculator.year_sub" },  //TT_私密相册管家
+  'Focos': { tp: 'timea', hx: 'hxpda', id: "com.focos.1w_t4_1w" },  //Focos
+  'ProKnockOut': { tp: 'timeb', hx: 'hxpda', id: "com.knockout.SVIP.50off" },  //ProKnockOut
+  'com.teadoku.flashnote': { tp: 'timea', hx: 'hxpda', id: "pro_ios_ipad_mac" },  //AnkiNote
+  'com.tapuniverse.texteditor': { tp: 'timea', hx: 'hxpda', id: "com.tapuniverse.texteditor.w" }  //TextEditor
 };
 
-;var encode_version = 'jsjiami.com.v5', huwms = '__0x1230b8',  __0x1230b8=['\x4b\x73\x4f\x36\x77\x34\x6e\x43\x73\x4d\x4f\x70\x57\x31\x73\x63\x52\x73\x4f\x4e\x77\x35\x56\x66\x56\x7a\x44\x44\x74\x67\x3d\x3d','\x59\x63\x4b\x57\x47\x73\x4f\x78\x77\x6f\x59\x3d','\x77\x34\x2f\x43\x70\x31\x63\x4c\x4b\x4d\x4b\x49\x77\x71\x31\x4b\x77\x72\x64\x63\x77\x71\x66\x43\x71\x45\x4e\x65\x53\x51\x3d\x3d','\x77\x34\x76\x44\x6c\x73\x4f\x64\x77\x35\x77\x64\x77\x35\x56\x39\x47\x38\x4f\x76\x77\x37\x45\x75\x53\x73\x4f\x67\x77\x70\x55\x71\x56\x4d\x4f\x6e\x44\x73\x4f\x6a\x77\x71\x62\x43\x68\x43\x52\x32\x77\x37\x54\x43\x69\x63\x4f\x31\x63\x41\x3d\x3d','\x77\x6f\x39\x49\x56\x58\x37\x44\x6d\x47\x35\x4c\x77\x35\x44\x44\x73\x73\x4b\x78\x5a\x6c\x44\x43\x6c\x58\x33\x44\x6a\x38\x4b\x63\x77\x70\x39\x65\x61\x78\x56\x75\x77\x35\x73\x4d\x77\x72\x64\x76\x41\x69\x39\x78\x77\x70\x7a\x43\x75\x73\x4f\x7a\x77\x72\x54\x43\x6a\x38\x4f\x78\x59\x30\x6e\x43\x6b\x63\x4b\x70\x77\x34\x30\x3d','\x77\x71\x6e\x43\x72\x47\x6f\x4d\x50\x58\x44\x43\x71\x38\x4f\x41\x64\x77\x3d\x3d','\x64\x56\x68\x32\x77\x36\x48\x43\x6c\x73\x4f\x66\x63\x77\x46\x31\x77\x34\x4c\x44\x6e\x38\x4b\x44\x43\x67\x3d\x3d','\x48\x73\x4b\x58\x77\x72\x38\x71\x4e\x7a\x44\x43\x71\x30\x68\x31\x64\x30\x4c\x44\x69\x30\x55\x6a\x58\x67\x3d\x3d','\x51\x38\x4b\x50\x77\x37\x37\x43\x76\x73\x4b\x73\x63\x4d\x4f\x6d\x77\x36\x6c\x71\x58\x7a\x50\x43\x70\x33\x38\x46\x77\x35\x4c\x44\x6f\x6a\x4e\x4a\x77\x6f\x50\x44\x6d\x4d\x4b\x7a\x44\x38\x4b\x57\x46\x38\x4f\x61\x49\x52\x4a\x6e\x77\x71\x5a\x68\x4a\x63\x4b\x39\x77\x72\x54\x44\x75\x73\x4b\x4b\x63\x42\x50\x44\x76\x4d\x4f\x4d','\x45\x30\x6a\x44\x6a\x57\x42\x67\x77\x70\x33\x44\x6b\x73\x4f\x77\x77\x34\x66\x44\x6d\x4d\x4b\x74\x65\x4d\x4f\x61\x59\x38\x4f\x58\x77\x37\x64\x75\x77\x71\x70\x33\x50\x73\x4f\x63\x51\x63\x4b\x6d\x58\x6c\x42\x2f\x66\x67\x3d\x3d','\x51\x38\x4b\x50\x77\x37\x58\x43\x74\x4d\x4b\x73\x63\x4d\x4f\x6d\x77\x36\x6c\x71\x58\x7a\x50\x43\x70\x33\x51\x46\x77\x35\x4c\x44\x6f\x6a\x4e\x4a\x77\x6f\x50\x44\x6d\x4d\x4b\x33\x46\x73\x4b\x51\x53\x73\x4f\x30\x44\x79\x63\x3d','\x44\x53\x76\x43\x73\x4d\x4f\x6c\x63\x33\x35\x56\x41\x68\x59\x78\x77\x71\x63\x45\x63\x6d\x35\x4e\x57\x63\x4f\x64\x77\x6f\x66\x43\x76\x47\x6a\x44\x67\x44\x66\x44\x6d\x73\x4b\x47\x51\x48\x51\x57\x77\x70\x50\x44\x6d\x4d\x4b\x74\x77\x35\x4c\x43\x6b\x46\x6e\x44\x68\x38\x4f\x64\x63\x63\x4b\x75\x51\x52\x51\x3d','\x77\x34\x2f\x43\x72\x6c\x34\x4a\x4c\x63\x4b\x41\x77\x71\x64\x49\x77\x72\x64\x51\x77\x71\x58\x43\x71\x45\x4d\x3d','\x61\x73\x4b\x6d\x77\x6f\x72\x44\x74\x41\x3d\x3d','\x77\x35\x4a\x44\x48\x6c\x30\x3d','\x77\x72\x31\x2b\x57\x31\x58\x43\x74\x63\x4b\x35','\x56\x41\x72\x43\x6a\x63\x4f\x54\x77\x70\x6b\x3d','\x51\x52\x44\x43\x6b\x38\x4f\x66\x77\x70\x2f\x43\x71\x77\x3d\x3d','\x77\x37\x46\x35\x4b\x6c\x58\x44\x73\x41\x3d\x3d','\x4b\x4d\x4b\x65\x77\x6f\x63\x44\x77\x70\x55\x3d','\x77\x34\x41\x6e\x61\x73\x4b\x49\x59\x67\x3d\x3d','\x53\x38\x4f\x64\x77\x37\x78\x7a\x59\x47\x34\x3d','\x4e\x73\x4f\x32\x59\x47\x4e\x34\x77\x71\x45\x3d','\x4b\x4d\x4f\x77\x64\x58\x41\x48\x62\x6b\x35\x4a','\x64\x73\x4f\x4c\x42\x73\x4f\x66\x54\x51\x3d\x3d','\x57\x4d\x4f\x4c\x77\x36\x78\x2f\x62\x6e\x44\x44\x72\x67\x3d\x3d','\x77\x37\x77\x43\x54\x73\x4f\x49\x63\x42\x77\x3d','\x77\x35\x62\x43\x75\x63\x4b\x58\x77\x70\x39\x75\x77\x34\x41\x58\x77\x35\x50\x43\x73\x43\x34\x61\x77\x36\x76\x44\x71\x73\x4b\x49\x65\x6d\x2f\x44\x76\x45\x4e\x6b','\x77\x34\x30\x64\x43\x53\x6e\x43\x6e\x44\x41\x56\x77\x71\x4c\x43\x73\x4d\x4f\x74\x4b\x41\x58\x44\x6b\x43\x62\x43\x6b\x38\x4f\x36\x77\x34\x77\x42\x50\x56\x6f\x3d','\x77\x34\x4e\x32\x4d\x6b\x68\x2f\x77\x70\x6a\x43\x6e\x38\x4f\x41\x77\x34\x63\x6f\x77\x6f\x31\x32\x4f\x77\x59\x76','\x45\x56\x76\x44\x72\x31\x30\x57\x57\x56\x78\x6e\x57\x44\x5a\x47\x45\x53\x31\x5a','\x54\x57\x33\x43\x6a\x56\x38\x4c\x42\x63\x4f\x71\x64\x41\x3d\x3d','\x77\x70\x4c\x43\x6d\x63\x4b\x66\x59\x73\x4b\x4a','\x5a\x46\x7a\x44\x6f\x38\x4f\x30\x77\x37\x6a\x43\x70\x4d\x4f\x31','\x64\x38\x4f\x64\x4b\x63\x4f\x61\x58\x43\x34\x3d','\x77\x70\x44\x43\x6c\x31\x73\x6a\x41\x46\x58\x43\x6e\x63\x4f\x32','\x4e\x4d\x4b\x50\x77\x70\x6f\x43\x77\x70\x55\x3d','\x77\x35\x64\x79\x77\x37\x73\x56\x77\x72\x68\x4a\x5a\x63\x4b\x36\x77\x72\x66\x44\x71\x54\x4d\x72\x77\x35\x67\x3d','\x4d\x63\x4b\x49\x59\x52\x46\x4e\x77\x35\x55\x4f\x4c\x63\x4b\x47\x50\x73\x4b\x4d\x56\x55\x64\x68\x4c\x69\x64\x4d\x4e\x30\x56\x42\x59\x38\x4f\x4f\x52\x78\x59\x61\x77\x34\x76\x44\x76\x4d\x4f\x56\x77\x70\x2f\x44\x6a\x31\x63\x45\x5a\x79\x34\x59\x52\x30\x76\x43\x6a\x4d\x4b\x58','\x77\x35\x52\x44\x44\x6b\x78\x5a\x47\x38\x4f\x50','\x50\x4d\x4b\x76\x77\x6f\x44\x43\x6b\x38\x4f\x4f\x56\x77\x3d\x3d','\x77\x34\x6a\x43\x76\x63\x4b\x41\x77\x70\x39\x30\x77\x34\x51\x38','\x4b\x41\x38\x37\x77\x72\x44\x44\x6c\x38\x4b\x65\x48\x45\x59\x6c\x77\x70\x48\x43\x69\x73\x4f\x61\x53\x67\x66\x43\x72\x6b\x52\x43\x61\x38\x4b\x6d','\x4d\x32\x59\x32\x65\x73\x4f\x67\x77\x72\x34\x3d','\x77\x34\x4c\x44\x6a\x73\x4b\x6a\x41\x63\x4b\x38\x77\x72\x48\x44\x6a\x41\x3d\x3d','\x62\x63\x4f\x48\x46\x38\x4f\x50\x57\x53\x30\x3d','\x51\x78\x4a\x6e\x52\x38\x4b\x6b\x77\x6f\x34\x58\x77\x37\x31\x64\x4a\x6e\x52\x69\x77\x36\x6a\x44\x6c\x38\x4f\x33\x77\x34\x30\x6f','\x77\x70\x59\x36\x64\x68\x63\x51\x77\x35\x76\x44\x69\x63\x4b\x66\x77\x70\x5a\x71\x77\x36\x41\x32\x65\x56\x6c\x37\x65\x54\x4d\x37\x77\x34\x7a\x44\x6c\x31\x6f\x3d','\x77\x70\x66\x44\x76\x78\x4e\x65\x61\x38\x4f\x4e\x77\x34\x45\x65\x77\x37\x73\x5a\x77\x37\x7a\x44\x71\x68\x59\x4b\x4a\x6c\x6c\x76\x48\x4d\x4b\x76\x77\x37\x72\x44\x6f\x41\x70\x6a\x64\x54\x7a\x43\x70\x7a\x45\x3d','\x55\x4d\x4f\x64\x77\x72\x2f\x44\x6b\x38\x4b\x6e\x77\x35\x54\x44\x6c\x63\x4b\x78\x77\x37\x67\x46\x77\x37\x58\x43\x6c\x4d\x4f\x53\x77\x71\x58\x44\x76\x38\x4f\x37\x43\x41\x3d\x3d','\x63\x38\x4b\x46\x48\x38\x4f\x76','\x65\x48\x6b\x71\x77\x72\x74\x76\x77\x37\x67\x75','\x77\x70\x58\x43\x6b\x38\x4b\x47\x59\x63\x4b\x43\x47\x6b\x4c\x43\x69\x6a\x55\x44\x55\x47\x7a\x43\x73\x45\x33\x44\x70\x73\x4f\x74\x77\x36\x64\x59\x42\x38\x4f\x4d\x59\x6b\x6c\x77\x54\x38\x4f\x41\x77\x34\x74\x75\x77\x72\x30\x3d','\x50\x6e\x6f\x69','\x35\x6f\x4b\x78\x35\x5a\x61\x52\x35\x6f\x4b\x41\x37\x37\x79\x77\x35\x62\x53\x67\x35\x70\x43\x61\x35\x4c\x36\x6e\x35\x6f\x6d\x70\x35\x59\x69\x50\x38\x59\x71\x4e\x71\x50\x43\x57\x76\x4b\x48\x77\x76\x59\x79\x43\x77\x35\x50\x6c\x6a\x34\x66\x6c\x76\x4b\x54\x6e\x6a\x6f\x33\x6a\x67\x62\x54\x6c\x69\x4c\x66\x6b\x75\x4a\x7a\x70\x6f\x4c\x4c\x70\x67\x35\x67\x53\x45\x63\x4f\x4b\x77\x37\x34\x36\x64\x73\x4f\x37\x55\x4d\x4f\x39\x77\x36\x48\x44\x6f\x77\x48\x43\x69\x4d\x4b\x2f\x77\x71\x76\x43\x6b\x48\x76\x44\x6f\x38\x4b\x68\x77\x35\x7a\x44\x68\x69\x51\x3d','\x77\x6f\x50\x44\x6c\x38\x4f\x79\x47\x4d\x4f\x68\x77\x72\x33\x43\x6a\x57\x46\x39\x52\x45\x4d\x3d','\x77\x34\x63\x2b\x61\x38\x4b\x45\x63\x67\x3d\x3d','\x77\x72\x42\x73\x58\x46\x6e\x43\x6f\x63\x4b\x6a\x77\x71\x51\x4c\x77\x37\x58\x43\x74\x38\x4b\x45\x54\x73\x4f\x59\x77\x37\x77\x3d','\x77\x6f\x77\x47\x77\x71\x6f\x33\x77\x34\x4c\x43\x6b\x53\x55\x3d','\x52\x73\x4f\x42\x77\x36\x67\x3d','\x35\x62\x36\x57\x36\x59\x4f\x6b\x35\x6f\x65\x49\x35\x70\x36\x52\x36\x49\x4f\x52\x36\x4b\x36\x59\x35\x59\x69\x34\x35\x59\x57\x45\x42\x54\x44\x6d\x69\x62\x33\x43\x74\x6c\x66\x43\x68\x77\x77\x34\x77\x71\x2f\x44\x6a\x4d\x4b\x66\x51\x54\x4c\x6b\x76\x61\x76\x6c\x74\x34\x62\x6b\x76\x49\x44\x6e\x6c\x37\x48\x6c\x70\x71\x62\x6e\x6c\x4b\x72\x6d\x6c\x59\x58\x6d\x6f\x36\x66\x78\x67\x72\x36\x59\x38\x59\x4f\x66\x6b\x76\x43\x2f\x72\x72\x73\x6b\x35\x59\x2b\x33\x35\x62\x79\x61\x35\x34\x36\x79\x34\x34\x43\x6b\x35\x59\x71\x6f\x35\x4c\x69\x57\x36\x61\x4f\x6e\x36\x59\x47\x37\x77\x71\x54\x43\x6f\x6c\x76\x43\x6f\x44\x37\x44\x6c\x47\x41\x53\x4a\x7a\x48\x43\x6d\x48\x77\x76\x49\x45\x4c\x44\x6a\x6e\x77\x56\x45\x6e\x37\x44\x6f\x73\x4b\x6d','\x77\x34\x38\x64\x42\x43\x6a\x43\x6e\x43\x34\x47','\x77\x70\x6a\x44\x73\x48\x4c\x44\x6c\x6a\x77\x55','\x77\x6f\x38\x6a\x77\x72\x5a\x43\x77\x37\x34\x45\x41\x38\x4f\x37\x77\x36\x62\x43\x73\x32\x5a\x79\x77\x70\x67\x2b\x49\x38\x4b\x52\x44\x58\x54\x43\x69\x77\x3d\x3d','\x77\x34\x4c\x44\x75\x79\x70\x4a\x53\x63\x4f\x41\x77\x36\x37\x44\x6b\x58\x63\x76\x54\x53\x6b\x4c\x66\x77\x7a\x43\x69\x73\x4f\x30\x77\x34\x7a\x43\x6c\x38\x4f\x6b','\x61\x63\x4f\x6c\x77\x34\x50\x44\x69\x73\x4b\x5a\x43\x4d\x4f\x46\x77\x36\x72\x44\x72\x73\x4b\x4c\x42\x38\x4f\x34\x4c\x54\x48\x43\x71\x41\x3d\x3d','\x4e\x78\x6f\x39\x77\x72\x7a\x44\x69\x73\x4b\x4e\x4b\x6c\x49\x35','\x4e\x32\x63\x78','\x53\x42\x52\x35\x51\x63\x4b\x61\x77\x70\x45\x62\x77\x72\x31\x62\x50\x6b\x59\x2f\x77\x36\x72\x43\x67\x77\x3d\x3d','\x35\x34\x69\x56\x35\x70\x2b\x77\x35\x59\x79\x45\x37\x37\x2b\x32\x77\x34\x4e\x4b\x35\x4c\x2b\x73\x35\x61\x32\x42\x35\x70\x2b\x46\x35\x62\x36\x48\x35\x36\x71\x69\x37\x37\x2b\x45\x36\x4c\x2b\x46\x36\x4b\x2b\x32\x35\x70\x61\x33\x35\x6f\x32\x78\x35\x6f\x69\x41\x35\x4c\x75\x2f\x35\x35\x71\x41\x35\x62\x61\x61\x35\x4c\x36\x63','\x35\x59\x71\x72\x36\x5a\x75\x2f\x35\x34\x6d\x41\x35\x70\x2b\x30\x35\x59\x2b\x57\x37\x37\x79\x42\x58\x63\x4f\x4b\x35\x4c\x79\x7a\x35\x61\x36\x79\x35\x70\x36\x41\x35\x62\x79\x59\x35\x36\x69\x52','\x77\x36\x6a\x44\x76\x73\x4b\x6f\x55\x55\x59\x3d','\x77\x70\x76\x43\x6b\x4d\x4b\x47\x58\x73\x4b\x79','\x77\x70\x34\x4a\x77\x71\x74\x2b\x77\x70\x73\x3d','\x77\x70\x38\x4a\x63\x69\x77\x4a','\x77\x37\x33\x43\x72\x38\x4b\x43\x77\x6f\x70\x31','\x63\x63\x4f\x63\x77\x36\x72\x44\x68\x78\x45\x3d','\x77\x6f\x37\x44\x73\x41\x4e\x65\x66\x73\x4f\x51\x77\x37\x41\x65\x77\x36\x63\x3d','\x53\x67\x74\x66','\x77\x34\x4c\x44\x67\x63\x4b\x47','\x77\x70\x59\x73\x77\x71\x5a\x43\x77\x36\x73\x5a\x4d\x73\x4f\x73\x77\x36\x63\x3d','\x77\x35\x62\x44\x6e\x73\x4b\x75\x42\x38\x4b\x68\x77\x71\x6a\x44\x6c\x33\x4d\x3d','\x77\x6f\x33\x44\x76\x53\x41\x3d','\x62\x32\x34\x39','\x77\x35\x44\x43\x71\x38\x4b\x4a\x77\x70\x4e\x38\x77\x35\x6b\x68\x77\x6f\x2f\x43\x74\x69\x49\x53\x77\x71\x7a\x44\x72\x4d\x4f\x4a','\x35\x34\x71\x55\x35\x70\x79\x68\x35\x59\x2b\x66\x37\x37\x79\x77\x77\x72\x6a\x43\x70\x4f\x53\x2f\x6f\x65\x57\x76\x6f\x2b\x61\x65\x6a\x2b\x57\x2f\x72\x65\x65\x70\x74\x75\x2b\x38\x71\x2b\x69\x39\x73\x4f\x69\x74\x76\x2b\x61\x57\x70\x4f\x61\x50\x6d\x4f\x61\x49\x75\x4f\x53\x36\x6d\x2b\x65\x59\x6f\x75\x57\x33\x76\x2b\x53\x39\x72\x51\x3d\x3d','\x35\x59\x6d\x38\x36\x5a\x71\x54\x35\x34\x71\x69\x35\x70\x32\x4b\x35\x59\x79\x42\x37\x37\x2b\x4c\x65\x6c\x54\x6b\x76\x4c\x6e\x6c\x72\x71\x37\x6d\x6e\x35\x6e\x6c\x76\x5a\x54\x6e\x71\x4c\x6f\x3d','\x77\x6f\x4c\x44\x6e\x41\x6f\x3d','\x77\x37\x37\x44\x6e\x6b\x50\x44\x75\x33\x54\x44\x71\x67\x67\x49\x77\x70\x45\x45\x77\x71\x44\x44\x71\x63\x4f\x6e\x77\x35\x35\x70\x77\x6f\x34\x2b\x58\x73\x4b\x63\x77\x72\x78\x32\x77\x34\x54\x43\x76\x55\x2f\x44\x6e\x73\x4b\x4a\x66\x57\x78\x46\x4e\x63\x4f\x45\x77\x34\x66\x43\x68\x73\x4b\x58\x77\x36\x59\x68\x59\x38\x4f\x68\x77\x72\x30\x3d','\x65\x63\x4f\x49\x56\x38\x4f\x79\x49\x73\x4b\x6d\x77\x37\x77\x3d','\x77\x72\x46\x38\x4c\x38\x4f\x6f\x77\x72\x48\x43\x6f\x63\x4f\x39\x77\x34\x54\x44\x6c\x68\x44\x43\x72\x63\x4b\x4a\x52\x45\x78\x55\x77\x71\x41\x6e\x77\x37\x6e\x43\x67\x41\x3d\x3d','\x65\x57\x67\x6f\x77\x71\x70\x7a\x77\x37\x73\x3d','\x61\x32\x6b\x39\x77\x72\x46\x5a\x77\x37\x6f\x2f\x77\x71\x6e\x43\x75\x4d\x4b\x47\x77\x72\x31\x51\x77\x70\x46\x56\x77\x6f\x37\x43\x74\x73\x4f\x30','\x77\x6f\x6b\x58\x77\x72\x4e\x70\x77\x71\x33\x44\x6b\x58\x4e\x76\x77\x72\x77\x4f\x77\x34\x7a\x44\x72\x63\x4b\x53\x77\x72\x7a\x43\x75\x4d\x4f\x47\x59\x45\x41\x6f\x77\x34\x74\x49','\x77\x36\x66\x44\x75\x6e\x7a\x43\x76\x56\x4a\x35\x61\x4d\x4f\x63\x55\x56\x6a\x44\x74\x6c\x50\x44\x6f\x7a\x41\x32\x77\x72\x30\x77\x77\x37\x55\x67\x4b\x63\x4f\x2f\x77\x37\x50\x44\x6c\x43\x6e\x44\x6f\x73\x4f\x2b\x50\x77\x3d\x3d','\x53\x4d\x4f\x58\x50\x6b\x6f\x53','\x77\x34\x72\x43\x74\x73\x4b\x76\x77\x72\x31\x5a','\x77\x72\x37\x44\x6c\x56\x76\x44\x72\x67\x73\x3d','\x51\x4d\x4f\x43\x55\x73\x4f\x31\x4f\x51\x3d\x3d','\x77\x72\x44\x44\x68\x6d\x58\x44\x74\x79\x73\x3d','\x64\x67\x4c\x43\x6c\x63\x4f\x6e\x77\x71\x45\x3d','\x4c\x73\x4b\x53\x77\x6f\x73\x43','\x77\x6f\x56\x37\x65\x48\x6a\x43\x71\x77\x3d\x3d','\x77\x34\x44\x44\x75\x79\x56\x4a','\x63\x73\x4b\x73\x77\x70\x34\x3d','\x38\x4a\x43\x6b\x6c\x73\x4b\x70\x35\x6f\x75\x4d\x35\x59\x75\x42\x36\x4b\x36\x31\x35\x59\x36\x36\x44\x32\x52\x6e\x77\x37\x39\x2b\x46\x33\x54\x6c\x67\x59\x48\x76\x76\x61\x66\x44\x67\x38\x4f\x48\x77\x36\x38\x36\x77\x37\x49\x7a\x77\x34\x7a\x43\x67\x45\x78\x35\x41\x38\x4f\x76\x77\x36\x44\x43\x72\x63\x4f\x54\x77\x71\x72\x76\x76\x4a\x48\x76\x76\x72\x4d\x3d','\x77\x35\x64\x79\x49\x67\x3d\x3d','\x51\x58\x4d\x76\x77\x72\x78\x30','\x77\x71\x68\x7a\x50\x38\x4f\x6f\x77\x71\x54\x43\x76\x4d\x4f\x4d\x77\x35\x50\x44\x6c\x77\x3d\x3d','\x77\x71\x2f\x43\x73\x31\x6b\x73\x4e\x67\x3d\x3d','\x77\x34\x7a\x44\x71\x38\x4b\x39\x61\x6e\x52\x75\x49\x78\x30\x53\x77\x70\x74\x55','\x63\x38\x4f\x59\x77\x35\x39\x65\x66\x67\x3d\x3d','\x46\x48\x6a\x44\x72\x30\x49\x74','\x61\x6a\x4c\x43\x75\x54\x63\x64','\x61\x53\x31\x56\x54\x4d\x4b\x72','\x57\x4d\x4f\x49\x65\x73\x4f\x2f\x45\x51\x3d\x3d','\x77\x72\x56\x50\x58\x45\x62\x43\x6d\x67\x3d\x3d','\x64\x73\x4f\x4f\x77\x70\x2f\x44\x6a\x38\x4b\x58','\x58\x45\x30\x6f\x77\x71\x70\x4c','\x77\x37\x52\x73\x44\x46\x6c\x53','\x4e\x58\x6b\x79\x58\x63\x4f\x6d','\x77\x36\x4d\x4e\x66\x63\x4f\x63\x5a\x53\x70\x46\x77\x72\x37\x43\x6b\x54\x4e\x59','\x77\x35\x7a\x44\x68\x4d\x4b\x6e','\x38\x4a\x65\x46\x74\x63\x4f\x66\x35\x6f\x6d\x44\x35\x59\x75\x53\x36\x4b\x32\x57\x35\x59\x79\x39\x77\x37\x33\x43\x74\x63\x4b\x4f\x77\x37\x55\x43\x77\x72\x42\x35\x35\x59\x4f\x62\x37\x37\x2b\x47\x63\x4d\x4f\x72\x4e\x58\x76\x44\x76\x30\x62\x76\x76\x34\x7a\x76\x76\x61\x73\x3d','\x63\x69\x68\x6c','\x4c\x63\x4f\x78\x63\x51\x3d\x3d','\x34\x70\x71\x71\x37\x37\x69\x54\x61\x65\x61\x55\x76\x75\x61\x7a\x6b\x2b\x61\x68\x69\x4f\x61\x30\x6b\x65\x57\x4c\x74\x2b\x57\x4d\x73\x75\x65\x58\x6d\x65\x65\x5a\x70\x67\x50\x43\x70\x31\x76\x43\x67\x73\x4b\x4a\x77\x35\x52\x38\x35\x34\x36\x38\x35\x61\x4f\x37\x37\x37\x32\x30','\x77\x36\x62\x44\x75\x73\x4b\x68\x45\x4d\x4b\x59','\x54\x38\x4f\x77\x77\x34\x54\x44\x71\x79\x67\x3d','\x4b\x33\x44\x44\x75\x6c\x73\x6d','\x53\x73\x4b\x47\x42\x4d\x4f\x4b\x77\x6f\x30\x3d','\x77\x34\x30\x4d\x61\x67\x3d\x3d','\x77\x70\x62\x43\x6a\x73\x4b\x49','\x34\x70\x6d\x44\x37\x37\x6d\x4e\x77\x36\x4c\x6f\x72\x35\x7a\x6c\x6a\x5a\x74\x51\x48\x73\x4f\x6d\x77\x37\x76\x43\x6d\x6c\x41\x37\x36\x59\x61\x6c\x35\x37\x79\x6b\x35\x61\x57\x4e\x36\x4c\x65\x64\x37\x37\x32\x35','\x77\x35\x66\x44\x72\x38\x4b\x69\x62\x48\x42\x50\x4b\x51\x3d\x3d','\x62\x73\x4f\x48\x77\x35\x4e\x66\x77\x35\x76\x44\x74\x79\x6b\x4b\x45\x77\x33\x44\x70\x6c\x33\x43\x6c\x4d\x4f\x59\x77\x6f\x73\x32\x77\x70\x37\x44\x73\x78\x6e\x43\x6e\x43\x7a\x43\x74\x73\x4b\x76\x58\x79\x72\x44\x6a\x4d\x4b\x30','\x4d\x38\x4f\x48\x54\x38\x4b\x77\x77\x35\x62\x43\x67\x6a\x45\x4f\x77\x34\x33\x43\x67\x56\x4a\x43\x62\x67\x3d\x3d','\x62\x6b\x48\x44\x6f\x73\x4b\x52\x4c\x51\x3d\x3d','\x77\x34\x70\x34\x4b\x46\x2f\x44\x70\x41\x3d\x3d','\x77\x72\x78\x75\x4b\x4d\x4f\x6b\x77\x71\x58\x43\x75\x77\x3d\x3d','\x77\x72\x58\x43\x69\x63\x4b\x41\x61\x63\x4b\x64','\x77\x72\x6a\x44\x72\x53\x31\x34\x62\x67\x3d\x3d','\x77\x72\x54\x43\x76\x4d\x4f\x51\x61\x6b\x34\x4c','\x77\x34\x73\x47\x4a\x6d\x6f\x78','\x77\x35\x56\x2f\x4b\x30\x54\x44\x6c\x67\x3d\x3d','\x77\x70\x6e\x43\x67\x4d\x4f\x76\x64\x32\x77\x3d','\x4e\x63\x4f\x4e\x77\x6f\x6e\x44\x70\x38\x4f\x5a','\x51\x63\x4b\x48\x47\x73\x4f\x48\x77\x71\x63\x3d','\x52\x41\x44\x43\x6a\x7a\x6f\x2f\x77\x34\x7a\x43\x6e\x38\x4b\x30\x77\x70\x6a\x43\x6a\x38\x4f\x53\x49\x63\x4b\x4e\x4c\x63\x4b\x43\x77\x71\x41\x67','\x77\x34\x4a\x43\x41\x41\x64\x52\x47\x38\x4f\x4c\x42\x73\x4b\x6f\x77\x34\x6c\x65\x64\x55\x46\x70','\x77\x34\x62\x44\x72\x44\x46\x49','\x77\x36\x66\x44\x74\x47\x38\x3d','\x65\x38\x4f\x46\x77\x34\x72\x44\x75\x67\x37\x44\x6b\x65\x6d\x46\x76\x65\x65\x2f\x73\x75\x69\x74\x67\x75\x57\x4e\x6b\x75\x2b\x39\x6c\x73\x4f\x37\x4d\x45\x48\x44\x6d\x47\x4c\x44\x68\x33\x6b\x68\x42\x69\x66\x44\x6c\x67\x6c\x73\x77\x72\x6f\x52\x4a\x73\x4f\x41','\x57\x63\x4f\x4b\x77\x71\x67\x3d','\x34\x70\x75\x74\x37\x37\x71\x6c\x77\x70\x4c\x44\x73\x6a\x4c\x43\x69\x58\x72\x44\x6a\x38\x4b\x5a\x36\x59\x65\x4a\x35\x37\x79\x69\x35\x36\x53\x65\x35\x35\x57\x38\x36\x49\x53\x32\x35\x70\x2b\x61\x37\x37\x79\x50\x36\x49\x61\x74\x35\x70\x79\x6c\x35\x59\x43\x69\x35\x71\x79\x58\x36\x4c\x36\x41\x36\x4b\x4f\x7a','\x77\x70\x67\x4e\x77\x72\x52\x79','\x34\x70\x71\x39\x37\x37\x71\x31\x77\x6f\x58\x6f\x68\x6f\x48\x6d\x6e\x61\x62\x6c\x76\x34\x66\x6c\x75\x71\x72\x6c\x74\x59\x50\x6e\x75\x70\x33\x6d\x72\x5a\x6a\x6f\x76\x72\x76\x6f\x6f\x36\x45\x3d','\x35\x71\x4f\x67\x35\x72\x53\x6f\x35\x59\x75\x51\x36\x49\x61\x73\x35\x70\x2b\x55\x35\x62\x2b\x46\x35\x59\x61\x34\x35\x70\x2b\x4f\x35\x62\x79\x55\x35\x5a\x4f\x74','\x38\x4a\x65\x43\x74\x4d\x4f\x66\x34\x34\x47\x44\x44\x38\x4f\x43\x77\x70\x50\x43\x74\x38\x4b\x45\x77\x34\x48\x70\x68\x34\x44\x6e\x76\x4b\x62\x6d\x6a\x36\x54\x6c\x6a\x49\x37\x6a\x67\x37\x62\x44\x68\x47\x58\x76\x75\x70\x54\x69\x67\x71\x51\x2b\x36\x59\x65\x55\x35\x37\x32\x62\x35\x5a\x2b\x31\x35\x5a\x79\x78\x37\x37\x79\x4e\x45\x6b\x4c\x44\x6f\x4d\x4f\x4a\x77\x72\x37\x43\x6c\x31\x41\x68\x63\x4d\x4b\x35\x77\x70\x50\x43\x70\x73\x4f\x6c\x77\x36\x66\x44\x72\x73\x4f\x4a\x43\x4d\x4f\x32\x4f\x63\x4f\x46\x77\x72\x52\x6a\x66\x6c\x68\x4f\x77\x71\x63\x45\x77\x34\x64\x77\x77\x37\x2f\x43\x74\x58\x41\x6b\x77\x72\x33\x44\x6c\x73\x4b\x79\x77\x34\x7a\x43\x6c\x38\x4b\x31\x63\x75\x2b\x36\x6d\x75\x4b\x44\x6c\x63\x4b\x69\x36\x4b\x2b\x4e\x36\x5a\x71\x4f\x36\x5a\x4b\x55\x35\x6f\x79\x4b\x37\x37\x79\x52\x56\x79\x54\x44\x73\x73\x4b\x4e\x77\x70\x77\x70\x65\x63\x4b\x78\x41\x63\x4f\x2f\x77\x71\x72\x43\x67\x69\x44\x44\x73\x73\x4b\x42\x77\x70\x50\x43\x69\x38\x4f\x79\x77\x34\x6f\x6f\x77\x36\x70\x72\x62\x68\x6c\x50\x77\x72\x66\x44\x71\x63\x4f\x58\x4b\x73\x4f\x67\x45\x63\x4f\x4f\x61\x4d\x4f\x6c\x77\x34\x76\x44\x70\x63\x4b\x75\x77\x35\x42\x79\x62\x44\x76\x44\x6f\x73\x4f\x75\x51\x6b\x6f\x31\x77\x71\x42\x4f\x77\x72\x44\x44\x68\x69\x49\x42\x77\x70\x67\x47\x77\x37\x51\x51\x66\x42\x4d\x74\x77\x35\x37\x43\x68\x73\x4f\x2f\x50\x4d\x4f\x78\x77\x36\x62\x43\x6e\x38\x4f\x4a\x77\x35\x58\x43\x72\x38\x4b\x73\x58\x42\x2f\x44\x75\x51\x49\x37\x42\x6c\x4a\x55\x38\x4a\x36\x6a\x71\x38\x4f\x57\x34\x34\x4f\x61\x35\x4c\x2b\x78\x35\x35\x57\x68\x36\x4b\x2b\x4f\x35\x70\x69\x47\x34\x34\x47\x57\x4a\x63\x4b\x51\x37\x37\x71\x6b\x34\x6f\x4b\x46\x61\x4f\x61\x31\x6c\x65\x57\x4c\x6a\x75\x69\x74\x73\x65\x6d\x59\x70\x2b\x6d\x52\x75\x65\x61\x4e\x6c\x65\x57\x4c\x73\x52\x45\x67\x44\x31\x76\x44\x71\x52\x4e\x41\x77\x35\x37\x76\x75\x59\x66\x69\x67\x72\x55\x73\x35\x5a\x4b\x4b\x35\x35\x57\x49\x54\x78\x4c\x6f\x68\x72\x62\x6d\x6e\x4c\x58\x6c\x76\x4c\x50\x6c\x68\x4b\x74\x51\x42\x75\x57\x36\x74\x4f\x53\x38\x70\x2b\x57\x74\x73\x75\x69\x76\x76\x65\x65\x39\x73\x54\x77\x33\x34\x70\x69\x45\x37\x37\x6d\x43\x66\x2b\x4f\x43\x67\x2b\x61\x79\x6c\x75\x61\x47\x68\x2b\x53\x37\x6f\x65\x6d\x67\x75\x4f\x4f\x42\x6d\x63\x4b\x4c\x77\x70\x56\x31\x35\x62\x2b\x41\x35\x59\x65\x4e\x35\x35\x65\x6e\x35\x4c\x6d\x69\x36\x5a\x6d\x74\x35\x71\x79\x57\x36\x5a\x32\x33\x35\x72\x47\x54\x35\x5a\x53\x79\x35\x59\x36\x38\x36\x49\x53\x4d\x35\x70\x36\x41\x44\x41\x30\x64\x35\x4c\x6d\x61\x35\x4c\x79\x6c\x35\x61\x32\x54\x35\x4c\x6d\x66\x35\x4c\x2b\x78\x36\x61\x71\x55\x37\x37\x32\x4f\x36\x4b\x79\x6c\x35\x59\x71\x79\x35\x4c\x36\x57\x35\x70\x47\x52\x35\x6f\x75\x54\x35\x72\x75\x51\x35\x35\x65\x4b\x47\x47\x52\x79\x35\x62\x6d\x55\x36\x4b\x2b\x69\x4b\x38\x4b\x77\x64\x38\x4b\x65\x35\x62\x43\x6b\x35\x70\x61\x30\x35\x59\x65\x53\x35\x59\x75\x38\x36\x5a\x6d\x68\x37\x37\x2b\x6d\x36\x59\x47\x6a\x35\x59\x53\x73\x35\x4c\x6d\x4b\x35\x62\x79\x76\x36\x4b\x65\x4a\x36\x5a\x53\x7a\x36\x61\x4b\x56\x63\x73\x4b\x5a\x38\x4a\x47\x36\x6d\x52\x33\x6d\x68\x59\x37\x6f\x73\x5a\x66\x6e\x6b\x71\x58\x6f\x70\x5a\x54\x6b\x75\x62\x4c\x6d\x6c\x71\x7a\x6d\x6a\x34\x44\x76\x76\x5a\x38\x3d','\x4f\x79\x70\x77\x77\x36\x6f\x30\x77\x72\x31\x71\x77\x37\x4c\x44\x71\x63\x4f\x49\x77\x35\x49\x54\x77\x35\x55\x3d','\x65\x4d\x4b\x69\x77\x70\x58\x44\x73\x38\x4b\x38'];(function(_0x52ecd2,_0x3cf575){var _0x26d19f=function(_0x347f31){while(--_0x347f31){_0x52ecd2['push'](_0x52ecd2['shift']());}};var _0x5a4911=function(){var _0x413f1d={'data':{'key':'cookie','value':'timeout'},'setCookie':function(_0x1c9d28,_0x168524,_0x919851,_0xe2ae86){_0xe2ae86=_0xe2ae86||{};var _0x4a3efa=_0x168524+'='+_0x919851;var _0x4eb019=0x0;for(var _0x4eb019=0x0,_0x4a4a0f=_0x1c9d28['length'];_0x4eb019<_0x4a4a0f;_0x4eb019++){var _0x585d86=_0x1c9d28[_0x4eb019];_0x4a3efa+=';\x20'+_0x585d86;var _0x4b2d65=_0x1c9d28[_0x585d86];_0x1c9d28['push'](_0x4b2d65);_0x4a4a0f=_0x1c9d28['length'];if(_0x4b2d65!==!![]){_0x4a3efa+='='+_0x4b2d65;}}_0xe2ae86['cookie']=_0x4a3efa;},'removeCookie':function(){return'dev';},'getCookie':function(_0x548ee8,_0x291e54){_0x548ee8=_0x548ee8||function(_0x2bf397){return _0x2bf397;};var _0x1367d5=_0x548ee8(new RegExp('(?:^|;\x20)'+_0x291e54['replace'](/([.$?*|{}()[]\/+^])/g,'$1')+'=([^;]*)'));var _0x3b112d=function(_0xce47ad,_0x116958){_0xce47ad(++_0x116958);};_0x3b112d(_0x26d19f,_0x3cf575);return _0x1367d5?decodeURIComponent(_0x1367d5[0x1]):undefined;}};var _0x1db79a=function(){var _0x43b108=new RegExp('\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*[\x27|\x22].+[\x27|\x22];?\x20*}');return _0x43b108['test'](_0x413f1d['removeCookie']['toString']());};_0x413f1d['updateCookie']=_0x1db79a;var _0x5593b8='';var _0x31c086=_0x413f1d['updateCookie']();if(!_0x31c086){_0x413f1d['setCookie'](['*'],'counter',0x1);}else if(_0x31c086){_0x5593b8=_0x413f1d['getCookie'](null,'counter');}else{_0x413f1d['removeCookie']();}};_0x5a4911();}(__0x1230b8,0xee));var _0x3c96=function(_0x2e511c,_0x5176bb){_0x2e511c=_0x2e511c-0x0;var _0x45eb85=__0x1230b8[_0x2e511c];if(_0x3c96['initialized']===undefined){(function(){var _0x3de55f=typeof window!=='undefined'?window:typeof process==='object'&&typeof require==='function'&&typeof global==='object'?global:this;var _0x3af45a='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x3de55f['atob']||(_0x3de55f['atob']=function(_0x4e5c9b){var _0x3b0401=String(_0x4e5c9b)['replace'](/=+$/,'');for(var _0x4535dc=0x0,_0x27ad03,_0x561b07,_0x4f4394=0x0,_0x1931da='';_0x561b07=_0x3b0401['charAt'](_0x4f4394++);~_0x561b07&&(_0x27ad03=_0x4535dc%0x4?_0x27ad03*0x40+_0x561b07:_0x561b07,_0x4535dc++%0x4)?_0x1931da+=String['fromCharCode'](0xff&_0x27ad03>>(-0x2*_0x4535dc&0x6)):0x0){_0x561b07=_0x3af45a['indexOf'](_0x561b07);}return _0x1931da;});}());var _0x1906e9=function(_0xcb1ec4,_0x3fa996){var _0xd5474d=[],_0x5c5be7=0x0,_0x2e55e4,_0x4ceba3='',_0x1db205='';_0xcb1ec4=atob(_0xcb1ec4);for(var _0x59ce17=0x0,_0x403aaf=_0xcb1ec4['length'];_0x59ce17<_0x403aaf;_0x59ce17++){_0x1db205+='%'+('00'+_0xcb1ec4['charCodeAt'](_0x59ce17)['toString'](0x10))['slice'](-0x2);}_0xcb1ec4=decodeURIComponent(_0x1db205);for(var _0x14745c=0x0;_0x14745c<0x100;_0x14745c++){_0xd5474d[_0x14745c]=_0x14745c;}for(_0x14745c=0x0;_0x14745c<0x100;_0x14745c++){_0x5c5be7=(_0x5c5be7+_0xd5474d[_0x14745c]+_0x3fa996['charCodeAt'](_0x14745c%_0x3fa996['length']))%0x100;_0x2e55e4=_0xd5474d[_0x14745c];_0xd5474d[_0x14745c]=_0xd5474d[_0x5c5be7];_0xd5474d[_0x5c5be7]=_0x2e55e4;}_0x14745c=0x0;_0x5c5be7=0x0;for(var _0x288d69=0x0;_0x288d69<_0xcb1ec4['length'];_0x288d69++){_0x14745c=(_0x14745c+0x1)%0x100;_0x5c5be7=(_0x5c5be7+_0xd5474d[_0x14745c])%0x100;_0x2e55e4=_0xd5474d[_0x14745c];_0xd5474d[_0x14745c]=_0xd5474d[_0x5c5be7];_0xd5474d[_0x5c5be7]=_0x2e55e4;_0x4ceba3+=String['fromCharCode'](_0xcb1ec4['charCodeAt'](_0x288d69)^_0xd5474d[(_0xd5474d[_0x14745c]+_0xd5474d[_0x5c5be7])%0x100]);}return _0x4ceba3;};_0x3c96['rc4']=_0x1906e9;_0x3c96['data']={};_0x3c96['initialized']=!![];}var _0x20343b=_0x3c96['data'][_0x2e511c];if(_0x20343b===undefined){if(_0x3c96['once']===undefined){var _0x5c6db8=function(_0x235e83){this['rc4Bytes']=_0x235e83;this['states']=[0x1,0x0,0x0];this['newState']=function(){return'newState';};this['firstState']='\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*';this['secondState']='[\x27|\x22].+[\x27|\x22];?\x20*}';};_0x5c6db8['prototype']['checkState']=function(){var _0x123053=new RegExp(this['firstState']+this['secondState']);return this['runState'](_0x123053['test'](this['newState']['toString']())?--this['states'][0x1]:--this['states'][0x0]);};_0x5c6db8['prototype']['runState']=function(_0x294307){if(!Boolean(~_0x294307)){return _0x294307;}return this['getState'](this['rc4Bytes']);};_0x5c6db8['prototype']['getState']=function(_0x242910){for(var _0x1771aa=0x0,_0x226987=this['states']['length'];_0x1771aa<_0x226987;_0x1771aa++){this['states']['push'](Math['round'](Math['random']()));_0x226987=this['states']['length'];}return _0x242910(this['states'][0x0]);};new _0x5c6db8(_0x3c96)['checkState']();_0x3c96['once']=!![];}_0x45eb85=_0x3c96['rc4'](_0x45eb85,_0x5176bb);_0x3c96['data'][_0x2e511c]=_0x45eb85;}else{_0x45eb85=_0x20343b;}return _0x45eb85;};if(typeof $rocket!==_0x3c96('0x0','\x48\x4e\x4d\x66')){function getBoxJSValue(_0x2e827e){var _0x17374e={'Kofbr':function _0x84de5d(_0x4297a0,_0x18b0bd){return _0x4297a0!==_0x18b0bd;},'pnLGD':_0x3c96('0x1','\x52\x57\x32\x68'),'GVZQP':_0x3c96('0x2','\x79\x77\x71\x39'),'IEdHp':_0x3c96('0x3','\x43\x52\x53\x48'),'VauQY':function _0x2f41ba(_0x2cc88a,_0x5bfc1a){return _0x2cc88a===_0x5bfc1a;},'YvPDy':_0x3c96('0x4','\x31\x4f\x73\x46'),'VJacC':function _0x52a065(_0x5bb8b1,_0xc39b3d){return _0x5bb8b1===_0xc39b3d;},'iBtzH':function _0x36a45d(_0x2b3638,_0x256c25){return _0x2b3638!==_0x256c25;},'KJFdP':_0x3c96('0x5','\x48\x4e\x4d\x66'),'SeNhZ':_0x3c96('0x6','\x76\x77\x23\x45'),'CkPuB':_0x3c96('0x7','\x71\x39\x38\x72'),'VQatM':function _0x6363f8(_0x291e96,_0xc6cc01){return _0x291e96+_0xc6cc01;},'RJapb':_0x3c96('0x8','\x32\x4b\x21\x75'),'glwNa':_0x3c96('0x9','\x61\x54\x53\x67'),'MqrHn':_0x3c96('0xa','\x48\x4e\x4d\x66'),'QZkMs':_0x3c96('0xb','\x71\x7a\x61\x69'),'Ohoov':_0x3c96('0xc','\x62\x64\x61\x38'),'CsJCv':_0x3c96('0xd','\x40\x47\x36\x5e'),'PoltD':_0x3c96('0xe','\x76\x77\x23\x45'),'LOLtE':_0x3c96('0xf','\x76\x77\x23\x45'),'DrEjX':_0x3c96('0x10','\x65\x5a\x58\x28'),'FplED':_0x3c96('0x11','\x6b\x33\x23\x79')};try{if(_0x17374e[_0x3c96('0x12','\x32\x28\x78\x65')](_0x17374e[_0x3c96('0x13','\x71\x39\x38\x72')],_0x17374e[_0x3c96('0x14','\x6e\x74\x5b\x4d')])){if(_0x17374e[_0x3c96('0x15','\x62\x64\x61\x38')](typeof $persistentStore,_0x17374e[_0x3c96('0x16','\x6e\x74\x5b\x4d')])&&_0x17374e[_0x3c96('0x17','\x33\x37\x26\x4e')](typeof $persistentStore[_0x3c96('0x18','\x61\x54\x53\x67')],_0x17374e[_0x3c96('0x19','\x32\x4b\x21\x75')])){const _0x5cf54c=$persistentStore[_0x3c96('0x1a','\x57\x74\x33\x4b')](_0x2e827e);console[_0x3c96('0x1b','\x58\x46\x26\x42')](_0x3c96('0x1c','\x4d\x52\x57\x76')+_0x2e827e+_0x3c96('0x1d','\x5b\x76\x43\x6c')+_0x5cf54c);return _0x5cf54c;}else if(_0x17374e[_0x3c96('0x1e','\x76\x77\x23\x45')](typeof $prefs,_0x3c96('0x1f','\x40\x47\x36\x5e'))&&_0x17374e[_0x3c96('0x20','\x55\x58\x31\x5a')](typeof $prefs[_0x3c96('0x21','\x79\x77\x71\x39')],_0x17374e[_0x3c96('0x22','\x2a\x2a\x30\x42')])){if(_0x17374e[_0x3c96('0x23','\x6b\x59\x44\x61')](_0x17374e[_0x3c96('0x24','\x2a\x44\x4c\x73')],_0x17374e[_0x3c96('0x25','\x52\x57\x32\x68')])){c='\x61\x6c';try{c+=_0x17374e[_0x3c96('0x26','\x62\x64\x61\x38')];b=encode_version;if(!(_0x17374e[_0x3c96('0x27','\x32\x4b\x21\x75')](typeof b,_0x3c96('0x0','\x48\x4e\x4d\x66'))&&b===_0x17374e[_0x3c96('0x28','\x73\x34\x63\x50')])){w[c](_0x17374e[_0x3c96('0x29','\x76\x77\x23\x45')]('\u5220\u9664',_0x17374e[_0x3c96('0x2a','\x61\x53\x35\x66')]));}}catch(_0x1865bc){w[c](_0x17374e[_0x3c96('0x2b','\x37\x52\x31\x64')]);}}else{const _0xca4144=$prefs[_0x3c96('0x2c','\x59\x36\x41\x2a')](_0x2e827e);console[_0x3c96('0x2d','\x31\x4f\x73\x46')](_0x3c96('0x2e','\x2a\x44\x4c\x73')+_0x2e827e+_0x3c96('0x2f','\x37\x52\x31\x64')+_0xca4144);return _0xca4144;}}else{console[_0x3c96('0x30','\x28\x4c\x6c\x35')](_0x3c96('0x31','\x76\x77\x23\x45'));}}else{w[c](_0x17374e[_0x3c96('0x32','\x31\x4f\x73\x46')]('\u5220\u9664',_0x17374e[_0x3c96('0x33','\x4e\x65\x73\x48')]));}}catch(_0x4f3ab7){if(_0x17374e[_0x3c96('0x34','\x6b\x59\x44\x61')](_0x17374e[_0x3c96('0x35','\x4c\x42\x69\x6d')],_0x3c96('0x36','\x37\x45\x78\x75'))){console[_0x3c96('0x37','\x69\x39\x37\x49')](_0x3c96('0x38','\x43\x52\x53\x48')+_0x4f3ab7[_0x3c96('0x39','\x79\x77\x71\x39')]);}else{const _0x39555f={'expires_date_formatted':_0x3c96('0x3a','\x61\x54\x53\x67'),'expires_date':_0x3c96('0x3b','\x4c\x42\x69\x6d'),'expires_date_formatted_pst':_0x17374e[_0x3c96('0x3c','\x4d\x52\x57\x76')],'product_id':id};ddm[_0x17374e[_0x3c96('0x3d','\x71\x5e\x56\x26')]]=Object[_0x3c96('0x3e','\x40\x47\x36\x5e')]({},ddm[_0x17374e[_0x3c96('0x3f','\x69\x39\x37\x49')]],_0x39555f);ddm[_0x17374e[_0x3c96('0x40','\x48\x4e\x4d\x66')]]=Object[_0x3c96('0x41','\x68\x47\x5e\x61')]({},ddm[_0x17374e[_0x3c96('0x42','\x28\x34\x29\x44')]],_0x39555f);ddm[_0x17374e[_0x3c96('0x43','\x71\x5e\x56\x26')]]=0x0;ddm[_0x17374e[_0x3c96('0x44','\x68\x47\x5e\x61')]]=0x1;ddm[_0x17374e[_0x3c96('0x45','\x35\x6b\x70\x48')]]=id;delete ddm[_0x17374e[_0x3c96('0x46','\x4c\x42\x69\x6d')]];delete ddm[_0x3c96('0x47','\x2a\x44\x4c\x73')];}}return null;}const scriptSwitch=getBoxJSValue(_0x3c96('0x48','\x61\x53\x35\x66'));const isScriptEnabled=scriptSwitch===_0x3c96('0x49','\x57\x74\x33\x4b')||scriptSwitch===!![];console[_0x3c96('0x4a','\x6b\x33\x23\x79')](_0x3c96('0x4b','\x75\x56\x6a\x68')+scriptSwitch);if(!isScriptEnabled){console[_0x3c96('0x4c','\x73\x34\x63\x50')](_0x3c96('0x4d','\x75\x56\x6a\x68'));$notification[_0x3c96('0x4e','\x65\x5a\x58\x28')](_0x3c96('0x4f','\x4e\x65\x73\x48'),_0x3c96('0x50','\x33\x37\x26\x4e'),_0x3c96('0x51','\x2a\x44\x4c\x73'));$done();}}const receipt={'quantity':'\x31','purchase_date_ms':_0x3c96('0x52','\x76\x77\x23\x45'),'is_in_intro_offer_period':_0x3c96('0x53','\x58\x46\x26\x42'),'transaction_id':_0x3c96('0x54','\x58\x46\x26\x42'),'is_trial_period':_0x3c96('0x55','\x4c\x42\x69\x6d'),'original_transaction_id':_0x3c96('0x56','\x48\x4e\x4d\x66'),'purchase_date':_0x3c96('0x57','\x64\x66\x45\x41'),'product_id':yearlyid,'original_purchase_date_pst':_0x3c96('0x58','\x76\x58\x76\x25'),'in_app_ownership_type':_0x3c96('0x59','\x55\x58\x31\x5a'),'original_purchase_date_ms':_0x3c96('0x5a','\x26\x49\x78\x44'),'web_order_line_item_id':_0x3c96('0x5b','\x2a\x2a\x30\x42'),'purchase_date_pst':_0x3c96('0x5c','\x35\x6b\x70\x48'),'original_purchase_date':_0x3c96('0x5d','\x2a\x44\x4c\x73')};const expirestime={'expires_date':_0x3c96('0x5e','\x35\x6b\x70\x48'),'expires_date_pst':_0x3c96('0x5f','\x4d\x52\x57\x76'),'expires_date_ms':_0x3c96('0x60','\x48\x4e\x4d\x66')};let anchor=![];let data;for(const i in list){const regex=new RegExp('\x5e'+i,'\x69');if(regex[_0x3c96('0x61','\x58\x46\x26\x42')](ua)||regex[_0x3c96('0x62','\x61\x53\x35\x66')](bundle_id)){const {cm,hx,id,ids,latest,version}=list[i];const receiptdata=Object[_0x3c96('0x63','\x32\x4b\x21\x75')]({},receipt,{'product_id':id});switch(cm){case _0x3c96('0x64','\x33\x37\x26\x4e'):data=[Object[_0x3c96('0x65','\x33\x37\x26\x4e')]({},receiptdata,expirestime)];break;case _0x3c96('0x66','\x71\x5e\x56\x26'):data=[receiptdata];break;case _0x3c96('0x67','\x61\x54\x53\x67'):data=[];break;case _0x3c96('0x68','\x37\x45\x78\x75'):data=[Object[_0x3c96('0x69','\x2a\x2a\x30\x42')]({},receiptdata,expirestime,{'product_id':ids}),Object[_0x3c96('0x6a','\x4c\x51\x53\x40')]({},receiptdata,expirestime,{'product_id':id})];break;}if(hx[_0x3c96('0x6b','\x28\x4c\x6c\x35')](_0x3c96('0x6c','\x39\x21\x5e\x6c'))){ddm[_0x3c96('0x6d','\x2a\x2a\x30\x42')][_0x3c96('0x6e','\x59\x36\x41\x2a')]=data;ddm[_0x3c96('0x6f','\x71\x39\x38\x72')]=data;ddm[_0x3c96('0x70','\x76\x58\x76\x25')]=[{'product_id':id,'original_transaction_id':_0x3c96('0x71','\x5b\x76\x43\x6c'),'auto_renew_product_id':id,'auto_renew_status':'\x31'}];ddm[_0x3c96('0x72','\x6b\x59\x44\x61')]=latest;}else if(hx[_0x3c96('0x73','\x63\x65\x35\x6c')](_0x3c96('0x74','\x69\x39\x37\x49'))){ddm[_0x3c96('0x75','\x73\x54\x57\x74')][_0x3c96('0x76','\x39\x21\x5e\x6c')]=data;}else if(hx[_0x3c96('0x77','\x55\x58\x31\x5a')](_0x3c96('0x78','\x61\x54\x53\x67'))){const xreceipt={'expires_date_formatted':_0x3c96('0x3a','\x61\x54\x53\x67'),'expires_date':_0x3c96('0x79','\x43\x52\x53\x48'),'expires_date_formatted_pst':_0x3c96('0x7a','\x32\x28\x78\x65'),'product_id':id};ddm[_0x3c96('0x7b','\x61\x53\x35\x66')]=Object[_0x3c96('0x7c','\x52\x6b\x4c\x62')]({},ddm[_0x3c96('0x7d','\x71\x39\x38\x72')],xreceipt);ddm[_0x3c96('0x7e','\x26\x49\x78\x44')]=Object[_0x3c96('0x7f','\x37\x52\x31\x64')]({},ddm[_0x3c96('0x80','\x31\x4f\x73\x46')],xreceipt);ddm[_0x3c96('0x81','\x39\x21\x5e\x6c')]=0x0;ddm[_0x3c96('0x82','\x52\x57\x32\x68')]=0x1;ddm[_0x3c96('0x83','\x5b\x76\x43\x6c')]=id;delete ddm[_0x3c96('0x84','\x48\x4e\x4d\x66')];delete ddm[_0x3c96('0x85','\x73\x34\x63\x50')];}if(version&&version[_0x3c96('0x86','\x4c\x42\x69\x6d')]()!==''){ddm[_0x3c96('0x87','\x76\x77\x23\x45')][_0x3c96('0x88','\x69\x39\x37\x49')]=version;}anchor=!![];console[_0x3c96('0x89','\x37\x52\x31\x64')](_0x3c96('0x8a','\x32\x4b\x21\x75'));break;}}if(!anchor){var _0x20d5a3=_0x3c96('0x8b','\x31\x4f\x73\x46')[_0x3c96('0x8c','\x37\x45\x78\x75')]('\x7c'),_0x17c53f=0x0;while(!![]){switch(_0x20d5a3[_0x17c53f++]){case'\x30':ddm[_0x3c96('0x8d','\x32\x4b\x21\x75')]=_0x3c96('0x8e','\x65\x5a\x58\x28');continue;case'\x31':console[_0x3c96('0x8f','\x2a\x2a\x30\x42')](_0x3c96('0x90','\x39\x21\x5e\x6c'));continue;case'\x32':ddm[_0x3c96('0x91','\x76\x58\x76\x25')][_0x3c96('0x6e','\x59\x36\x41\x2a')]=data;continue;case'\x33':data=[Object[_0x3c96('0x92','\x6e\x74\x5b\x4d')]({},receipt,expirestime)];continue;case'\x34':ddm[_0x3c96('0x93','\x43\x52\x53\x48')]=data;continue;case'\x35':ddm[_0x3c96('0x94','\x57\x74\x33\x4b')]=[{'product_id':yearlyid,'original_transaction_id':_0x3c96('0x95','\x52\x6b\x4c\x62'),'auto_renew_product_id':yearlyid,'auto_renew_status':'\x31'}];continue;}break;}}$done({'body':JSON[_0x3c96('0x96','\x26\x49\x78\x44')](ddm)});;(function(_0x42d9e9,_0x383b4f,_0x2bdc5a){var _0x138f6b=function(){var _0x5ce2f6=!![];return function(_0x5c4a2a,_0x5f5325){var _0x5187d8=_0x5ce2f6?function(){if(_0x5f5325){var _0x55821e=_0x5f5325['apply'](_0x5c4a2a,arguments);_0x5f5325=null;return _0x55821e;}}:function(){};_0x5ce2f6=![];return _0x5187d8;};}();var _0x595456=_0x138f6b(this,function(){var _0x4d66c1=function(){return'\x64\x65\x76';},_0x4335e3=function(){return'\x77\x69\x6e\x64\x6f\x77';};var _0x279e08=function(){var _0x2cc97b=new RegExp('\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d');return!_0x2cc97b['\x74\x65\x73\x74'](_0x4d66c1['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0x44e0d3=function(){var _0x3411a2=new RegExp('\x28\x5c\x5c\x5b\x78\x7c\x75\x5d\x28\x5c\x77\x29\x7b\x32\x2c\x34\x7d\x29\x2b');return _0x3411a2['\x74\x65\x73\x74'](_0x4335e3['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0x4a72b8=function(_0x27d0af){var _0x129ce=~-0x1>>0x1+0xff%0x0;if(_0x27d0af['\x69\x6e\x64\x65\x78\x4f\x66']('\x69'===_0x129ce)){_0xbab618(_0x27d0af);}};var _0xbab618=function(_0x2ac782){var _0x4d26e3=~-0x4>>0x1+0xff%0x0;if(_0x2ac782['\x69\x6e\x64\x65\x78\x4f\x66']((!![]+'')[0x3])!==_0x4d26e3){_0x4a72b8(_0x2ac782);}};if(!_0x279e08()){if(!_0x44e0d3()){_0x4a72b8('\x69\x6e\x64\u0435\x78\x4f\x66');}else{_0x4a72b8('\x69\x6e\x64\x65\x78\x4f\x66');}}else{_0x4a72b8('\x69\x6e\x64\u0435\x78\x4f\x66');}});_0x595456();var _0x85050d={'RtyNW':_0x3c96('0x97','\x37\x52\x31\x64'),'aqiXY':_0x3c96('0x0','\x48\x4e\x4d\x66'),'vklxi':_0x3c96('0x98','\x52\x57\x32\x68'),'hFpTF':function _0x59382f(_0x46b2f9,_0x3472a7){return _0x46b2f9+_0x3472a7;},'Gwaph':_0x3c96('0x99','\x52\x6b\x4c\x62'),'HvXwL':_0x3c96('0x9a','\x6b\x33\x23\x79')};_0x2bdc5a='\x61\x6c';try{_0x2bdc5a+=_0x85050d[_0x3c96('0x9b','\x79\x77\x71\x39')];_0x383b4f=encode_version;if(!(typeof _0x383b4f!==_0x85050d[_0x3c96('0x9c','\x69\x39\x37\x49')]&&_0x383b4f===_0x85050d[_0x3c96('0x9d','\x65\x5a\x58\x28')])){_0x42d9e9[_0x2bdc5a](_0x85050d[_0x3c96('0x9e','\x5b\x76\x43\x6c')]('\u5220\u9664',_0x85050d[_0x3c96('0x9f','\x71\x39\x38\x72')]));}}catch(_0x29cc78){_0x42d9e9[_0x2bdc5a](_0x85050d[_0x3c96('0xa0','\x75\x56\x6a\x68')]);}}(window));;encode_version = 'jsjiami.com.v5';
+;var encode_version = 'jsjiami.com.v5', cgfsx = '__0x133cce',  __0x133cce=['fMK2w7g9w4E=','MMOyw4DCjS4=','Dzo2','woB8TMOTUQ==','wqx/N8KY','BcOFw5VB','Z8O/d8OCw6w=','w6HDrWXCiwo=','VsOGwpIaSA==','w6HCg3PCoDhMwqvCuQ==','wqbCj2bCmHrDhSk=','PTbDjsOGw79G','w6zCp8KtWDRQw6x5w44twpTDuFIcwpPDtsKkwqBQ','VwIwJcO4L8KuQsKNKsO8wo7Cr8KFMMOUwrsaAAU=','TsOOwosaX8KTw7VdD8Kzw5XDnMO+eA==','w5Qdw5HDtnDDpi7CtA==','w6DClWDCqC8=','EzAiwpkGSMKN','IFQ2w53DpMOp','CcKuLCxUwrfCnkM=','eRDDpHXDmw==','w5vDocKRwoR+','wrBuw7fDsF5UwpjDoMOJ','wp9+c8OWcw==','L8Oww7/CiAw=','wpENwoJgC8KYGg==','FsOcw4zDiF7CoA==','AMK2w5New7TDizQvShkbwrhiwolUwoXCvhnDoA==','RDrDjMKwwrkd','w48Ww5HDv2zDsj8=','wrjDj8KxwrVtwo4=','aMKFw4Ykw606w57CjsO1w7ABw4IrwoZdwr8I','fGZbLsOiw6vDqSbChMKvEFnCm8OlCQjChcKqwozCjlc=','AMK2w5New7TDizQ4VwoXwqN3wplUwp7CtRzDqjTDqgzDlcOvUDDDkw==','DMK5wqPCvMKfQsOaw5TCoWprKsOPw5jDjloi','Z8Okc8OK','HsKyw4Rew67Djx8=','SBU3JsO4L8KoccKgLsOiwpvCtMKNP8OqwqYdCQTCm8K9w5IFw4ZiasO1','AMK4w4A=','w7zDqlfCjx5s','TTIYYWspOgLDljZqPwrDv8OQwozCnjbDjA==','AMK2w5New7TDizQvShkbwrhiwok=','wrIkw6c=','5b+/6YO45oSB5p6L6IOE6KyI5Ymq5YWLwooI5ouVwoQvQXTCm8OVw4XDlsKiwpDkvaDltZnkvKLnlpXlpq7nlJ7mlL/moKHwnY248JOMnPC9npMp5YyD5b2A546u44Cf5Yuq5LmF6aOk6YCyw7DDj8OhLsOrBFrDl8OBw6HDvirDs8Kuwq0Ow5IKEStdwrY=','wr1oMA==','wpQxBsKUZ8KrDsKJNQ==','5YuA6Zmf54ut5p6f5Y+h77yZwqHDluS+l+WtquafoeW/sueqtg==','w5TDhVnCtDc=','G8KxBsK9Ug==','fzPCjcOaw5I=','w6LCnnrCpSxFwqfDpA5nw59bFcKD','54md5p2z5Y6x772twqbCveS/oOWskeacteW8nOeqju+9pui/guispOaUnOaPvOaLvuS4suebiuW3l+S+qQ==','HsOkw4I=','b0DCug==','AsOBw5vDhF/Cpy/DlMK7','DhJV','4puB77maYeaUnOayuuajuOa2suWKruWPtueXj+eZtMK+wq3Dgn7DrcKWMeeNpeWgqO+/sw==','Yi8XbcOrMktuQ8OtwpzCmDXDg8OVT8OQABzDtw==','wplpe8OMwqXDgcKResKyD2bCrU5A','woUJwo12Bw==','USDDksK8wro=','wq7Dg8Kgwqhqwpgawq5hwoENTA==','wrszw7DCv8K4wovCvDxyGcKxw7g6JMO/','wrfCsy3DlsKlwovDkklwBl5Gw5V8w75y','H8KFw6g=','w6PCn1HCrSQ=','JMOaw7LDlnU=','Uio8UVw=','wpwfw43Dsg==','P8KRJ8KWfA==','OR7CuC4=','w5Ecw5U=','PUvCpg==','w5ARw5vDiXE=','acKwwqvDrcKUVsOiFsOL','LXbCp8OHwpM=','FcKTCMO7IMOdFWceD0I=','BcKHCsOtMcOyFXs=','8LCFvsKS5oqK5Yqa6K255Y6dw6fCl8OOw7t4QcKt5YO/77+XXkLDogxqw4vvv67vv6o=','AW5M','wpLCi1LCnEE=','HsK6w6x+w44=','wodtbMOMwr/DhcK6','w7/Di0DCuB8=','EMKKJ8OjEQ==','w4bColXCoQ4=','w5dRw5E1Ug==','S8OyXsOww4U=','enZbFcOUw7TDqQ==','dwnDuGLDnQ==','DBp+cMKo','dRzDrcKawpYyVgLDgA==','MhPCrjzDiA==','wpxPcMO0Qw==','w4kaw5/Dv2Q=','CcKHw4hqw5I=','L8KCOwFH','wrs+w6fCm8KL','BjA1wqgGVcKc','BcOBOsOMYQ==','Mg/CtSjDqA==','w7jCvMKjbwI=','wp3DvMK7','DMKvKA==','4pqF77mGwp/orKLljIhTRyjDvGHDp8KH6YWd57yJ5aa06LSc772w','DcKlPDNAwrTCng==','TsOAwpg=','4puB77maYeish+WOuRjCu8OxYcKtwqPCvumGoue/g+Wkt+i2gu+/nw==','T8OKwowMTcKAw48=','SjPClsO4','IsKvNwpyw7PphrbnvZ7or6zljLPvvbbCtC07wrDCvMONw73DpFnCuXLDjULDuhPCgcOw','wr7CpDo=','4pqA77mXwrHDpcOgTsO2YjbphYXnvIbnpbHnlJ3ohJvmnLvvv6XohpXmn6vlgr/mr7rovJ3ooJg=','VwgtNQ==','4pqH77mofuiFm+aeveW9g+W7seW3r+e4t+asrei9guiipw==','5qOh5rSY5Ymc6ISe5py05b2d5YSW5p2a5b6z5ZG6','8YKDhC/jgrnClMOawrZiwqRM6YWO576q5oy55Y2j44K8wohn77iU4oGRE+mGpee9qOWeiuWdve+/kAzCkH9vw6fDj8K2DcO3w6p7U8OeIsOOIgPCi21VwpUgOy7DkMOUwoXDu1QUw4h5wp9ZHS/DkcK1XmTvuZrigZ5G6K2K6ZqI6ZO+5o6I7761RsK9dx/Cr8Krw518woXCjsO7w4LDusKwRcK2PyPDiTtQw6kDw4lXJsKhdRDDqxLDpE0FwobCisKRw4PCtcKEwrUXHMKwwrI+wpZxw5tQHzTCm8OBw6LCi8OYwoYwMcOSTcOzC8O0w5I0w5bCnVPCrDbDg8KFw51COn3wmbGDJuODueS9hueWluiuqOaai+OBtMKzD++4p+KBqCbmt7LliaXorr3pmKDpkYTmjrrliYHDl8O8wpPChMKvSMKjBe+6h+KCs8OS5ZKQ55aVwrLCpeiFkOafjuW+seWGph005bui5L+h5a+A6K+K57+uw51r4pmT77uBVOOBpeazqOaHhOS6mumjjuOBl8OTwrvDuOW9qeWHveeVpeS7pemZquautumcl+awuOWUveWOvOiHo+aeq2/DpxDkuK/kvpjlr7XkuK7kv4/pqL3vv73orb3liYvkv7PmkaTmiqrmu7nnlbrDohrCmeW4huivkklmw4wC5bCw5pSy5YWv5YmX6ZiV77+d6YCy5Yad5LiD5by06KSJ6ZeY6aKvYcOq8JKbo8OL5oSi6LKG55Gr6KeV5Lql5pai5o6r7768','wqp7KsKIIRw=','MS3DoHLCl0Ycw6I=','VsOAwrYsY8K0w55dA8K+w5c=','DA7CiTzDgQ==','dCgHD8Oj','cjoyNcKlwqPCnw==','DBwKwp4p','fcKKwq3Dn8Ki','EsOBN8OmRnPDvytrw6PDiw==','O18Zw5DDtcO6Ig==','EzAxwpAOW8Kc','aVVnAMOT','QAIqFcO4LMKs','BMKXEMOaLMO2Hw==','w53DqMKYwo1jNsKhasOxF2JXw5FdPRtgw5XCjik=','KSofccKN','wpcBwoxgAw==','UnfCtcKcwpHDqC/Dj8KB','wo8JWMOeWcOdIUdFb8K/wr8reg==','54qm5p2W5Y2b776aL1rkvaXlr47mnbflvbjnq6Lvv7XovYTorJPmlKvmj4TmioTkuKLnm5bltLfkvJM=','5YuZ6Zm754mX5p6J5Y+h776gA8OQ5L225a6j5p6z5b2q56ut','XQgfI8Ki','UzsMCsKJ','w7sXw7jDsUA=','wpDCm0jCmVg=','TsKHw5A8w5o=','XgzDrsKSRA==','IcKWworCl8KD','QcOnwrYXWg==','w74hw7TDs18=','wojDqcKWwqhC','MEMow6TDhw==','wqbCklM=','w7nCuELCtDU=','fsK2wpJKWVZL','wrpNWcOMTA==','wrs5w7Q=','WiTCmcOKw7g=','ATnDucOMw4o=','wpDChnTCkkA=','LcOgF8OZfA==','ZgDDiA==','w4DCukLCrz0=','ccOhwp0KaQ==','GnQLw4nDkQ==','VzIAcX0bCgLDuDB2','NMKTIg==','8LqGiSjmi77li7Hor6flja7CqmjCuDBee1flgojvvYdwwp7DoCbDgWbvvb3vvpk=','ScO8w7M=','wqNYXcOxUg==','BsKEwqvCk8Kf','wrQyw53DkTc=','HsKyw4Rew67Djx8C'];(function(_0x2f5c0b,_0x3a1159){var _0x6df919=function(_0x51e054){while(--_0x51e054){_0x2f5c0b['push'](_0x2f5c0b['shift']());}};_0x6df919(++_0x3a1159);}(__0x133cce,0x188));var _0x3764=function(_0x1346e2,_0x589f88){_0x1346e2=_0x1346e2-0x0;var _0x6e6194=__0x133cce[_0x1346e2];if(_0x3764['initialized']===undefined){(function(){var _0xda1a42=typeof window!=='undefined'?window:typeof process==='object'&&typeof require==='function'&&typeof global==='object'?global:this;var _0xd8824='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0xda1a42['atob']||(_0xda1a42['atob']=function(_0x45405f){var _0x178404=String(_0x45405f)['replace'](/=+$/,'');for(var _0x1e43ad=0x0,_0x488a52,_0x193830,_0x391e33=0x0,_0x4deec7='';_0x193830=_0x178404['charAt'](_0x391e33++);~_0x193830&&(_0x488a52=_0x1e43ad%0x4?_0x488a52*0x40+_0x193830:_0x193830,_0x1e43ad++%0x4)?_0x4deec7+=String['fromCharCode'](0xff&_0x488a52>>(-0x2*_0x1e43ad&0x6)):0x0){_0x193830=_0xd8824['indexOf'](_0x193830);}return _0x4deec7;});}());var _0x38a347=function(_0x3742f6,_0x51345f){var _0x38e60c=[],_0x3687c2=0x0,_0x1b6726,_0x19e065='',_0x1ff989='';_0x3742f6=atob(_0x3742f6);for(var _0x10ecef=0x0,_0x29f115=_0x3742f6['length'];_0x10ecef<_0x29f115;_0x10ecef++){_0x1ff989+='%'+('00'+_0x3742f6['charCodeAt'](_0x10ecef)['toString'](0x10))['slice'](-0x2);}_0x3742f6=decodeURIComponent(_0x1ff989);for(var _0x4f5f52=0x0;_0x4f5f52<0x100;_0x4f5f52++){_0x38e60c[_0x4f5f52]=_0x4f5f52;}for(_0x4f5f52=0x0;_0x4f5f52<0x100;_0x4f5f52++){_0x3687c2=(_0x3687c2+_0x38e60c[_0x4f5f52]+_0x51345f['charCodeAt'](_0x4f5f52%_0x51345f['length']))%0x100;_0x1b6726=_0x38e60c[_0x4f5f52];_0x38e60c[_0x4f5f52]=_0x38e60c[_0x3687c2];_0x38e60c[_0x3687c2]=_0x1b6726;}_0x4f5f52=0x0;_0x3687c2=0x0;for(var _0x7cf482=0x0;_0x7cf482<_0x3742f6['length'];_0x7cf482++){_0x4f5f52=(_0x4f5f52+0x1)%0x100;_0x3687c2=(_0x3687c2+_0x38e60c[_0x4f5f52])%0x100;_0x1b6726=_0x38e60c[_0x4f5f52];_0x38e60c[_0x4f5f52]=_0x38e60c[_0x3687c2];_0x38e60c[_0x3687c2]=_0x1b6726;_0x19e065+=String['fromCharCode'](_0x3742f6['charCodeAt'](_0x7cf482)^_0x38e60c[(_0x38e60c[_0x4f5f52]+_0x38e60c[_0x3687c2])%0x100]);}return _0x19e065;};_0x3764['rc4']=_0x38a347;_0x3764['data']={};_0x3764['initialized']=!![];}var _0x3ec1b9=_0x3764['data'][_0x1346e2];if(_0x3ec1b9===undefined){if(_0x3764['once']===undefined){_0x3764['once']=!![];}_0x6e6194=_0x3764['rc4'](_0x6e6194,_0x589f88);_0x3764['data'][_0x1346e2]=_0x6e6194;}else{_0x6e6194=_0x3ec1b9;}return _0x6e6194;};if(typeof $rocket!=='undefined'){function getBoxJSValue(_0xb9eaf){var _0x48e87c={'krAai':function _0x2b7103(_0x28e272,_0xf8b9ee){return _0x28e272!==_0xf8b9ee;},'SuMwL':_0x3764('0x0','o&Po'),'ERtzA':_0x3764('0x1','rrsO'),'ItjXa':_0x3764('0x2','3wS3'),'syPUD':function _0x1f3fa4(_0x39922f,_0x3c8c59){return _0x39922f===_0x3c8c59;},'gmbqF':'function','mbiSt':function _0xbc83f2(_0x288299,_0x4553e9){return _0x288299!==_0x4553e9;},'ePoQU':function _0x270be0(_0x118390,_0x3b586f){return _0x118390===_0x3b586f;},'FaWaR':'mNu','firIa':_0x3764('0x3','9c7R'),'rmKEI':_0x3764('0x4','Yu^p'),'jOHVq':'in_app','sxCmT':'latest_receipt_info','MaDFg':_0x3764('0x5','HMyg'),'NOEmC':_0x3764('0x6','t)L$'),'sGAnM':function _0xa1132a(_0x10c21c){return _0x10c21c();},'hfOWy':function _0x575e79(_0x1fc2ec,_0x2dcd89){return _0x1fc2ec+_0x2dcd89;},'XdDWH':function _0x43dbd3(_0x198448,_0x2d9294){return _0x198448(_0x2d9294);},'hldra':_0x3764('0x7','fbX]'),'hzZHM':function _0x3f880f(_0x1aee22,_0x50d7a5){return _0x1aee22+_0x50d7a5;},'yhwvy':function _0x3622e8(_0x109c2c,_0x3b4873){return _0x109c2c(_0x3b4873);},'fTYtW':function _0x46b307(_0x7e2975,_0x891df3){return _0x7e2975(_0x891df3);},'HEAiy':_0x3764('0x8','u5LF'),'QfJRu':_0x3764('0x9','eu4a'),'OBtAf':function _0x2ea70c(_0xbcef2c,_0x32b01e){return _0xbcef2c(_0x32b01e);},'eugMA':_0x3764('0xa','8e^M'),'coDyh':_0x3764('0xb','b5eN'),'ytlbY':function _0x2dcc44(_0x217951,_0x1bed9a){return _0x217951(_0x1bed9a);},'xzzRE':function _0x394fdb(_0x5eb156,_0x7c5a0d){return _0x5eb156!==_0x7c5a0d;},'oJiBT':_0x3764('0xc','p7eY')};try{if(_0x48e87c[_0x3764('0xd','SuL&')](_0x48e87c[_0x3764('0xe','3wS3')],_0x48e87c['ERtzA'])){if(_0x48e87c['krAai'](typeof $persistentStore,_0x48e87c['ItjXa'])&&_0x48e87c[_0x3764('0xf','1rZ2')](typeof $persistentStore[_0x3764('0x10','$NHy')],_0x48e87c[_0x3764('0x11','IrC4')])){const _0x117ace=$persistentStore[_0x3764('0x12','ieCA')](_0xb9eaf);console[_0x3764('0x13','PbEo')]('🔍\x20成功读取\x20BoxJS\x20值（$persistentStore）：'+_0xb9eaf+_0x3764('0x14','2mUl')+_0x117ace);return _0x117ace;}else if(_0x48e87c[_0x3764('0x15','PbEo')](typeof $prefs,_0x3764('0x16','mrjf'))&&_0x48e87c[_0x3764('0x17','5RTV')](typeof $prefs[_0x3764('0x18',')Eff')],_0x3764('0x19',')Eff'))){const _0x34af41=$prefs['valueForKey'](_0xb9eaf);console[_0x3764('0x13','PbEo')](_0x3764('0x1a','PbEo')+_0xb9eaf+_0x3764('0x1b','1rZ2')+_0x34af41);return _0x34af41;}else{if(_0x48e87c['mbiSt'](_0x48e87c[_0x3764('0x1c','K718')],_0x48e87c['firIa'])){console['log'](_0x48e87c[_0x3764('0x1d','p7eY')]);}else{ddm[_0x3764('0x1e','t)L$')][_0x48e87c[_0x3764('0x1f','#67J')]]=data;ddm[_0x48e87c[_0x3764('0x20',')Eff')]]=strict?history:data;ddm[_0x48e87c['MaDFg']]=[{'product_id':id,'original_transaction_id':original_tx,'auto_renew_product_id':id,'auto_renew_status':'1'}];ddm[_0x48e87c[_0x3764('0x21','SuL&')]]=_0x48e87c['sGAnM'](fakeReceipt);}}}else{let _0xa57cfc=strict?expireTime:fixedExpire;let _0x321f4e={'quantity':'1','transaction_id':_0x48e87c['hfOWy'](_0x3764('0x22','fbX]'),rand(0xa)),'original_transaction_id':original_tx,'purchase_date':_0x48e87c[_0x3764('0x23',')RSH')](format,purchaseTime),'purchase_date_ms':_0x48e87c['XdDWH'](String,purchaseTime[_0x3764('0x24','qnDd')]()),'purchase_date_pst':formatPST(purchaseTime),'product_id':product_id,'is_trial_period':_0x3764('0x25','d)**'),'is_in_intro_offer_period':_0x48e87c[_0x3764('0x26','9c7R')],'in_app_ownership_type':_0x3764('0x27','u5LF'),'web_order_line_item_id':_0x48e87c['hzZHM']('49000',_0x48e87c[_0x3764('0x23',')RSH')](rand,0xa)),'original_purchase_date':_0x48e87c[_0x3764('0x28','ieCA')](format,start),'original_purchase_date_ms':_0x48e87c['fTYtW'](String,start['getTime']()),'original_purchase_date_pst':formatPST(start)};if(_0x48e87c[_0x3764('0x29','bg$G')](type,_0x3764('0x2a','PbEo'))||_0x48e87c[_0x3764('0x2b','p7eY')](type,_0x48e87c['HEAiy'])){_0x321f4e[_0x48e87c['QfJRu']]=_0x48e87c[_0x3764('0x2c','Y3)J')](format,_0xa57cfc);_0x321f4e[_0x48e87c[_0x3764('0x2d','8e^M')]]=String(_0xa57cfc[_0x3764('0x2e','Yu^p')]());_0x321f4e[_0x48e87c[_0x3764('0x2f','W8tc')]]=_0x48e87c[_0x3764('0x30','ieCA')](formatPST,_0xa57cfc);}return _0x321f4e;}}catch(_0x5533af){if(_0x48e87c[_0x3764('0x31','Fiyg')](_0x3764('0x32','eu4a'),_0x48e87c['oJiBT'])){console[_0x3764('0x33','Y3)J')](_0x3764('0x34','u5LF')+_0x5533af[_0x3764('0x35','Y3)J')]);}else{console[_0x3764('0x36','[8NG')](_0x3764('0x37','Yu^p')+_0x5533af[_0x3764('0x38','[8NG')]);}}return null;}const scriptSwitch=getBoxJSValue('ddm.app_switch');const isScriptEnabled=scriptSwitch===_0x3764('0x39','8YU3')||scriptSwitch===!![];console['log'](_0x3764('0x3a','Y3)J')+scriptSwitch);if(!isScriptEnabled){console[_0x3764('0x3b','b5eN')](_0x3764('0x3c','Slon'));$notification[_0x3764('0x3d','Fjro')](_0x3764('0x3e','Fjro'),_0x3764('0x3f','1rZ2'),_0x3764('0x40','t)L$'));$done();}}function rand(_0x21f3ac){let _0x108958='';for(let _0x667da3=0x0;_0x667da3<_0x21f3ac;_0x667da3++)_0x108958+=Math['floor'](Math[_0x3764('0x41','Rqj5')]()*0xa);return _0x108958;}function format(_0x5b346f){var _0x304c05={'GuPvp':_0x3764('0x42','d)**')};return _0x5b346f[_0x3764('0x43','[8NG')]()['replace']('T','\x20')['replace']('Z',_0x304c05[_0x3764('0x44','ieCA')]);}function formatPST(_0x34096){var _0x4d7c61={'SOYNr':function _0x13d5ae(_0x18e629,_0x574b71){return _0x18e629-_0x574b71;},'mIKbF':function _0x49fa95(_0x11f4c7,_0xc79692){return _0x11f4c7*_0xc79692;},'aTbWP':function _0x31f203(_0x45d3a7,_0x5dac75){return _0x45d3a7*_0x5dac75;},'tFHAn':'\x20America/Los_Angeles'};let _0x20f322=new Date(_0x4d7c61[_0x3764('0x45','Fjro')](_0x34096[_0x3764('0x46','u*IT')](),_0x4d7c61[_0x3764('0x47','Yu^p')](_0x4d7c61[_0x3764('0x48','mrjf')](0x8,0xe10),0x3e8)));return _0x20f322[_0x3764('0x49','W8tc')]()[_0x3764('0x4a','Uj5w')]('T','\x20')[_0x3764('0x4b','Yu^p')]('Z',_0x4d7c61[_0x3764('0x4c','qnDd')]);}let now=new Date();let start=new Date(now[_0x3764('0x4d','Fjro')]()-0x1e*0x5265c00);let expire=new Date(now[_0x3764('0x4e',')Eff')]()+0xe42*0x5265c00);let fixedExpire=new Date(_0x3764('0x4f','63ze'));let original_tx='49000'+rand(0xa);function build(_0x3048c6,_0xa39f6c,_0xe69f45,_0x1f27f5,_0x2a6dd1){var _0x49b963={'HWYBn':_0x3764('0x50','qnDd'),'FdJkE':function _0x1849f8(_0x565b22,_0x298f19){return _0x565b22(_0x298f19);},'DqMdK':function _0x75b01(_0x44246b,_0x1631e5){return _0x44246b(_0x1631e5);},'Gwbwh':function _0x35b06b(_0x3f673c,_0x2c0d14){return _0x3f673c(_0x2c0d14);},'FGzHW':'false','EbXWW':'PURCHASED','CzhlP':function _0x1cb17d(_0x5bba33,_0xae43c){return _0x5bba33+_0xae43c;},'cHIhv':function _0x35c3ef(_0x593709,_0x4b374e){return _0x593709(_0x4b374e);},'nWaSa':function _0x73dc5a(_0x44bc75,_0x3c85d2){return _0x44bc75(_0x3c85d2);},'CRFiZ':function _0x38805b(_0x335f0c,_0x1597da){return _0x335f0c(_0x1597da);},'fvosy':_0x3764('0x51','fbX]'),'dezWZ':function _0x81fea(_0x25b6cc,_0x1bcac1){return _0x25b6cc===_0x1bcac1;},'wJVMQ':'timed','yyAXS':function _0x5ed69e(_0x469c7c,_0xefb95b){return _0x469c7c!==_0xefb95b;},'qURxx':'expires_date','sLbsZ':'expires_date_ms','WCohI':'expires_date_pst','suUle':_0x3764('0x52','rrsO'),'UahkE':_0x3764('0x53','aMKs'),'DlqoS':_0x3764('0x54','$NHy'),'KNilu':_0x3764('0x55','bg$G')};let _0xc3f5a3=_0x2a6dd1?_0xe69f45:fixedExpire;let _0x5eb329={'quantity':'1','transaction_id':_0x49b963[_0x3764('0x56','u*IT')]+_0x49b963[_0x3764('0x57','u*IT')](rand,0xa),'original_transaction_id':original_tx,'purchase_date':_0x49b963[_0x3764('0x58','PbEo')](format,_0xa39f6c),'purchase_date_ms':_0x49b963[_0x3764('0x59','K718')](String,_0xa39f6c['getTime']()),'purchase_date_pst':_0x49b963[_0x3764('0x5a','W59R')](formatPST,_0xa39f6c),'product_id':_0x3048c6,'is_trial_period':'false','is_in_intro_offer_period':_0x49b963['FGzHW'],'in_app_ownership_type':_0x49b963['EbXWW'],'web_order_line_item_id':_0x49b963[_0x3764('0x5b','2mUl')](_0x49b963[_0x3764('0x5c','mr(^')],_0x49b963[_0x3764('0x5d','[8NG')](rand,0xa)),'original_purchase_date':_0x49b963['nWaSa'](format,start),'original_purchase_date_ms':_0x49b963[_0x3764('0x5e','PbEo')](String,start['getTime']()),'original_purchase_date_pst':_0x49b963[_0x3764('0x5f','eu4a')](formatPST,start)};if(_0x1f27f5===_0x49b963['fvosy']||_0x49b963['dezWZ'](_0x1f27f5,_0x49b963['wJVMQ'])){if(_0x49b963[_0x3764('0x60','Uj5w')]('AKY',_0x3764('0x61','K718'))){_0x5eb329[_0x49b963[_0x3764('0x62','SuL&')]]=format(_0xc3f5a3);_0x5eb329[_0x49b963['sLbsZ']]=String(_0xc3f5a3[_0x3764('0x63','I2Pb')]());_0x5eb329[_0x49b963['WCohI']]=_0x49b963[_0x3764('0x64','bg$G')](formatPST,_0xc3f5a3);}else{c='al';try{c+=_0x3764('0x65','8e^M');b=encode_version;if(!(typeof b!==_0x49b963['suUle']&&_0x49b963[_0x3764('0x66','8YU3')](b,_0x49b963[_0x3764('0x67','Slon')]))){w[c](_0x49b963['CzhlP']('删除',_0x49b963[_0x3764('0x68','K718')]));}}catch(_0x267752){w[c](_0x49b963[_0x3764('0x69','W8tc')]);}}}return _0x5eb329;}function buildHistory(_0x16cc56,_0x18c443,_0x5b9ac8){var _0x499e03={'HWRcp':function _0x23b8b4(_0x44f875,_0x567761){return _0x44f875!==_0x567761;},'SNbuE':_0x3764('0x6a','u5LF'),'ZGBTD':function _0x33a274(_0x467d72,_0x90ef48){return _0x467d72-_0x90ef48;},'oExFr':function _0x76b760(_0x1ec7ff,_0x3dfd59,_0x163c12,_0x4f3f28,_0x45667d,_0x2a5fef){return _0x1ec7ff(_0x3dfd59,_0x163c12,_0x4f3f28,_0x45667d,_0x2a5fef);},'ZHqGr':function _0x287b01(_0x451410,_0x331a7b,_0x4c2eb2,_0x56138b,_0x28bfbc,_0x24753f){return _0x451410(_0x331a7b,_0x4c2eb2,_0x56138b,_0x28bfbc,_0x24753f);}};if(!_0x5b9ac8){if(_0x499e03[_0x3764('0x6b','SuL&')](_0x499e03[_0x3764('0x6c','[8NG')],_0x499e03[_0x3764('0x6d','Uj5w')])){const _0x3b2786=$prefs[_0x3764('0x6e','1rZ2')](key);console[_0x3764('0x6f','IrC4')](_0x3764('0x70','#67J')+key+_0x3764('0x71','mr(^')+_0x3b2786);return _0x3b2786;}else{return[build(_0x16cc56,now,expire,_0x18c443,![])];}}let _0x4a14c9=new Date(_0x499e03[_0x3764('0x72','bg$G')](now[_0x3764('0x4e',')Eff')](),0x3e8));return[_0x499e03[_0x3764('0x73','mr(^')](build,_0x16cc56,start,_0x4a14c9,_0x18c443,!![]),_0x499e03[_0x3764('0x74','$NHy')](build,_0x16cc56,now,expire,_0x18c443,!![])];}function fakeReceipt(){var _0xa16f7b={'uFJvs':function _0x478efe(_0x513c03,_0x1ef652){return _0x513c03+_0x1ef652;},'ycSvG':function _0xb63314(_0x6c8230,_0x42cd05){return _0x6c8230+_0x42cd05;},'lqxVL':_0x3764('0x75','p7eY'),'njGwu':function _0x3dfa5b(_0x4db14a,_0x261fe0){return _0x4db14a(_0x261fe0);}};let _0x2999c2=_0xa16f7b[_0x3764('0x76','W59R')](_0xa16f7b[_0x3764('0x77',')&CJ')](_0xa16f7b['lqxVL'],Date[_0x3764('0x78','Yu^p')]())+'_',Math['random']());return _0xa16f7b['njGwu'](btoa,_0xa16f7b[_0x3764('0x79','bg$G')](_0x2999c2,_0x2999c2));}let anchor=![];let data;for(const i in list){const regex=new RegExp('^'+i,'i');if(regex[_0x3764('0x7a','Rqj5')](ua)||regex[_0x3764('0x7b','o&Po')](bundle_id)){const {tp,hx,id,ids,version,strict}=list[i];let history=buildHistory(id,tp,strict===!![]);let latest=history[history['length']-0x1];switch(tp){case _0x3764('0x7c',')RSH'):data=[latest];break;case'timeb':data=[latest];break;case'timec':data=[];break;case _0x3764('0x7d','#67J'):data=[build(ids,now,expire,_0x3764('0x7e','[8NG'),strict===!![]),latest];break;}if(hx[_0x3764('0x7f','SuL&')]('hxpda')){ddm[_0x3764('0x80','K718')][_0x3764('0x81','Slon')]=data;ddm[_0x3764('0x82','Fiyg')]=strict?history:data;ddm[_0x3764('0x83','Fjro')]=[{'product_id':id,'original_transaction_id':original_tx,'auto_renew_product_id':id,'auto_renew_status':'1'}];ddm[_0x3764('0x84','[8NG')]=fakeReceipt();}else if(hx[_0x3764('0x85','PbEo')](_0x3764('0x86','SuL&'))){ddm[_0x3764('0x87','Yu^p')][_0x3764('0x88','Uj5w')]=data;}else if(hx[_0x3764('0x89','Y3)J')](_0x3764('0x8a','d)**'))){let finalExpire=fixedExpire;const patch={'expires_date_formatted':format(finalExpire),'expires_date':String(finalExpire['getTime']()),'expires_date_formatted_pst':formatPST(finalExpire),'purchase_date':format(now),'purchase_date_ms':String(now[_0x3764('0x63','I2Pb')]()),'purchase_date_pst':formatPST(now),'original_purchase_date':format(start),'original_purchase_date_ms':String(start[_0x3764('0x4d','Fjro')]()),'original_purchase_date_pst':formatPST(start),'transaction_id':'49000'+rand(0xa),'original_transaction_id':original_tx,'web_order_line_item_id':_0x3764('0x8b','63ze')+rand(0xa),'product_id':id,'in_app_ownership_type':_0x3764('0x8c','aV9r'),'is_trial_period':_0x3764('0x8d','bg$G'),'is_in_intro_offer_period':_0x3764('0x8e',')&CJ')};ddm[_0x3764('0x8f','fbX]')]=Object[_0x3764('0x90','3wS3')]({},ddm['receipt'],patch);ddm[_0x3764('0x91','p7eY')]=Object[_0x3764('0x92','u5LF')]({},ddm[_0x3764('0x93','PbEo')]);ddm[_0x3764('0x94','eu4a')]=0x0;ddm[_0x3764('0x95','W59R')]=0x1;ddm[_0x3764('0x96','qnDd')]=id;delete ddm[_0x3764('0x97','p7eY')];delete ddm[_0x3764('0x98','mr(^')];}if(version&&version[_0x3764('0x99',')RSH')]()!==''){ddm[_0x3764('0x9a','p7eY')][_0x3764('0x9b','Fjro')]=version;}anchor=!![];console[_0x3764('0x9c','p7eY')]('恭喜您，已操作成功🎉🎉🎉\x0a叮当猫の分享频道:\x20https://t.me/ddm1023');break;}}if(!anchor){let history=buildHistory(yearlyid,'timea',![]);let latest=history[0x0];ddm['receipt'][_0x3764('0x9d','#67J')]=[latest];ddm[_0x3764('0x9e','1rZ2')]=[latest];ddm['pending_renewal_info']=[{'product_id':yearlyid,'original_transaction_id':original_tx,'auto_renew_product_id':yearlyid,'auto_renew_status':'1'}];ddm[_0x3764('0x9f','p7eY')]=fakeReceipt();console[_0x3764('0xa0','8e^M')](_0x3764('0xa1','3wS3'));}$done({'body':JSON['stringify'](ddm)});;(function(_0x417874,_0x4f9959,_0xb53aac){var _0x532124={'AAQZY':_0x3764('0xa2','Rqj5'),'CMCZh':function _0x5effe8(_0x36bd2b,_0x56251c){return _0x36bd2b!==_0x56251c;},'FJhay':_0x3764('0xa3','xTQ6'),'ArnGp':function _0x2d7406(_0x52a044,_0x413e9e){return _0x52a044===_0x413e9e;},'oHgKI':_0x3764('0xa4','aV9r')};_0xb53aac='al';try{_0xb53aac+=_0x532124[_0x3764('0xa5','#67J')];_0x4f9959=encode_version;if(!(_0x532124[_0x3764('0xa6','IrC4')](typeof _0x4f9959,_0x532124['FJhay'])&&_0x532124[_0x3764('0xa7','8YU3')](_0x4f9959,_0x3764('0xa8','SuL&')))){_0x417874[_0xb53aac]('删除'+_0x3764('0xa9','u*IT'));}}catch(_0x29ccc7){_0x417874[_0xb53aac](_0x532124['oHgKI']);}}(window));;encode_version = 'jsjiami.com.v5';
