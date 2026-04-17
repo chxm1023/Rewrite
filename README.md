@@ -9,12 +9,12 @@
 
 ## 已解锁App下载地址
 
-* **总数量累计：** 238
+* **总数量累计：** 253
 
 * **指示灯：**  永久💙&emsp;&emsp;~~非永久~~❤️
 
 ### Revenuecat系列<br/>
-001💙【Fileball-网络播放器】<br/>下载地址：https://t.cn/A6ScGy9g
+001💙【Fileball-已移出合集】<br/>下载地址：https://t.cn/A6ScGy9g
 
 002💙【VSCO-照片与视频编辑】<br/>下载地址：https://t.cn/AiOSSyU9
 
@@ -217,6 +217,10 @@
 
 078❤️【aDiary-待办日记本】<br/>下载地址：https://t.cn/A6NiI4mt
 
+079💙【年轮3】<br/>下载地址：https://t.cn/A6pZiooP
+
+080💙【Gemini Photos】<br/>下载地址：https://t.cn/A6p23yIj
+
 ### 其他解锁<br/>
 001💙【Nicegram-第三方电报】<br/>下载地址：https://t.cn/A6ou0MCe
 
@@ -409,3 +413,29 @@
 100❤️【挖财记账】<br/>下载地址：https://t.cn/A66nU5uI
 
 101❤️【野果阅读】<br/>下载地址：https://t.cn/A6NTIw89
+
+102❤️【夸克】<br/>下载地址：https://t.cn/A69h68E2
+
+103❤️【蜗牛睡眠】<br/>下载地址：https://t.cn/A6NBzdYh
+
+104❤️【网易蜗牛读书】<br/>下载地址：https://t.cn/A6NBBLeU
+
+105❤️【DailyArt(每日艺术)】<br/>下载地址：https://t.cn/A6pv6XfN
+
+106❤️【录屏】<br/>下载地址：https://t.cn/A6pvVCrS
+
+107❤️【大神P图】<br/>下载地址：https://t.cn/A6p7eiRM
+
+108❤️【乐秀】<br/>下载地址：https://t.cn/A6p7XAT4
+
+109❤️【多功能视频剪辑】<br/>下载地址：https://t.cn/A6p7XyPT
+
+110💙【iTranslate 翻译】<br/>下载地址：https://t.cn/A6p2IR1g
+
+111💙【Icon Killer】<br/>下载地址：https://t.cn/A6py6nmc
+
+112💙【字体册】<br/>下载地址：https://t.cn/A6py6uxY
+
+113❤️【充电助手】<br/>下载地址：https://t.cn/A6py63ac
+
+114💙【声波助手】<br/>下载地址：https://t.cn/A6py610v
