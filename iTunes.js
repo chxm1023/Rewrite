@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：iTunes-系列解锁合集
-更新日期：2026-04-19
+更新日期：2026-04-20
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -20,7 +20,14 @@ hostname = buy.itunes.apple.com
 *************************************/
 
 
-const ddm = JSON.parse($response.body);
+let ddm;
+try {
+  ddm = JSON.parse($response.body.match(/\{[\s\S]*\}/)[0]);
+} catch {
+  console.log("⚠️ 非法 JSON，跳过修改");
+  $done({ body: $response.body });
+  return;
+}
 const ua = $request.headers["User-Agent"] || $request.headers["user-agent"];
 const bundle_id = ddm.receipt["bundle_id"] || ddm.receipt["Bundle_Id"];
 
