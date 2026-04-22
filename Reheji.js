@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-04-08
+更新日期：2026-04-22
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -53,6 +53,7 @@ const bundle = {
 };
 
 const listua = {
+  'kiddztube': { name: 'Subscriber', id: 'kidsbeetv.lifetime.subscription.ios', cm: 'sjc' },  //KidsBeeTV 少儿英语启蒙动画
   'tetrify': { name: 'pro', id: 'pro_early_lifetime', cm: 'sjb' },  //tetrify:给自己发信息做笔记
   'ObjectRemoval': { name: 'Pro', id: 'ObjectRemoval.Lifetime', cm: 'sjc' },  //狗狗橡皮擦
   'TheGreatMe': { name: 'The Great Me Pro', id: 'thegreatme.forever', cm: 'sjc' },  //伟大的我: 重启人生计划
