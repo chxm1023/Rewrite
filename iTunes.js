@@ -20,6 +20,7 @@ hostname = buy.itunes.apple.com
 *************************************/
 
 
+(function () {
 let body = $response.body;
 let ddm = null, data = null, anchor = false;
 function tryParse(raw) {
@@ -446,3 +447,4 @@ if (!anchor) {
 }
 
 $done({ body: JSON.stringify(ddm || {}) });
+})();
