@@ -29,7 +29,7 @@ if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $req
 }
 
 const bundle = {
-  'io.fadel.TeleprompterX': { name: 'io.fadel.teleprompterx.pro', id: 'io.fadel.TeleprompterX.pro.lifetime', cm: 'sjc' },  //Teleprompter-提词器和字幕
+  'io.fadel.TeleprompterX': { name: 'io.fadel.teleprompterx.pro', id: 'io.fadel.TeleprompterX.pro.lifetime', cm: 'sjb' },  //Teleprompter-提词器和字幕
   'com.flexicalc.app': { name: 'pro', id: 'pro_product', cm: 'sja' },  //灵活计算器
   'com.trainfitness.Train': { name: 'Pro', id: 'TrainAnnualSubscription', cm: 'sja' },  //TrainFitness 健身追踪器
   'com.OfflineMusic.www': { name: 'premium', id: 'com.OfflineMusic.www.lifetime298', cm: 'sjb' },  //维克音乐
@@ -54,6 +54,7 @@ const bundle = {
 };
 
 const listua = {
+  'OrbitFast': { name: 'Orbit Fast Full', id: 'com.fastorbitapps.OrbitFast.premium.lifetime', cm: 'sjb' },  //OrbitFast
   'Mojo': { name: 'pro_ai', id: 'video.mojo.pro.ai.yearly', cm: 'sja' },  //Mojo:AI视频和Reels编辑器
   'VidCap': { name: 'io.fadel.vidcap.pro', id: 'io.fadel.vidcap.pro.lifetime', cm: 'sjc' },  //VidCap-视频字幕生成器
   'kiddztube': { name: 'Subscriber', id: 'kidsbeetv.lifetime.subscription.ios', cm: 'sjc' },  //KidsBeeTV 少儿英语启蒙动画
