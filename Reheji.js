@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-05-20
+更新日期：2026-05-21
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -29,6 +29,7 @@ if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $req
 }
 
 const bundle = {
+  'com.zhang333.dd': { name: 'premium', id: 'com.zhang3.plus', cm: 'sjb' },  //系统电池分析
   'io.fadel.TeleprompterX': { name: 'io.fadel.teleprompterx.pro', id: 'io.fadel.TeleprompterX.pro.lifetime', cm: 'sjb' },  //Teleprompter-提词器和字幕
   'com.flexicalc.app': { name: 'pro', id: 'pro_product', cm: 'sja' },  //灵活计算器
   'com.trainfitness.Train': { name: 'Pro', id: 'TrainAnnualSubscription', cm: 'sja' },  //TrainFitness 健身追踪器
