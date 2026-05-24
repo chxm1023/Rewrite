@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-05-21
+更新日期：2026-05-24
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -55,6 +55,7 @@ const bundle = {
 };
 
 const listua = {
+  'PixelStudio': { name: 'Pro', id: 'PixelNFT.Pro.Lifetime', cm: 'sjb' },  //像素艺术-Pixel Canvas
   'OrbitFast': { name: 'Orbit Fast Full', id: 'com.fastorbitapps.OrbitFast.premium.lifetime', cm: 'sjb' },  //OrbitFast
   'Mojo': { name: 'pro_ai', id: 'video.mojo.pro.ai.yearly', cm: 'sja' },  //Mojo:AI视频和Reels编辑器
   'VidCap': { name: 'io.fadel.vidcap.pro', id: 'io.fadel.vidcap.pro.lifetime', cm: 'sjc' },  //VidCap-视频字幕生成器
