@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-05-25
+更新日期：2026-05-30
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -55,6 +55,7 @@ const bundle = {
 };
 
 const listua = {
+  'weight': { name: 'Weight Pro', id: 'weight.pro.lifetime', cm: 'sjb' },  //体重小本
   'QuietCam': { name: 'QuietCam Pro', id: 'pawelchmiel.quietcam.yearly', cm: 'sja' },  //隐形相机/黑屏录像-QuietCam
   'PixelStudio': { name: 'Pro', id: 'PixelNFT.Pro.Lifetime', cm: 'sjb' },  //像素艺术-Pixel Canvas
   'OrbitFast': { name: 'Orbit Fast Full', id: 'com.fastorbitapps.OrbitFast.premium.lifetime', cm: 'sjb' },  //OrbitFast
