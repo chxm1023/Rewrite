@@ -2,7 +2,7 @@
 
 项目名称：百度网盘
 下载地址：https://t.cn/AiT82mfg
-更新日期：2026-05-10
+更新日期：2026-05-31
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -272,7 +272,7 @@ function handleProductInfo() {
 }
 
 function handleUserInfo() {
-  if (!ddm.user_info) return;
+  ddm.user_info = ddm.user_info || {};
   merge(ddm.user_info, {
     "is_svip" : 1,
     "is_vip" : 1,
@@ -280,29 +280,6 @@ function handleUserInfo() {
     "is_vip_v2_new" : 1,
     "is_scan_vip" : 1
   });
-}
-
-function handleH5Vip() {
-  let body = $response.body;
-  body = body
-    .replace(/"is_vip":\d+/g, '"is_vip":1')
-    .replace(/"is_svip":\d+/g, '"is_svip":1')
-    .replace(/"is_vip_v2":\d+/g, '"is_vip_v2":1')
-    .replace(/"is_vip_v2_new":\d+/g, '"is_vip_v2_new":1')
-    .replace(/"is_mvip":\d+/g, '"is_mvip":1')
-    .replace(/"vipsid":\d+/g, '"vipsid":1')
-    .replace(/"is_scan_vip":\d+/g, '"is_scan_vip":1')
-    .replace(/"is_plus_buy":\d+/g, '"is_plus_buy":1')
-    .replace(/"plus_buy_hit":\d+/g, '"plus_buy_hit":1')
-    .replace(/"isAutoRenew":\d+/g, '"isAutoRenew":1')
-    .replace(/"isVolumeAutoRenew":\d+/g, '"isVolumeAutoRenew":1')
-    .replace(/"isScanVipAutoRenew":\d+/g, '"isScanVipAutoRenew":1')
-    .replace(/"mvipAutoRenewStatus":\d+/g, '"mvipAutoRenewStatus":1')
-    .replace(/"privilegecard_work":\d+/g, '"privilegecard_work":1')
-    .replace(/"privilegecard_life":\d+/g, '"privilegecard_life":1')
-    .replace(/"privilegecard_audio_visual":\d+/g, '"privilegecard_audio_visual":1')
-    .replace(/"expVolumeVideoAd":\d+/g, '"expVolumeVideoAd":0');
-  $done({ body });
 }
 
 const routes = [
@@ -344,8 +321,25 @@ if (/user\/getinfo/.test(url)) {
 }
 
 if (/wap\/vip/.test(url) && !isJson) {
-  handleH5Vip();
-  return;
+  let body = $response.body;
+  body = body
+    .replace(/"is_vip":\d+/g, '"is_vip":1')
+    .replace(/"is_svip":\d+/g, '"is_svip":1')
+    .replace(/"is_vip_v2":\d+/g, '"is_vip_v2":1')
+    .replace(/"is_vip_v2_new":\d+/g, '"is_vip_v2_new":1')
+    .replace(/"is_mvip":\d+/g, '"is_mvip":1')
+    .replace(/"vipsid":\d+/g, '"vipsid":1')
+    .replace(/"is_scan_vip":\d+/g, '"is_scan_vip":1')
+    .replace(/"is_plus_buy":\d+/g, '"is_plus_buy":1')
+    .replace(/"plus_buy_hit":\d+/g, '"plus_buy_hit":1')
+    .replace(/"isAutoRenew":\d+/g, '"isAutoRenew":1')
+    .replace(/"isVolumeAutoRenew":\d+/g, '"isVolumeAutoRenew":1')
+    .replace(/"isScanVipAutoRenew":\d+/g, '"isScanVipAutoRenew":1')
+    .replace(/"mvipAutoRenewStatus":\d+/g, '"mvipAutoRenewStatus":1')
+    .replace(/"privilegecard_work":\d+/g, '"privilegecard_work":1')
+    .replace(/"privilegecard_life":\d+/g, '"privilegecard_life":1')
+    .replace(/"privilegecard_audio_visual":\d+/g, '"privilegecard_audio_visual":1')
+    .replace(/"expVolumeVideoAd":\d+/g, '"expVolumeVideoAd":0');
 }
 
 if (/api\/loginstatus/.test(url)) {
@@ -445,4 +439,8 @@ routes.forEach(route => {
   }
 });
 
-$done({ body: JSON.stringify(ddm) });
+if (!isJson) {
+  $done({ body });
+} else {
+  $done({ body: JSON.stringify(ddm) });
+}
