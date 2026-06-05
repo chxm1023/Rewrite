@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-05-30
+更新日期：2026-06-05
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -55,6 +55,7 @@ const bundle = {
 };
 
 const listua = {
+  'Sharp': { name: 'pro', id: 'ape.lifetime', cm: 'sjb' },  //SharpAI-智能照片修复
   'weight': { name: 'Weight Pro', id: 'weight.pro.lifetime', cm: 'sjb' },  //体重小本
   'QuietCam': { name: 'QuietCam Pro', id: 'pawelchmiel.quietcam.yearly', cm: 'sja' },  //隐形相机/黑屏录像-QuietCam
   'PixelStudio': { name: 'Pro', id: 'PixelNFT.Pro.Lifetime', cm: 'sjb' },  //像素艺术-Pixel Canvas
@@ -314,7 +315,6 @@ const listua = {
   'Transfer': { name: 'pro', id: 'transfer_ios_premium_year_2022_1', cm: 'sja' },  //WeTransfer
   'Collect': { name: 'pro', id: 'com.revenuecat.product.yearly.ios', cm: 'sja' },  //Collect收集
   'Paper': { name: 'pro', id: 'com.fiftythree.paper.credit', cm: 'sjb' },  //Paper
-  'Ape': { name: 'pro-iOS', id: 'ape.lifetime', cm: 'sjb' },  //Sharp AI
   'Boar': { name: 'pro-iOS', id: 'boar.yearly', cm: 'sja' },  //Erase Objects
   'MySticker': { name: 'mysticker premium', id: 'com.miiiao.MySticker.lifetime', cm: 'sjb' },  //Tico-贴抠
   'Rec': { name: 'rec.paid', id: 'rec.paid.onetime', cm: 'sjb' },  //Rec相机
