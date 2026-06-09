@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-06-08
+更新日期：2026-06-09
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -55,7 +55,8 @@ const bundle = {
 };
 
 const listua = {
-  'PhotoAlbumManager': { name: 'picseekpro', id: 'ape.lifetime', cm: 'sjb' },  //PicSeek-AI整理相册
+  'TagCamera': { name: 'TagCamera Pro', id: 'com.foxlin.tagcamera.pro.lifetime', cm: 'sjb' },  //TagCamera-拍照即整理的相机
+  'PhotoAlbumManager': { name: 'picseekpro', id: 'ape.lifetime', cm: 'sjb' },  //PicSeek-AI相册整理
   'Sharp': { name: 'pro', id: 'ape.lifetime', cm: 'sjb' },  //SharpAI-智能照片修复
   'weight': { name: 'Weight Pro', id: 'weight.pro.lifetime', cm: 'sjb' },  //体重小本
   'QuietCam': { name: 'QuietCam Pro', id: 'pawelchmiel.quietcam.yearly', cm: 'sja' },  //隐形相机/黑屏录像-QuietCam
