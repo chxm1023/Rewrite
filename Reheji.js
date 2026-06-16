@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-06-13
+更新日期：2026-06-16
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -55,6 +55,7 @@ const bundle = {
 };
 
 const listua = {
+  'rxframe': { name: 'com.minardwu.rxframe_lifetime', id: 'com.minardwu.rxframe_lifetime', cm: 'sjb' },  //Rxframe-照片边框水印
   'MemeLoop': { name: 'pro', id: 'com.ai.gif.lifetime.pro', cm: 'sjb' },  //GIFMaker,GIFEditor
   'GLPTracker': { name: 'Pro Access', id: 'com.doseflow.glp1tracker.lifetime.premium', cm: 'sjb' },  //DoseWise
   'TagCamera': { name: 'TagCamera Pro', id: 'com.foxlin.tagcamera.pro.lifetime', cm: 'sjb' },  //TagCamera-拍照即整理的相机
