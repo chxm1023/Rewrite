@@ -55,6 +55,7 @@ const bundle = {
 };
 
 const listua = {
+  'powo': { name: 'com.minardwu.powo_lifetime', id: 'com.minardwu.powo_lifetime', cm: 'sjb' },  //Powo-桌面照片墙
   'rxframe': { name: 'com.minardwu.rxframe_lifetime', id: 'com.minardwu.rxframe_lifetime', cm: 'sjb' },  //Rxframe-照片边框水印
   'MemeLoop': { name: 'pro', id: 'com.ai.gif.lifetime.pro', cm: 'sjb' },  //GIFMaker,GIFEditor
   'GLPTracker': { name: 'Pro Access', id: 'com.doseflow.glp1tracker.lifetime.premium', cm: 'sjb' },  //DoseWise
