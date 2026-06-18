@@ -29,7 +29,7 @@ if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $req
 }
 
 const bundle = {
-  'com.qiqi1996.card-note': { name: 'vip', id: 'qi_card_note_lifetime', cm: 'sjb' },  //Qi卡片便签-QiCardNote-
+  'com.qiqi1996.card-note': { name: 'vip', id: 'qi_card_note_lifetime', cm: 'sjb' },  //Qi卡片便签-QiCardNote
   'com.zhang333.dd': { name: 'premium', id: 'com.zhang3.plus', cm: 'sjb' },  //系统电池分析
   'io.fadel.TeleprompterX': { name: 'io.fadel.teleprompterx.pro', id: 'io.fadel.TeleprompterX.pro.lifetime', cm: 'sjb' },  //Teleprompter-提词器和字幕
   'com.flexicalc.app': { name: 'pro', id: 'pro_product', cm: 'sja' },  //灵活计算器
