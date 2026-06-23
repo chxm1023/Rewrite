@@ -11,10 +11,10 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/api.*\.mihuangame\.com\/api\/v\d\/sys\/user\/login url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/zyyad.js
+^https?:\/\/.*\.mihuangame\.com\/api\/v\d\/sys\/user\/login url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/zyyad.js
 
 [mitm]
-hostname = api*.mihuangame.com
+hostname = *.mihuangame.com
 
 *************************************/
 
