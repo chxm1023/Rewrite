@@ -31,8 +31,6 @@ const date = new Date();
 const hour = date.getHours();
 const now = Date.now() - (hour < 2 ? 30 : 60) * 60 * 1000;
 
-const userid = 11211581623455; //账户ID
-
 if (/user/.test($request.url)) {
 
   if (!ddm.data) ddm.data = {}; // 创建data
@@ -41,8 +39,6 @@ if (/user/.test($request.url)) {
   if (!ddm.data.attach) ddm.data.attach = {}; // 创建attach
 
   Object.assign(ddm.data, {
-    "userId": userid, //账户ID
-    "authentication" : "R8aQp1ZpwODnWCVl/omAMB3gd1vHLofOKLQBInrKCesIrOfYxpWjlN4GYAOsPsGs6S9C7XdMH8ObBmsJRtB8zQGfmo5hMqGkliP8vo8Lnpn4YIDHfOMvPZiQovc7Q8JP",
     "userType": 1 //用户权限
   });
 
