@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-06-25
+更新日期：2026-06-28
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -29,6 +29,7 @@ if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $req
 }
 
 const bundle = {
+  'com.qiqi1996.qi-watermark': { name: 'vip', id: 'com.qiqi1996.qi_watermark.yearly', cm: 'sjb' },  //Qi水印-QiWatermark
   'com.qiqi1996.pause-life': { name: 'vip', id: 'pause_life_lifetime', cm: 'sjb' },  //生活暂停器-Pause life
   'com.qiqi1996.app-poster': { name: 'vip', id: 'app_poster_lifetime', cm: 'sjb' },  //Qi应用海报-QiAppPoster
   'com.minardwu.cocam': { name: 'com.minardwu.cocam_lifetime', id: 'com.minardwu.cocam_lifetime', cm: 'sjb' },  //Cocam-相机照片下载
