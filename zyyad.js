@@ -4,7 +4,7 @@
 脚本功能：辅助小工具
 boxjs订阅: https://raw.githubusercontent.com/chxm1023/Script_X/main/ddm1023.boxjs.json
 下载地址：https://shm.to/zyyad
-更新日期：2026-07-02
+更新日期：2026-07-03
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -12,8 +12,8 @@ boxjs订阅: https://raw.githubusercontent.com/chxm1023/Script_X/main/ddm1023.bo
 **************************************
 
 [rewrite_local]
-^https?:\/\/.*\.mihuangame\.com\/api\/v\d\/sys\/user\/data url script-request-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/zyyad.js
-^https?:\/\/.*\.mihuangame\.com\/(api\/v\d\/sys\/user\/login|toutiaoGame\/ZhaoYunAndADou) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/zyyad.js
+^https?:\/\/.*\.mihuangame\.com\/api\/v\d\/sys url script-request-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/zyyad.js
+^https?:\/\/.*\.mihuangame\.com\/(api\/v\d\/sys\/user|toutiaoGame\/ZhaoYunAndADou) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/zyyad.js
 
 [mitm]
 hostname = *.mihuangame.com
@@ -45,15 +45,29 @@ function getBox(key, def) {
   return def;
 }
 
-function setBox(key, val) {
-  try {
-    if (ENV.isPrefs && $prefs.setValueForKey) {
-      return $prefs.setValueForKey(val, key);
-    }
-    if ($persistentStore && $persistentStore.write) {
-      return $persistentStore.write(val, key);
-    }
-  } catch (e) {}
+// 强制覆盖（false=只补不降，true=全部按配置覆盖）
+const ForceValue = getBox("ddm.zyyad.forcevalue", "false") === "true";
+
+// 各模块开关
+const EnableGold = getBox("ddm.zyyad.enablegold", "true") === "true";
+const EnableLevel = getBox("ddm.zyyad.enablelevel", "true") === "true";
+const EnableWeapon = getBox("ddm.zyyad.enableweapon", "true") === "true";
+const EnableSkill = getBox("ddm.zyyad.enableskill", "true") === "true";
+const EnableAvatar = getBox("ddm.zyyad.enableavatar", "true") === "true";
+const EnableRegister = getBox("ddm.zyyad.enableregister", "true") === "true";
+
+// 数值修改
+function setValue(data, key, value) {
+  if (ForceValue) {
+    // 强制覆盖
+    data[key] = value;
+    return;
+  }
+  // 安全模式（只补不降）
+  const old = Number(data[key]) || 0;
+  if (old < value) {
+    data[key] = value;
+  }
 }
 
 // 设置金币
@@ -62,8 +76,6 @@ const Gold = Number(getBox("ddm.zyyad.gold", 9999999));
 // 修改注册天数(默认7天前)
 const RegisterDay = Number(getBox("ddm.zyyad.registerday", 7));
 
-// 设置等级开关 true开启/false关闭
-const CustomLevel = getBox("ddm.zyyad.customlevel", "true") === "true";
 // 设置等级级数
 const Level = Number(getBox("ddm.zyyad.level", 999));
 
@@ -82,54 +94,14 @@ function safeJson(body) {
   }
 }
 
-let ojb = {};
+let obj = {};
 let ddm = {};
 let data = {};
 let attach = {};
+const headers = $request ? ($request.headers || {}) : {};
 
 // 导入武器碎片列表(基本全部了)
-const WeaponList = [
-  [20, 50],
-  [32, 50],
-  [12, 50],
-  [22, 50],
-  [11, 50],
-  [1, 50],
-  [25, 50],
-  [33, 50],
-  [37, 50],
-  [2, 50],
-  [3, 51],
-  [6, 50],
-  [34, 50],
-  [13, 52],
-  [14, 51],
-  [35, 50],
-  [23, 51],
-  [28, 50],
-  [24, 51],
-  [39, 50],
-  [41, 50],
-  [40, 50],
-  [18, 50],
-  [43, 50],
-  [16, 50],
-  [4, 50],
-  [15, 50],
-  [38, 50],
-  [27, 50],
-  [26, 50],
-  [5, 50],
-  [17, 50],
-  [36, 50],
-  [7, 50],
-  [9, 50],
-  [8, 50],
-  [19, 50],
-  [42, 50],
-  [29, 50],
-  [30, 51]
-];
+const WeaponList=[[1,50],[2,50],[3,50],[4,50],[5,50],[6,50],[7,50],[8,50],[9,50],[11,50],[12,50],[13,50],[14,50],[15,50],[16,50],[17,50],[18,50],[19,50],[20,50],[22,50],[23,50],[24,50],[25,50],[26,50],[27,50],[28,50],[29,50],[30,50],[32,50],[33,50],[34,50],[35,50],[36,50],[37,50],[38,50],[39,50],[40,50],[41,50],[42,50],[43,50]];
 
 // 技能列表
 const SkillList = [
@@ -147,10 +119,16 @@ const SkillList = [
 const current = Date.now();
 
 if (typeof $response === "undefined") {
-  ddm = safeJson($request.body);
-  data = ddm;
-  Module(data, null, "req");
-  ojb.body = JSON.stringify(ddm);
+  delete headers.authentication;
+  delete headers.Authentication;
+  delete headers.AUTHENTICATION;
+  obj.headers = headers;
+  if(/user\/data/.test($request.url)){
+    ddm = safeJson($request.body);
+    data = ddm;
+    Module(data, null);
+    obj.body = JSON.stringify(ddm);
+  }
 } else {
   ddm = safeJson($response.body);
   if (/user\/login/.test($request.url)) {
@@ -162,128 +140,137 @@ if (typeof $response === "undefined") {
     ddm.code = 0;
     ddm.msg = "Success";
     ddm.data.userType = 1;
-    Module(data, attach, "login");
+    Module(data, attach);
+  }
+  if(/user\/data/.test($request.url)){
+    ddm = {
+      "msg" : "Success",
+      "data" : null,
+      "code" : 0
+    };
   }
   if (/toutiaoGame\/ZhaoYunAndADou/.test($request.url)) {
     ddm.shareLimitPerDay = Math.max(ddm.shareLimitPerDay || 0, 99);
   }
-  const isQX = typeof $task !== "undefined";
-  ojb.status = isQX ? "HTTP/1.1 200 OK" : 200;
-  ojb.body = JSON.stringify(ddm);
+  obj.status = ENV.isQX ? "HTTP/1.1 200 OK" : 200;
+  obj.body = JSON.stringify(ddm);
 }
 
-$done(ojb);
+$done(obj);
 
-function Module(data, attach, mode) {
+function Module(data, attach) {
   if (!data) return;
-  // 基础数据
   Object.assign(data, {
-    //"hfb": true,
-    //"hfs": true,
-    //"pap": true,
-    //"wdg": true,
-    //"wfr": true,
-    //"op": true,
-    "sm": 30 //体力值
+    "sm": 30
   });
-
-  // 金币（只补不覆盖）
-  if ((Number(data.gd) || 0) < Gold) {
-    data.gd = Gold;
+  // 金币
+  if (EnableGold) {
+    setValue(data, "gd", Gold);
   }
-
-  // 连续登录天数
-  if ((Number(data.lld) || 0) < RegisterDay) {
-    data.lld = RegisterDay;
-  }
-
-  // 注册时间（安全模式）
-  if (mode === "login" || mode === "req") {
+  // 连续登录
+  if (EnableRegister) {
+    setValue(data, "lld", RegisterDay);
     ModuleRegister(data, attach);
   }
-
-  // 等级模块
-  ModuleLevel(data);
-  // 武器模块
-  ModuleWeapon(data);
-  // 技能模块
-  ModuleSkill(data);
-  // 头像模块
-  ModuleAvatar(data);
+  // 等级
+  if (EnableLevel) {
+    ModuleLevel(data);
+  }
+  // 武器
+  if (EnableWeapon) {
+    ModuleWeapon(data);
+  }
+  // 技能
+  if (EnableSkill) {
+    ModuleSkill(data);
+  }
+  // 头像
+  if (EnableAvatar) {
+    ModuleAvatar(data);
+  }
 }
 
 // 注册时间模块
 function ModuleRegister(data, attach) {
   const target = current - RegisterDay * 86400000 - 300000;
-
-  if (!data.rt || data.rt > target) {
+  if (ForceValue || !data.rt || data.rt > target) {
     data.rt = target;
   }
-
   if (attach && typeof attach === "object") {
-    if (!attach.ct || attach.ct > target) {
-      attach.ct = target;
+    if (ForceValue || !attach.ct || attach.ct > target) {
+        attach.ct = target;
     }
   }
 }
 
 // 等级模块
 function ModuleLevel(data) {
-  if (!CustomLevel) return;
-  if (Level > 0) {
-    data.cs = Math.max(Number(data.cs) || 0, Level);
-  } //等级
-  data.ga = Math.max(Number(data.ga) || 0, Level); //昨日等级
-  data.wn = Math.max(Number(data.wn) || 0, Level); //胜利次数
-  data.ls = Math.max(Number(data.ls) || 0, Level); //历史最高
-  data.cld = Math.max(Number(data.cld) || 0, Math.max(99, Math.ceil(Level / 10)));
+  setValue(data, "cs", Level); // 等级
+  setValue(data, "ga", Level); // 昨日等级
+  setValue(data, "wn", Level); // 胜利次数
+  setValue(data, "ls", Level); // 历史最高
+  setValue(data, "cld", Math.max(99, Math.ceil(Level / 10))); // 章节
 }
 
 // 武器模块
 function ModuleWeapon(data) {
+  // 关闭
   if (WeaponMode === 0) return;
-  if (!Array.isArray(data.wf)) data.wf = [];
-  // 模式1：补数量
+  // 修正数据
+  if (!Array.isArray(data.wf)) {
+    data.wf = [];
+  }
+  // 模式1：自动补充已有武器碎片
   if (WeaponMode === 1) {
-    data.wf.forEach(v => {
-      if (Array.isArray(v)) {
-        v[1] = Math.max(Number(v[1]) || 0, WeaponCount);
+    data.wf.forEach(function (item) {
+      if (Array.isArray(item) && item.length > 1) {
+        item[1] = Math.max(Number(item[1]) || 0, WeaponCount);
       }
     });
     return;
   }
-  // 模式2：去重覆盖
-  const map = {};
-  data.wf.forEach(v => {
-    if (Array.isArray(v)) map[v[0]] = v;
+  // 模式2：导入武器（保留已有，重复覆盖）
+  const WeaponMap = {};
+  // 建立已有武器索引
+  data.wf.forEach(function (item) {
+    if (Array.isArray(item) && item.length > 1) {
+      WeaponMap[item[0]] = item;
+    }
   });
-  WeaponList.forEach(v => {
-    if (map[v[0]]) {
-      map[v[0]][1] = v[1];
+  // 导入武器
+  WeaponList.forEach(function (item) {
+    if (WeaponMap[item[0]]) {
+      // 已存在
+      WeaponMap[item[0]][1] = ForceValue ? item[1] : Math.max(Number(WeaponMap[item[0]][1]) || 0, item[1]);
     } else {
-      data.wf.push([v[0], v[1]]);
+      // 不存在
+      data.wf.push([item[0], item[1]]);
     }
   });
 }
 
 // 技能模块
 function ModuleSkill(data) {
-  if (!Array.isArray(data.ps)) data.ps = [];
-  const map = {};
-  data.ps.forEach(v => {
-    if (Array.isArray(v)) map[v[0]] = v;
-  });
-  data.ps = [];
-  let t = current;
-  for (let i = 0; i < SkillList.length; i++) {
-    const id = SkillList[i][0];
-    data.ps.push([id, 1, t]);
-    t -= 300000;
+  if (!Array.isArray(data.ps)) {
+    data.ps = [];
   }
+  data.ps = [];
+  const interval = 5 * 60 * 1000;
+  let t = current - interval;
+  SkillList.forEach(function(v){
+    data.ps.push([
+      v[0],
+      1,
+      t
+    ]);
+    t -= interval;
+  });
 }
 
 //头像模块
 function ModuleAvatar(data) {
   if (!Array.isArray(data.aul)) return;
-  data.aul = data.aul.map(() => 1);
+  data.aul = data.aul.map(function () {
+    return 1;
+  });
 }
