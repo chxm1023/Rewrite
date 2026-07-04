@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-06-30
+更新日期：2026-07-04
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -60,6 +60,7 @@ const bundle = {
 };
 
 const listua = {
+  'SwimApp': { name: 'pro_access', id: 'com.dyl.swimnote.lifetime', cm: 'sjb' },  //泳记-Swimlog
   'ReverseChallengeSwiftUI': { name: 'ReverseChallenge.Pro', id: 'com.abighead.ReverseChallenge.iap.pro', cm: 'sjb' },  //倒放挑战
   'Ticket%20Lover': { name: 'com.minardwu.ticketlover_lifetime', id: 'com.minardwu.ticketlover_lifetime', cm: 'sjb' },  //票恋-TicketLover
   'powo': { name: 'com.minardwu.powo_lifetime', id: 'com.minardwu.powo_lifetime', cm: 'sjb' },  //Powo-桌面照片墙
