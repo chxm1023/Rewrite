@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：adapty-合集
-更新日期：2025-05-29
+更新日期：2026-07-06
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -24,6 +24,7 @@ const profileid = headers['adapty-sdk-profile-id'] || headers['ADAPTY-SDK-PROFIL
 const time = Date.now();
 
 const list = {
+  'Yomu': { dy: 'dypda', id: "lifetime.yomu.app", bundle_id: "yomu.app" },  //Yomu-漫画阅读器
   'Logo%20Maker': { dy: 'dypda', id: "com.limepresso.lm.paid.subscription.pro_yearly_high", bundle_id: "com.limepresso.logomaker" },  //LogoShop-logo设计软件
   'Luminar': { dy: 'dypda', id: "com.skylum.luminaripad.lifetime", bundle_id: "com.skylum.luminaripad" },  //Luminar手机照片编辑器
   'Genie': { dy: 'dypda', id: "yearly_advanced_pro", bundle_id: "co.appnation.geniechat" },  //Genie - Chatbot
