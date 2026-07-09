@@ -12,7 +12,7 @@ boxjs订阅: https://raw.githubusercontent.com/chxm1023/Script_X/main/ddm1023.bo
 **************************************
 
 [rewrite_local]
-^https?:\/\/.*\.mihuangame\.com\/api\/v\d\/sys url script-request-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/zyyad.js
+^https?:\/\/.*\.mihuangame\.com\/api\/v\d\/sys\/user\/data url script-request-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/zyyad.js
 ^https?:\/\/.*\.mihuangame\.com\/(api\/v\d\/sys\/user|toutiaoGame\/ZhaoYunAndADou) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/zyyad.js
 
 [mitm]
@@ -119,10 +119,6 @@ const SkillList = [
 const current = Date.now();
 
 if (typeof $response === "undefined") {
-  delete headers.authentication;
-  delete headers.Authentication;
-  delete headers.AUTHENTICATION;
-  obj.headers = headers;
   if(/user\/data/.test($request.url)){
     ddm = safeJson($request.body);
     data = ddm;
@@ -141,13 +137,6 @@ if (typeof $response === "undefined") {
     ddm.msg = "Success";
     ddm.data.userType = 1;
     Module(data, attach);
-  }
-  if(/user\/data/.test($request.url)){
-    ddm = {
-      "msg" : "Success",
-      "data" : null,
-      "code" : 0
-    };
   }
   if (/toutiaoGame\/ZhaoYunAndADou/.test($request.url)) {
     ddm.shareLimitPerDay = Math.max(ddm.shareLimitPerDay || 0, 99);
