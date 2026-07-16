@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：iTunes-系列解锁合集
-更新日期：2026-06-14
+更新日期：2026-07-16
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -325,6 +325,7 @@ const list = {
 // ===== 自动App分组 =====
 const autoMap = {
   year: [
+    'com.xxtstudio.dailyspending',  //Daily记账
     'com.internet-rocks',  //Air Apps System
     'co.airapps'  //Air Apps System
   ],
