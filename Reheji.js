@@ -29,6 +29,7 @@ if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $req
 }
 
 const bundle = {
+  'com.qiqi1996.think-action': { name: 'vip', id: 'think_action.yearly', cm: 'sjb' },  //ThinkAction-想做
   'com.abighead.Widgets': { name: 'HiWidget.Pro', id: 'com.abighead.Widgets.LifetimePro', cm: 'sjb' },  //HillWidget - 纪念日,黑胶，日历，时钟小组件
   'com.qiqi1996.qi-watermark': { name: 'vip', id: 'com.qiqi1996.qi_watermark.yearly', cm: 'sjb' },  //Qi水印-QiWatermark
   'com.qiqi1996.pause-life': { name: 'vip', id: 'pause_life_lifetime', cm: 'sjb' },  //生活暂停器-Pause life
