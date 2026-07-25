@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-07-23
+更新日期：2026-07-25
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -62,6 +62,7 @@ const bundle = {
 };
 
 const listua = {
+  'Short%20Menu': { name: 'pro', id: 'com.appiculous.shortmenuios.pro.annual', cm: 'sja' },  //Short Menu
   'PinDou': { name: 'PinDou Pro', id: 'com.pangqing.pindou.pro0', cm: 'sjb' },  //拼豆图纸
   'owl_recorder': { name: 'lifetime', id: 'company.thebrainstorming.owlrecorder.lifetime', cm: 'sjb' },  //Owl Recorder-猫头鹰智能录音机
   'stufflog': { name: 'pro_access', id: 'com.dyl.thinglog.lifetime', cm: 'sjb' },  //衣记Thinglog-衣橱管理与穿搭管家
