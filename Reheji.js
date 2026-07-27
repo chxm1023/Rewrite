@@ -62,6 +62,7 @@ const bundle = {
 };
 
 const listua = {
+  'Swish': { name: 'Swish Pro', id: 'swish_pro_lifetime', cm: 'sjb' },  //Swish:简单代办文件夹
   'Short%20Menu': { name: 'pro', id: 'com.appiculous.shortmenuios.pro.annual', cm: 'sja' },  //Short Menu
   'PinDou': { name: 'PinDou Pro', id: 'com.pangqing.pindou.pro0', cm: 'sjb' },  //拼豆图纸
   'owl_recorder': { name: 'lifetime', id: 'company.thebrainstorming.owlrecorder.lifetime', cm: 'sjb' },  //Owl Recorder-猫头鹰智能录音机
