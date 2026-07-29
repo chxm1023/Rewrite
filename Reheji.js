@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-07-27
+更新日期：2026-07-29
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -29,6 +29,7 @@ if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $req
 }
 
 const bundle = {
+  'me.capilabs.sleep': { name: 'Capi - Sleep Factors Analysis Unlimited Access', id: 'me.capilabs.sleep.premium.lifetime', cm: 'sjc' },  //睡眠因素
   'com.qiqi1996.think-action': { name: 'vip', id: 'think_action.yearly', cm: 'sjb' },  //ThinkAction-想做
   'com.abighead.Widgets': { name: 'HiWidget.Pro', id: 'com.abighead.Widgets.LifetimePro', cm: 'sjb' },  //HillWidget - 纪念日,黑胶，日历，时钟小组件
   'com.qiqi1996.qi-watermark': { name: 'vip', id: 'com.qiqi1996.qi_watermark.yearly', cm: 'sjb' },  //Qi水印-QiWatermark
