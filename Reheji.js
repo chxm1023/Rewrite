@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-08-06
+更新日期：2026-08-08
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -63,6 +63,7 @@ const bundle = {
 };
 
 const listua = {
+  'Speedometer': { name: 'SpeedometerLite Pro', id: 'speedometerlite_lifetime', cm: 'sjb' },  //Speedometer-速度计简易版
   'demo_FingerChooser': { name: 'pro', id: 'chooser.pro.lifetime', cm: 'sjb' },  //OneChoose-随机抽签工具
   'scanbatch': { name: 'Pro', id: 'scanbatch.lifetime', cm: 'sjc' },  //码立得•条码二维码批量神器-ScanBatch
   'Charge': { name: 'premium', id: 'charge.iap.special', cm: 'sjc' },  //速记账单
