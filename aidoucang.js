@@ -31,34 +31,28 @@ Object.assign(ddm.data, {
 });
 
 // VIP AI 配额
-if (ddm.data.aiQuota) {
-  Object.assign(ddm.data.aiQuota, {
-    "isVip": true,
-    "remaining": ddm.data.aiQuota.limit
-  });
-}
+Object.assign(ddm.data.aiQuota, {
+  "isVip": true,
+  "remaining": ddm.data.aiQuota.limit
+});
 
 // VIP 功能开关
-if (ddm.data.featureFlags) {
-  Object.assign(ddm.data.featureFlags, {
-    "highlight": true,
-    "pixelPattern": true,
-    "forceCloudHighlight": true,
-    "beadBuild": true,
-  });
-}
+Object.assign(ddm.data.featureFlags, {
+  "highlight": true,
+  "pixelPattern": true,
+  "forceCloudHighlight": true,
+  "beadBuild": true,
+});
 
 // 放开已有功能权限，保留服务端原有结构
-if (ddm.data.featureAccessMap) {
-  Object.keys(ddm.data.featureAccessMap).forEach(function(key) {
-    var feature = ddm.data.featureAccessMap[key];
+Object.keys(ddm.data.featureAccessMap).forEach(function(key) {
+  var feature = ddm.data.featureAccessMap[key];
 
-    if (feature && typeof feature === "object") {
-      Object.assign(feature, {
-        "allowed": true,
-      });
-    }
-  });
-}
+  if (feature && typeof feature === "object") {
+    Object.assign(feature, {
+      "allowed": true,
+    });
+  }
+});
 
 $done({ body: JSON.stringify(ddm)});
