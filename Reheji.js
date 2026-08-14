@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-08-13
+更新日期：2026-08-14
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -63,6 +63,7 @@ const bundle = {
 };
 
 const listua = {
+  'OneTT': { name: 'CloneCam Pro', id: 'clonecam.lifetime', cm: 'sjc' },  //CloneCam-支持克隆的相机
   'ShowcasePro': { name: 'ShowcasePro.Ultra', id: 'DesignTech.SIA.ShowcasePro.Ultra.Lifetime', cm: 'sjc' },  //拼图软件-ShowcasePro
   'iOS/3001101': { name: 'doneitPremium', id: 'DesignTech.SIA.Doneit.Premium.Plan.Lifetime', cm: 'sjc' },  //看板-Doneit
   'Speedometer': { name: 'SpeedometerLite Pro', id: 'speedometerlite_lifetime', cm: 'sjb' },  //Speedometer-速度计简易版
