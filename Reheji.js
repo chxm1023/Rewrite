@@ -24,7 +24,7 @@ const headers = $request.headers, ua = headers['User-Agent'] || headers['user-ag
 
 const forbiddenApps = [ 'PicSeedClient', 'ReflixiOS', 'Pomodoro', 'MyHabit', 'Rond', 'Filebar', 'Fileball', 'APTV'];
 if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $request.body.includes(app)))) {
-  console.log("⛔️检测到禁止 MITM 的 APP，脚本停止运行！");
+  console.log("⛔️检测到禁止【MITM】的 APP，脚本停止运行！");
   $done({});
 }
 
@@ -436,16 +436,15 @@ const listua = {
 };
 
 // 检查是否存在有效订阅
-const subChk = ddm.subscriber && ddm.subscriber.subChk;
+const subChk = ddm.subscriber && ddm.subscriber.entitlements;
 if (subChk && typeof subChk === "object") {
   const now = Date.now();
-  const subscribed = Object.values(subChk).some(item => {
+  if (Object.values(subChk).some(item => {
     if (!item?.product_identifier) return false;
     if (item.expires_date == null) return true;
     const expires = Date.parse(item.expires_date);
     return Number.isFinite(expires) && expires > now;
-  });
-  if (subscribed) {
+  })) {
     console.log("✅ 检测已存在有效订阅，已停止运行脚本");
     $done({});
     return;
