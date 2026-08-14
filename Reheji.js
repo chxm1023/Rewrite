@@ -436,17 +436,17 @@ const listua = {
 };
 
 // 检查是否存在有效订阅
-const entitlements = ddm.subscriber && ddm.subscriber.entitlements;
-if (entitlements && typeof entitlements === "object") {
+const subChk = ddm.subscriber && ddm.subscriber.subChk;
+if (subChk && typeof subChk === "object") {
   const now = Date.now();
-  const subscribed = Object.values(entitlements).some(item => {
+  const subscribed = Object.values(subChk).some(item => {
     if (!item?.product_identifier) return false;
     if (item.expires_date == null) return true;
     const expires = Date.parse(item.expires_date);
     return Number.isFinite(expires) && expires > now;
   });
   if (subscribed) {
-    console.log("✅ 已存在有效订阅，已停止运行脚本");
+    console.log("✅ 检测已存在有效订阅，已停止运行脚本");
     $done({});
     return;
   }
