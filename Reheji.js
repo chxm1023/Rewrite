@@ -64,6 +64,7 @@ const bundle = {
 };
 
 const listua = {
+  'Image2PDF': { name: 'Convertly Pro', id: 'life_time_id', cm: 'sjc' },  //Convertly-图片转PDF/相机扫描
   'OpsCat': { name: 'OpsCat - Server Monitor & SSH Pro', id: 'LifetimeAccessOps', cm: 'sjb' },  //OpsCat-SSH远程监控和管理服务器
   'OneTT': { name: 'CloneCam Pro', id: 'clonecam.lifetime', cm: 'sjc' },  //CloneCam-支持克隆的相机
   'ShowcasePro': { name: 'ShowcasePro.Ultra', id: 'DesignTech.SIA.ShowcasePro.Ultra.Lifetime', cm: 'sjc' },  //拼图软件-ShowcasePro
