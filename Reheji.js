@@ -64,6 +64,7 @@ const bundle = {
 };
 
 const listua = {
+  'PicPure': { name: 'PicPure Pro', id: 'LifetimeAccess2', cm: 'sjc' },  //PicPure-照片清理大师
   'VHSCamera': { name: 'pro', id: 'vhscam_pro_lifetime', cm: 'sjc' },  //VHS相机
   'Image2PDF': { name: 'Convertly Pro', id: 'life_time_id', cm: 'sjc' },  //Convertly-图片转PDF/相机扫描
   'OpsCat': { name: 'OpsCat - Server Monitor & SSH Pro', id: 'LifetimeAccessOps', cm: 'sjb' },  //OpsCat-SSH远程监控和管理服务器
