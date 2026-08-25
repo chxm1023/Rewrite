@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-08-24
+更新日期：2026-08-25
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -64,6 +64,7 @@ const bundle = {
 };
 
 const listua = {
+  'VideoBlur': { name: 'com.zhuangmengting.blur', id: 'com.zhuangmengting.blur.pro.permanent', cm: 'sjc' },  //VideoBlur-视频打码
   'PicPure': { name: 'PicPure Pro', id: 'LifetimeAccess2', cm: 'sjc' },  //PicPure-照片清理大师
   'VHSCamera': { name: 'pro', id: 'vhscam_pro_lifetime', cm: 'sjc' },  //VHS相机
   'Image2PDF': { name: 'Convertly Pro', id: 'life_time_id', cm: 'sjc' },  //Convertly-图片转PDF/相机扫描
