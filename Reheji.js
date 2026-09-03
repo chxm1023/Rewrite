@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-08-30
+更新日期：2026-09-03
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -65,6 +65,7 @@ const bundle = {
 };
 
 const listua = {
+  'YiKe': { name: 'YiKe - Light Journaling Pro', id: 'yike_pro', cm: 'sjc' },  //一刻-轻记录日记本
   'MusicPlayer': { name: 'com.zhuangmengting.player', id: 'com.zhuangmengting.player.permanen', cm: 'sjc' },  //黑胶音乐播放器-Orbit
   'VideoBlur': { name: 'com.zhuangmengting.blur', id: 'com.zhuangmengting.blur.pro.permanent', cm: 'sjc' },  //VideoBlur-视频打码
   'PicPure': { name: 'PicPure Pro', id: 'LifetimeAccess2', cm: 'sjc' },  //PicPure-照片清理大师
