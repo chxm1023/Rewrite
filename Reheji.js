@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-09-08
+更新日期：2026-09-10
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -65,6 +65,7 @@ const bundle = {
 };
 
 const listua = {
+  'CircleTime': { name: 'Premium', id: '000', cm: 'sjc' },  //CircleTime-日历规划环形日历
   'jinduoduo_calculator': { name: 'yuhuzi001', id: 'lifetime_vip', cm: 'sjb' },  //金多多计算器-自定义公式计算器
   'Erasee': { name: 'pro', id: 'erasee.pro.lifetime', cm: 'sjc' },  //Erasee-AI抠图换背景
   'YiKe': { name: 'YiKe - Light Journaling Pro', id: 'yike_pro', cm: 'sjc' },  //一刻-轻记录日记本
