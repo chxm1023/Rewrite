@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：iTunes-系列解锁合集
-更新日期：2026-09-14
+更新日期：2026-09-15
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -333,6 +333,7 @@ const autoMap = {
     'co.airapps'  //Air Apps System
   ],
   yearly: [
+    'Video%20Caption',  //VideoCaption-视频对话标题
     'com.pocket'  //NetPocket Co
   ],
   yearlysubscription: [
