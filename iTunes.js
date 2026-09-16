@@ -362,7 +362,7 @@ const AutoID = {
   yearly: (bid) => `${bid}.yearly`,
   yearlysubscription: (bid) => `${bid}.yearlysubscription`,
   lifetime: (bid) => `${bid}.lifetime`,
-  forever: (bid) => `${bid}.Forever`
+  forever: (bid) => `${bid}.forever`
 };
 
 // ===== 自动注入list =====
