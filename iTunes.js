@@ -333,7 +333,7 @@ const autoMap = {
     'co.airapps'  //Air Apps System
   ],
   yearly: [
-    'Video%20Caption',  //VideoCaption-视频对话标题
+    'com.mkapps.Vcaption',  //VideoCaption-视频对话标题
     'com.pocket'  //NetPocket Co
   ],
   yearlysubscription: [
