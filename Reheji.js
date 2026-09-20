@@ -146,7 +146,7 @@ const listua = {
   'PhotoVault': { name: 'lifetime', id: 'photovault.lifetime', cm: 'sjc' },  //iSafe-私密相册管家
   'CountdownWidget': { name: 'pro', id: 'cd_lifetime', cm: 'sjb' },  //倒计时小工具:Countful
   'DarkLooker': { name: 'Pro', id: 'com.boleStudio.safaridarkmode.permanent', cm: 'sjb' },  //DarkLooker 护眼蓝光/Safari扩展工具
-  'Sunlitt': { name: 'sunlitt.pro', id: 'pro.lifetime', cm: 'sjc' },  //Sunlitt-太阳位置
+  'Sunlitt': { name: 'sunlitt.pro', id: 'pro.lifetime', cm: 'sjc' },  //Sunlitt: 太阳轨迹与日照地图
   'Moonlitt': { name: 'moonlitt.pro', id: 'moonlitt.pro.lifetime', cm: 'sjb' },  //Moonlitt-月亮位置
   'A%20Widget': { name: 'all_widgets', id: 'all_widgets', cm: 'sjb' },  //OmniWidgets - 万能小组件灵动岛DIY
   'AccuFind': { name: 'accufind_payments', id: 'accufind_lifetime', cm: 'sjb' },  //AccuFind-搜索目标设备
