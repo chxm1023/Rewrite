@@ -65,6 +65,7 @@ const bundle = {
 };
 
 const listua = {
+  'volix': { name: 'Device Kit Pro', id: 'com.volix.pro', cm: 'sjc' },  //DeviceKit-硬件性能检测与手机管家
   'RoundedCorner': { name: 'pro', id: 'com.smallCorner.lifetime', cm: 'sjc' },  //小圆角
   'Speaker%20Cleaner': { name: 'WaterEject Pro', id: 'lifetime_water_eject', cm: 'sjc' },  //SpeakerCleaner-清理扬声器
   'CircleTime': { name: 'Premium', id: '000', cm: 'sjc' },  //CircleTime-日历规划环形日历
