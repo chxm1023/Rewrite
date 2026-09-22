@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-09-20
+更新日期：2026-09-22
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -148,7 +148,7 @@ const listua = {
   'CountdownWidget': { name: 'pro', id: 'cd_lifetime', cm: 'sjb' },  //倒计时小工具:Countful
   'DarkLooker': { name: 'Pro', id: 'com.boleStudio.safaridarkmode.permanent', cm: 'sjb' },  //DarkLooker 护眼蓝光/Safari扩展工具
   'Sunlitt': { name: 'sunlitt.pro', id: 'pro.lifetime', cm: 'sjc' },  //Sunlitt: 太阳轨迹与日照地图
-  'Moonlitt': { name: 'moonlitt.pro', id: 'moonlitt.pro.lifetime', cm: 'sjb' },  //Moonlitt-月亮位置
+  'Moonlitt': { name: 'moonlitt.pro', id: 'moonlitt.pro.lifetime', cm: 'sjc' },  //Moonlitt-月相与月历
   'A%20Widget': { name: 'all_widgets', id: 'all_widgets', cm: 'sjb' },  //OmniWidgets - 万能小组件灵动岛DIY
   'AccuFind': { name: 'accufind_payments', id: 'accufind_lifetime', cm: 'sjb' },  //AccuFind-搜索目标设备
   'alistTools': { name: 'pro_lifetime', id: 'com.jy.alistTools.pro_lifetime', cm: 'sjb' },  //alistTools
