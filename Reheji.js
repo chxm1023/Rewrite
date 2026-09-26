@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-09-25
+更新日期：2026-09-26
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -30,6 +30,7 @@ if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $req
 }
 
 const bundle = {
+  'me.xgmm.meallog': { id: '202602071529', cm: 'sjc' },  //记一餐-干饭人AI饮食营养师
   'me.xgmm.note': { name: 'one month', id: '20250203', cm: 'sjc' },  //NoteMark-全能日常生活记录
   'co.visualsupply.cam': { name: 'pro', id: 'vscopro_global_5999_annual_7D_free', cm: 'sja' },  //VSCO-照片与视频编辑
   'me.capilabs.sleep': { name: 'Capi - Sleep Factors Analysis Unlimited Access', id: 'me.capilabs.sleep.premium.lifetime', cm: 'sjc' },  //睡眠因素
