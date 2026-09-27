@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-09-26
+更新日期：2026-09-27
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -67,6 +67,7 @@ const bundle = {
 };
 
 const listua = {
+  'ReadCopilot': { name: 'premium', id: 'read_copilot_premium_yearly', cm: 'sja' },  //ReadCopilot-Al智能阅读助理
   'volix': { name: 'Device Kit Pro', id: 'com.volix.pro', cm: 'sjc' },  //DeviceKit-硬件性能检测与手机管家
   'RoundedCorner': { name: 'pro', id: 'com.smallCorner.lifetime', cm: 'sjc' },  //小圆角
   'Speaker%20Cleaner': { name: 'WaterEject Pro', id: 'lifetime_water_eject', cm: 'sjc' },  //SpeakerCleaner-清理扬声器
