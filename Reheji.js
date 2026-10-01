@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-09-29
+更新日期：2026-10-01
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -67,6 +67,7 @@ const bundle = {
 };
 
 const listua = {
+  'FitCurve': { name: 'pro', id: 'com.fitcurve.pro.lifetime', cm: 'sjc' },  //维刻: 体重记录、身材记录
   'Sculpt%20Log': { name: 'pro', id: 'com.suxuanlv.sculptic.pro.lifetime', cm: 'sjc' },  //塑形记: 健康记录•训练计划
   'ScreenMaker': { name: 'pro', id: 'snapApp_pro_lifetime', cm: 'sjc' },  //StoreView-应用程序屏幕截图工具
   'ReadCopilot': { name: 'premium', id: 'read_copilot_premium_yearly', cm: 'sja' },  //ReadCopilot-Al智能阅读助理
