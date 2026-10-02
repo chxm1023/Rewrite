@@ -329,7 +329,7 @@ const list = {
 // ===== 自动App分组 =====
 const autoMap = {
   year: [
-    'com.pocket'  //NetPocket Co合集
+    'com.pocket',  //NetPocket Co合集
     'com.xxtstudio.dailyspending',  //Daily记账
     'com.internet-rocks',  //Air Apps System合集
     'co.airapps'  //Air Apps System合集
