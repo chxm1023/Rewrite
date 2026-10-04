@@ -30,7 +30,7 @@ if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $req
 }
 
 const bundle = {
-  'com.suxuanlv.startsleepapp': { name: 'vip', id: 'kaishui_vip_lifetime', cm: 'sjc' },  //开睡:白噪音助眠与睡眠记录
+  'com.suxuanlv.startsleepapp': { name: 'vip', id: 'kaishui_vip_lifetime', cm: 'sjb' },  //开睡:白噪音助眠与睡眠记录
   'me.xgmm.meallog': { id: '202602071529', cm: 'sjc' },  //记一餐-干饭人AI饮食营养师
   'me.xgmm.note': { name: 'one month', id: '20250203', cm: 'sjc' },  //NoteMark-全能日常生活记录
   'co.visualsupply.cam': { name: 'pro', id: 'vscopro_global_5999_annual_7D_free', cm: 'sja' },  //VSCO-照片与视频编辑
