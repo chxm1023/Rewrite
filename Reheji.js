@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-10-16
+更新日期：2026-10-17
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -68,6 +68,7 @@ const bundle = {
 };
 
 const listua = {
+  'Fine': { name: 'Fine Pro', id: 'fine_subscription_yearly', cm: 'sja' },  //Fine修图
   'nebuwall': { name: 'wallpaper_pass', id: 'wallpaper_pass_lifetime', cm: 'sjc' },  //Nebuwall-壁纸与AI创作
   'DailyIdiomApp': { name: 'calendar', id: 'com.fiachra.DailyIdiomApp.yearly', cm: 'sja' },  //Chengyu Calendar-成语日历
   'SLPDFMaker': { name: 'pro', id: 'com.pdfstudio.lifetime.pro', cm: 'sjb' },  //PDFMaker-PDF编辑制作工具
