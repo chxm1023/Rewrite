@@ -2,9 +2,9 @@
 
 项目名称：一木记账
 下载地址：https://t.cn/A6YRLuSR
-更新日期：2024-03-03
-脚本作者：chxm1023
-电报频道：https://t.me/chxm1023
+更新日期：2026-10-19
+脚本作者：@ddm1023
+电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
@@ -18,9 +18,9 @@ hostname = yimuapp.com
 *************************************/
 
 
-var chxm1023 = JSON.parse($response.body);
+var ddm = JSON.parse($response.body);
 
-chxm1023.result.vipTime = 4092599349000;  //会员到期时间，可删除
-chxm1023.result.vipType = 2;  //永久会员
+ddm.result.vipTime = 4092599349000;  //会员到期时间，可删除
+ddm.result.vipType = 2;  //永久会员
 
-$done({body : JSON.stringify(chxm1023)});
+$done({body : JSON.stringify(ddm)});
