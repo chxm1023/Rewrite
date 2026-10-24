@@ -2,7 +2,7 @@
 
 应用名称：FitRead-飞阅英语分级阅读
 下载地址：http://c.u6v.cn/5HwPbH
-更新日期：2026-10-22
+更新日期：2026-10-24
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -23,7 +23,7 @@ var ddm = JSON.parse($response.body);
 Object.assign(ddm.data, {
   "isLong" : true,
   "isVip" : true,
-  "startDate": "2026-10-22 13:51:55",
+  "startDate": "2026-10-24 09:09:09",
   "endDate": "2099-09-09 09:09:09"
 });
 
