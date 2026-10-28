@@ -68,7 +68,7 @@ const bundle = {
 };
 
 const listua = {
-  'PhotoCleaner': { name: '相册清理专家 Pro', id: 'com.suxuanlv.photocleaner.vip.lifetime', cm: 'sjc' },  //相册清理专家
+  'LaunchX': { name: 'Pro', id: 'com.launcherx.Lifetime', cm: 'sjc' },  //LaunchX-应用启动器
   'varacare': { name: 'varacare_pro', id: 'com.beliveapptech.varacare.lifetime', cm: 'sjc' },  //血压记录日记-VaraCare
   'CalculatorJ': { name: 'pro', id: 'com.calculatorx.lifetime', cm: 'sjc' },  //计算器X-极简语音计算器
   'Linger': { name: 'Pro access', id: 'linger_lifetime_standard', cm: 'sjb' },  //去留-照片整理与随机回顾
