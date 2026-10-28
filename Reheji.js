@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-10-27
+更新日期：2026-10-28
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -68,6 +68,7 @@ const bundle = {
 };
 
 const listua = {
+  'PhotoCleaner': { name: '相册清理专家 Pro', id: 'com.suxuanlv.photocleaner.vip.lifetime', cm: 'sjc' },  //相册清理专家
   'varacare': { name: 'varacare_pro', id: 'com.beliveapptech.varacare.lifetime', cm: 'sjc' },  //血压记录日记-VaraCare
   'CalculatorJ': { name: 'pro', id: 'com.calculatorx.lifetime', cm: 'sjc' },  //计算器X-极简语音计算器
   'Linger': { name: 'Pro access', id: 'linger_lifetime_standard', cm: 'sjb' },  //去留-照片整理与随机回顾
