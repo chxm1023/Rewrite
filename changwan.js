@@ -2,8 +2,9 @@
 
 项目名称：畅玩空间
 下载地址：https://play.wo1wan.com
-脚本作者：chxm1023
-电报频道：https://t.me/chxm1023
+更新日期: 2026-10-29
+脚本作者：@ddm1023
+电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
 
 **************************************
@@ -17,22 +18,19 @@ hostname = play.wo1wan.com
 *************************************/
 
 
+var ddm = JSON.parse($response.body);
 
-var chxm1023 = JSON.parse($response.body);
+Object.assign(ddm.info.LevelInfo, {
+  "AllVipXP" : 999,
+  "SVipExpires" : "2099-09-09T09:09:09Z",
+  "VipLevel" : 5,
+  "Svip" : 1,
+  "VipExpires" : "2099-09-09T09:09:09Z",
+  "Level" : 99,
+  "NowXP" : 999,
+  "NowVipXP" : 999,
+  "AllXP" : 999,
+  "NextLevel" : 999
+});
 
-chxm1023.info.LevelInfo = {
-      "LastTime" : "0001-01-01T00:00:00Z",
-      "AllVipXP" : 1,
-      "SVipExpires" : "2099-09-09T09:09:09Z",
-      "VipLevel" : 5,
-      "Svip" : 1,
-      "NextVipXP" : 1,
-      "VipExpires" : "2099-09-09T09:09:09Z",
-      "Level" : 99,
-      "NowXP" : 999,
-      "NowVipXP" : 1,
-      "AllXP" : 1,
-      "NextLevel" : 999
-    };
-
-$done({body : JSON.stringify(chxm1023)});
+$done({ body: JSON.stringify(ddm) });
