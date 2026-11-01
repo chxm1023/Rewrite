@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-10-30
+更新日期：2026-11-01
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -68,6 +68,7 @@ const bundle = {
 };
 
 const listua = {
+  'PixelSensePocket': { name: 'pro', id: 'pixelsense_pocket_unlock_forever', cm: 'sjb' },  //Pixelsense修图
   'ByePhotos': { name: 'ByePhotos access', id: 'com.panicbyte.byephotos.lifetime', cm: 'sjc' },  //ByePhotos: 相册整理助手
   'LaunchX': { name: 'Pro', id: 'com.launcherx.Lifetime', cm: 'sjc' },  //LaunchX-应用启动器
   'varacare': { name: 'varacare_pro', id: 'com.beliveapptech.varacare.lifetime', cm: 'sjc' },  //血压记录日记-VaraCare
