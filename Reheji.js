@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-11-02
+更新日期：2026-11-05
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -68,6 +68,7 @@ const bundle = {
 };
 
 const listua = {
+  'Island%20Reader': { name: 'BookSpeak Pro', id: 'com.luyaolab.bookspeak.lifetime', cm: 'sjc' },  //岛屿阅读: AI朗读与电子书阅读器
   'Readora': { name: 'com.chengnayu.readora', id: 'com.chengnayu.readora.permanent', cm: 'sjc' },  //Readora-微信读书划线与EPUB阅读器
   'PixelSensePocket': { name: 'pro', id: 'pixelsense_pocket_unlock_forever', cm: 'sjb' },  //Pixelsense修图
   'ByePhotos': { name: 'ByePhotos access', id: 'com.panicbyte.byephotos.lifetime', cm: 'sjc' },  //ByePhotos: 相册整理助手
