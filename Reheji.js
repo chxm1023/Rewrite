@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-11-12
+更新日期：2026-11-13
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -68,6 +68,7 @@ const bundle = {
 };
 
 const listua = {
+  'billmate': { name: 'Bill Mate Pro', id: 'com.billmate.plus.yearly', cm: 'sja' },  //BillMate智能算账
   'col.or': { name: 'Color Plus', id: 'com.color.plus', cm: 'sjb' },  //col.or-AR颜色名称查找器
   'knowme-storage': { name: 'pro', id: 'pro', cm: 'sjb' },  //知我记物-更懂你的记物软件
   'Island%20Reader': { name: 'BookSpeak Pro', id: 'com.luyaolab.bookspeak.lifetime', cm: 'sjc' },  //岛屿阅读: AI朗读与电子书阅读器
