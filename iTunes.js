@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：iTunes-系列解锁合集
-更新日期：2026-11-04
+更新日期：2026-11-16
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -56,6 +56,7 @@ const bundle_id = ddm.receipt["bundle_id"] || ddm.receipt["Bundle_Id"];
 
 // ===== App列表 =====
 const list = {
+  'com.risingcabbage.pro.camera': { tp: 'timeb', hx: 'hxpda', id: "com.risingcabbage.pro.camera.relensproforeverc" },  //ReLens大光圈单反相机&专业摄像机
   'DuanSheLi': { tp: 'timeb', hx: 'hxpda', id: "com.weizhizeyi.camera.lifetime" }, //相册断难舍
   'Booka': { tp: 'timeb', hx: 'hxpda', id: "com.jianili.Booka.pro.lifetime" }, //Booka-极简书房
   'ZZVideoAlbumPortrait': { tp: 'timea', hx: 'hxpda', id: "com.hly.videoAlbum.yearautovipsubscription" }, //汇声绘影-视频制作&电子相册影集制作
@@ -285,7 +286,6 @@ const list = {
   'HashPhotos': { tp: 'timeb', hx: 'hxpda', id: "com.kobaltlab.HashPhotos.iap.proLifetime" },  //HashPhotos
   'SilProject': { tp: 'timea', hx: 'hxpda', id: "com.sm.Alina.Pro" },  //Alina米克锁屏—
   'com.chenxi.shanniankapian': { tp: 'timea', hx: 'hxpda', id: "com.chenxi.shannian.superNian" },  //闪念
-  'com.risingcabbage.pro.camera': { tp: 'timea', hx: 'hxpda', id: "com.risingcabbage.pro.camera.yearlysubscription" },  //ReLens相机
   'co.bazaart.patternator': { tp: 'timea', hx: 'hxpda', id: "Patternator_Lock_Screen_Monthly" },  //拍特内头
   'cn.linfei.SimpleRecorder': { tp: 'timea', hx: 'hxpda', id: "cn.linfei.SimpleRecorder.Plus" },  //录音机
   'com.maliquankai.appdesign': { tp: 'timec', hx: 'hxpdb', version: "1.5.8" },  //PutApp-应用收集
