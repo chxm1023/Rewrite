@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-11-20
+更新日期：2026-11-23
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -30,6 +30,7 @@ if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $req
 }
 
 const bundle = {
+  'com.ukgroup.translator': { name: 'Pro', id: 'lifetime_translator', cm: 'sjc' },  //Translator: 实时翻译器-语音和文本
   'com.suxuanlv.startsleepapp': { name: 'vip', id: 'kaishui_vip_lifetime', cm: 'sjb' },  //开睡:白噪音助眠与睡眠记录
   'me.xgmm.meallog': { id: '202602071529', cm: 'sjc' },  //记一餐-干饭人AI饮食营养师
   'me.xgmm.note': { name: 'one month', id: '20250203', cm: 'sjc' },  //NoteMark-全能日常生活记录
