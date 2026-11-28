@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：Revenuecat系列解锁合集
-更新日期：2026-11-23
+更新日期：2026-11-28
 脚本作者：@ddm1023
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
@@ -69,6 +69,7 @@ const bundle = {
 };
 
 const listua = {
+  'ECG%20Tracker+': { name: 'ECG Tracker+', id: 'lifetime_v2', cm: 'sjc' },  //ECG Tracker+心电图、心率、HRV与QTc分析
   'Remote+': { name: 'Pro', id: 'com.cherpake.macrc.all', cm: 'sjc' },  //Remote+电视与流媒体遥控器
   'TouchRetouchBasic': { name: 'premium', id: 'tr5_yearlysubsc_15dlrs_2', cm: 'sja' },  //TouchRetouch:轻松扣图,剪下或移除
   'billmate': { name: 'Bill Mate Pro', id: 'com.billmate.plus.yearly', cm: 'sja' },  //BillMate智能算账
